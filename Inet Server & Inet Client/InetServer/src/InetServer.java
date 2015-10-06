@@ -42,8 +42,11 @@ public class InetServer {
 			//to accept a new connection from client and following new connections
 			sock=servsock.accept();
 			//worker is assigned to the new accepted connection
-			if (controlSwitch) new Worker(sock).start();
-			try{Thread.sleep(10000);} catch(InterruptedException ex){}
+			if (controlSwitch) 
+				new Worker(sock).start();
+			
+			try{Thread.sleep(10000);} 
+			catch(InterruptedException ex){}
 		}
 	}
 }
