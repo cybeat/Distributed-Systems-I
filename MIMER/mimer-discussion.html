@@ -1,0 +1,127 @@
+<pre>
+<b><h3>Write-Up for Mimer</h3></b>
+1.	Download the shim.bat which helps in executing the .xyz file
+2.	Download the mime-data.xyz 
+3.	First we need to make a change in Registry at
+a.	“HKEY_CLASSES_ROOT\MIME\Database\Content Type”
+b.	Add a new key as application/xyz
+c.	Under the key add a string with the name Extensions
+d.	The value for the String Extension is .xyz
+
+4.	Go to “Control Panel\All Control Panel Items\Default Programs\Set Associations” and associate the .xyz file with the shim.bat 
+OR
+Right click .xyz file and select “open with” and select choose another app, browse more apps and select the shim.bat file
+
+5.	Download the handler file to check the .xyz file
+6.	Make necessary changes in the shim.bat file which is the development directory and the classpath
+7.	Pass the .xyz file through shim.bat , it will show the XmlfileName which is mentioned with the output file, this file is created and it shows xyz content.
+
+C:\Users\ppadm\workspace\WebServer>java -Dfirstarg=mimer-data.xyz Handler
+Executing the java application.
+First var is: mimer-data.xyz
+Data is: One partridge in a pear tree
+Data is: Two turtle doves
+Data is: Three French hens
+Data is: Four calling birds
+Data is: Five golden rings
+i is: 6
+
+C:\Users\ppadm\workspace\WebServer>pause
+Press any key to continue . . .
+
+Also the output file::
+
+First arg to Handler is: mimer-data.xyz
+<This where the persistent XML will go>
+
+8.	Download the two Jar files which are Xstream and xpp3 min and place them in the java library (C:\Program Files\Java<version>\lib\)
+9.	Download the BCClient.java, and the batch file jcxclient which helps in compile with xstream and xpp3 , make the changes of the file path in the bat file
+10.	Create a new environment variables CLASSPATH with the values of the path of the downloaded Jar files.
+11.	Download the rxclient.bat file and make the path changes as the batch file have a java call to BCClient it will execute, enter some string you can see the output with the deserialized data of the XML and the XML format output
+Here is the XML version:
+
+< myDataArray>
+  < num__lines>3</num__lines>
+  < lines>
+    < string>You </string>
+    < string>typed </string>
+    < string>this is test</string>
+    < null/>
+    < null/>
+    < null/>
+    < null/>
+    < null/>
+    < null/>
+    < null/>
+  < /lines>
+< /myDataArray>
+
+Here is the deserialized data:
+You
+typed
+this is test
+
+12.	Edit the webserver code by adding the BClooper and BCWorker. To call the back channel handler later.
+13.	Download the jcx and rx bat file which are similar to the previous batch files it will help to compile and execute the webserver, we have to change the file path in the .bat’s according to the file locations.
+14.	Webserver will execute with the  batch file even execute the BCClient to check if we have a connection and if the data is exchanged and the acknowledgement is received from server
+15.	This output is similar to the output on 11th step but here we see the marshalled data 
+Called BC worker.
+The XML marshaled data:
+< myDataArray>
+  < num__lines>3</num__lines>
+  < lines>
+    < string>You </string>
+    < string>typed </string>
+    < string>testing</string>
+    < null/>
+    < null/>
+    < null/>
+    < null/>
+    < null/>
+    < null/>
+    < null/>
+  < /lines>
+< /myDataArray>
+
+Here is the restored data:
+You
+typed
+testing
+
+16.	Take the BCClient.java and handler.java and we have merged it together to create a back channel handler BCHandler.java. All the necessary code have been given we just need to rearrange it.
+17.	I have create SSLSocket for backchannel for which I created javakeystore and cert files for client and server
+18.	Changed the shim.bat file to execute BCHandler 
+19.	Compile and execute the MyWebServer.java and  go to the web browser and go to http://condor.depaul.edu/elliott/435/hw/programs/mimer/mimer-call.html 
+20.	And click the mimer-data.xyz hyperlink a dialog box will appear asking whether to download or to open give open the file with default application. 
+21.	The shim.bat will get executed and the BCHandler will be called and executed we can see the webserver’s console the parsed data after the XML marshalled data.
+22.	Here instead of a string we pass the mimer-data.xyz file the contents of the files are read and the rest is same as the 11th and 15th step outputs
+Called BC worker.
+The XML marshaled data:
+< myDataArray>
+  < num__lines>7</num__lines>
+  < lines>
+    < string> </string>
+    < string></string>
+    < string>One partridge in a pear tree</string>
+    < string>Two turtle doves</string>
+    < string>Three French hens</string>
+    < string>Four calling birds</string>
+    < string>Five golden rings</string>
+    < null/>
+    < null/>
+    < null/>
+  < /lines>
+< /myDataArray>
+
+Here is the restored data:
+
+One partridge in a pear tree
+Two turtle doves
+Three French hens
+Four calling birds
+Five golden rings
+
+23.	For SSL sockets a keystore is added to the server and a truststore is added to the client. To enable the handshake and then start the communication
+
+
+</pre>
