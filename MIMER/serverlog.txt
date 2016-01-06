@@ -1,0 +1,2762 @@
+								SERVER-LOG
+
+BCHandler Application Output:
+
+C:\Users\ppadm\AppData\Local\Temp>rem This is shim.bat
+
+C:\Users\ppadm\AppData\Local\Temp>rem Change this to your development directory:
+
+C:\Users\ppadm\AppData\Local\Temp>cd C:\Users\ppadm\Desktop\MIMER Submission
+
+C:\Users\ppadm\Desktop\MIMER Submission>echo "We are now in a shim called from the Web Browser"
+"We are now in a shim called from the Web Browser"
+
+C:\Users\ppadm\Desktop\MIMER Submission>echo Arg one is: "C:\Users\ppadm\AppData\Local\Temp\mimer-data-10.xyz"
+Arg one is: "C:\Users\ppadm\AppData\Local\Temp\mimer-data-10.xyz"
+
+C:\Users\ppadm\Desktop\MIMER Submission>rem Change this to point to your Handler directory:
+
+C:\Users\ppadm\Desktop\MIMER Submission>cd C:\Users\ppadm\Desktop\MIMER Submission
+
+C:\Users\ppadm\Desktop\MIMER Submission>pause
+Press any key to continue . . .
+
+C:\Users\ppadm\Desktop\MIMER Submission>rem have to set classpath in batch, passing as arg does not work.
+
+C:\Users\ppadm\Desktop\MIMER Submission>rem Change this to point to your own Xstream library files:
+
+C:\Users\ppadm\Desktop\MIMER Submission>rem set classpath=C:\Users\ppadm\workspace\WebServer;C:\Program Files\Java\jdk1.8.0_60\lib\xstream-1.2.1.j
+ar;C:\Program Files\Java\jdk1.8.0_60\lib\xpp3_min-1.1.3.4.O.jarC:\Users\ppadm\Desktop\MIMER Submission;C:\Program Files\Java\jdk1.8.0_60\lib\xstre
+am-1.2.1.jar;C:\Program Files\Java\jdk1.8.0_60\lib\xpp3_min-1.1.3.4.O.jar;
+
+C:\Users\ppadm\Desktop\MIMER Submission>rem pass the name of the first argument to java:
+
+C:\Users\ppadm\Desktop\MIMER Submission>java -Dfirstarg="C:\Users\ppadm\AppData\Local\Temp\mimer-data-10.xyz" BCHandler
+Executing the java application.
+Prashant's back channel Client.
+Server name: localhost, Port: 2540 / 2570
+First var is:C:\Users\ppadm\AppData\Local\Temp\mimer-data-10.xyz
+Data is:
+Data is:
+Data is: One partridge in a pear tree
+Data is: Two turtle doves
+Data is: Three French hens
+Data is: Four calling birds
+Data is: Five golden rings
+i is: 8
+
+
+
+Here is the XML version:
+<myDataArray>
+  <num__lines>7</num__lines>
+  <lines>
+    <string> </string>
+    <string></string>
+    <string>One partridge in a pear tree</string>
+    <string>Two turtle doves</string>
+    <string>Three French hens</string>
+    <string>Four calling birds</string>
+    <string>Five golden rings</string>
+    <null/>
+    <null/>
+    <null/>
+  </lines>
+</myDataArray>
+Blocking on acknowledgment from Server...
+Acknowledging Back Channel Data Receipt
+closing the output file
+
+C:\Users\ppadm\Desktop\MIMER Submission>pause
+Press any key to continue . . .
+
+
+WebServer Server Output:
+PS C:\Users\ppadm\Desktop\MIMER Submission> java .\MyWebServer
+Error: Could not find or load main class .\MyWebServer
+PS C:\Users\ppadm\Desktop\MIMER Submission> java MyWebServer
+In BC Looper thread, waiting for 2570 connections
+Prashant's Web Server starting up, listening at port 2540
+
+keyStore is : webserver.jks
+keyStore type is : jks
+keyStore provider is :
+init keystore
+init keymanager of type SunX509
+***
+found key for : webserver
+chain [0] = [
+[
+  Version: V3
+  Subject: CN=prashant, OU=security, O=depaul, L=chicago, ST=IL, C=US
+  Signature Algorithm: SHA256withRSA, OID = 1.2.840.113549.1.1.11
+
+  Key:  Sun RSA public key, 2048 bits
+  modulus: 1874054395285348125131305093351997838656895952365085420441191997908801833495759268934496793092122173039960229
+730090648371941640910431320101088195518671287378706415469038473030244739525308254315763243738375129244736651929935185562
+245120550465230677059806987482923937918415267848622594681102311161709899944536851399759355344779245991882871844473169076
+158105001067297319347696367696166705296812751937515423183877992195423853780734705102268123450476969925428795809019285925
+567168626890239378412614938602360001577700922993483815894241734440930939084722854664529593944409991686461727433079974486
+7233128754127263932539989751
+  public exponent: 65537
+  Validity: [From: Wed Oct 21 10:30:04 CDT 2015,
+               To: Tue Jan 19 09:30:04 CST 2016]
+  Issuer: CN=prashant, OU=security, O=depaul, L=chicago, ST=IL, C=US
+  SerialNumber: [    17b1f953]
+
+Certificate Extensions: 1
+[1]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 4A DF 05 42 E2 24 39 4E   3A 8F 31 2D D3 DC 46 E1  J..B.$9N:.1-..F.
+0010: 7A 6B FB FC                                        zk..
+]
+]
+
+]
+  Algorithm: [SHA256withRSA]
+  Signature:
+0000: 22 30 3E A7 43 6A 33 F7   18 C9 CB C6 DF 67 E7 8C  "0>.Cj3......g..
+0010: A8 3A 10 29 D4 0B E9 AA   47 93 77 90 BE F6 0E 65  .:.)....G.w....e
+0020: 40 C7 8B FC 7A D2 B6 FB   11 A6 C1 D4 DF A5 9F AC  @...z...........
+0030: 9E 5E 75 1A C6 DE A9 FF   96 DB 9F B4 6A AA A8 76  .^u.........j..v
+0040: 71 39 6D AD 29 91 80 78   F5 1F 0F F0 38 B5 49 3A  q9m.)..x....8.I:
+0050: 96 B2 9A 13 34 AB BC E3   C9 E9 E7 05 F4 FE 0C FD  ....4...........
+0060: 06 55 16 1C 2A B9 3B C9   A5 43 01 BD 52 80 36 A4  .U..*.;..C..R.6.
+0070: 88 0A 88 98 1B 4B 98 DB   8B C1 E9 4D B6 42 60 EB  .....K.....M.B`.
+0080: 33 61 21 BA 8E AE 64 63   81 E1 27 DD 97 86 24 A2  3a!...dc..'...$.
+0090: 8F 76 2C 4E 26 15 98 21   AC 04 27 0B B0 74 73 49  .v,N&..!..'..tsI
+00A0: 52 8E 0E 84 65 8C 4E 2E   E7 53 A3 22 6E EB C9 E7  R...e.N..S."n...
+00B0: 7B FF 89 C3 96 55 96 93   DF 65 DD A3 9C 5A 27 6C  .....U...e...Z'l
+00C0: 8F 18 B3 A1 E7 EF 23 59   92 6A AF 6F 25 B1 03 EB  ......#Y.j.o%...
+00D0: 8A 98 D7 7A 94 B5 67 B9   00 7C CC F5 F7 8A 08 E0  ...z..g.........
+00E0: B1 2B 27 95 2F 53 E0 AF   5C 3B 56 2D A6 88 8A 08  .+'./S..\;V-....
+00F0: 3D 4B B9 00 21 F3 36 5E   56 AA F3 31 37 A8 81 4F  =K..!.6^V..17..O
+
+]
+***
+trustStore is: C:\Program Files\Java\jdk1.8.0_60\jre\lib\security\cacerts
+trustStore type is : jks
+trustStore provider is :
+init truststore
+adding as trusted cert:
+  Subject: CN=Equifax Secure Global eBusiness CA-1, O=Equifax Secure Inc., C=US
+  Issuer:  CN=Equifax Secure Global eBusiness CA-1, O=Equifax Secure Inc., C=US
+  Algorithm: RSA; Serial number: 0xc3517
+  Valid from Sun Jun 20 23:00:00 CDT 1999 until Sun Jun 21 23:00:00 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=SecureTrust CA, O=SecureTrust Corporation, C=US
+  Issuer:  CN=SecureTrust CA, O=SecureTrust Corporation, C=US
+  Algorithm: RSA; Serial number: 0xcf08e5c0816a5ad427ff0eb271859d0
+  Valid from Tue Nov 07 13:31:18 CST 2006 until Mon Dec 31 13:40:55 CST 2029
+
+adding as trusted cert:
+  Subject: CN=Entrust Root Certification Authority - EC1, OU="(c) 2012 Entrust, Inc. - for authorized use only", OU=See
+www.entrust.net/legal-terms, O="Entrust, Inc.", C=US
+  Issuer:  CN=Entrust Root Certification Authority - EC1, OU="(c) 2012 Entrust, Inc. - for authorized use only", OU=See
+www.entrust.net/legal-terms, O="Entrust, Inc.", C=US
+  Algorithm: EC; Serial number: 0xa68b79290000000050d091f9
+  Valid from Tue Dec 18 09:25:36 CST 2012 until Fri Dec 18 09:55:36 CST 2037
+
+adding as trusted cert:
+  Subject: CN=Starfield Root Certificate Authority - G2, O="Starfield Technologies, Inc.", L=Scottsdale, ST=Arizona, C=U
+S
+  Issuer:  CN=Starfield Root Certificate Authority - G2, O="Starfield Technologies, Inc.", L=Scottsdale, ST=Arizona, C=U
+S
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Mon Aug 31 19:00:00 CDT 2009 until Thu Dec 31 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: CN=VeriSign Class 2 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized
+ use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Class 2 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized
+ use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x6170cb498c5f984529e7b0a6d9505b7a
+  Valid from Thu Sep 30 19:00:00 CDT 1999 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: OU=Security Communication RootCA1, O=SECOM Trust.net, C=JP
+  Issuer:  OU=Security Communication RootCA1, O=SECOM Trust.net, C=JP
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Mon Sep 29 23:20:49 CDT 2003 until Fri Sep 29 23:20:49 CDT 2023
+
+adding as trusted cert:
+  Subject: CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Issuer:  CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Algorithm: RSA; Serial number: 0x83be056904246b1a1756ac95991c74a
+  Valid from Thu Nov 09 18:00:00 CST 2006 until Sun Nov 09 18:00:00 CST 2031
+
+adding as trusted cert:
+  Subject: CN=Entrust.net Certification Authority (2048), OU=(c) 1999 Entrust.net Limited, OU=www.entrust.net/CPS_2048 i
+ncorp. by ref. (limits liab.), O=Entrust.net
+  Issuer:  CN=Entrust.net Certification Authority (2048), OU=(c) 1999 Entrust.net Limited, OU=www.entrust.net/CPS_2048 i
+ncorp. by ref. (limits liab.), O=Entrust.net
+  Algorithm: RSA; Serial number: 0x3863def8
+  Valid from Fri Dec 24 11:50:51 CST 1999 until Tue Jul 24 09:15:12 CDT 2029
+
+adding as trusted cert:
+  Subject: CN=thawte Primary Root CA, OU="(c) 2006 thawte, Inc. - For authorized use only", OU=Certification Services Di
+vision, O="thawte, Inc.", C=US
+  Issuer:  CN=thawte Primary Root CA, OU="(c) 2006 thawte, Inc. - For authorized use only", OU=Certification Services Di
+vision, O="thawte, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x344ed55720d5edec49f42fce37db2b6d
+  Valid from Thu Nov 16 18:00:00 CST 2006 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=Go Daddy Root Certificate Authority - G2, O="GoDaddy.com, Inc.", L=Scottsdale, ST=Arizona, C=US
+  Issuer:  CN=Go Daddy Root Certificate Authority - G2, O="GoDaddy.com, Inc.", L=Scottsdale, ST=Arizona, C=US
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Mon Aug 31 19:00:00 CDT 2009 until Thu Dec 31 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: CN=GeoTrust Primary Certification Authority, O=GeoTrust Inc., C=US
+  Issuer:  CN=GeoTrust Primary Certification Authority, O=GeoTrust Inc., C=US
+  Algorithm: RSA; Serial number: 0x18acb56afd69b6153a636cafdafac4a1
+  Valid from Sun Nov 26 18:00:00 CST 2006 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=VeriSign Class 1 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized
+ use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Class 1 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized
+ use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x8b5b75568454850b00cfaf3848ceb1a4
+  Valid from Thu Sep 30 19:00:00 CDT 1999 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=VeriSign Class 3 Public Primary Certification Authority - G4, OU="(c) 2007 VeriSign, Inc. - For authorized
+ use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Class 3 Public Primary Certification Authority - G4, OU="(c) 2007 VeriSign, Inc. - For authorized
+ use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: EC; Serial number: 0x2f80fe238c0e220f486712289187acb3
+  Valid from Sun Nov 04 18:00:00 CST 2007 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=Entrust Root Certification Authority, OU="(c) 2006 Entrust, Inc.", OU=www.entrust.net/CPS is incorporated
+by reference, O="Entrust, Inc.", C=US
+  Issuer:  CN=Entrust Root Certification Authority, OU="(c) 2006 Entrust, Inc.", OU=www.entrust.net/CPS is incorporated
+by reference, O="Entrust, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x456b5054
+  Valid from Mon Nov 27 14:23:42 CST 2006 until Fri Nov 27 14:53:42 CST 2026
+
+adding as trusted cert:
+  Subject: OU=Security Communication RootCA2, O="SECOM Trust Systems CO.,LTD.", C=JP
+  Issuer:  OU=Security Communication RootCA2, O="SECOM Trust Systems CO.,LTD.", C=JP
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Fri May 29 00:00:39 CDT 2009 until Tue May 29 00:00:39 CDT 2029
+
+adding as trusted cert:
+  Subject: OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 3 Public Primary
+Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Issuer:  OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 3 Public Primary
+Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x7dd9fe07cfa81eb7107967fba78934c6
+  Valid from Sun May 17 19:00:00 CDT 1998 until Tue Aug 01 18:59:59 CDT 2028
+
+adding as trusted cert:
+  Subject: OU=ePKI Root Certification Authority, O="Chunghwa Telecom Co., Ltd.", C=TW
+  Issuer:  OU=ePKI Root Certification Authority, O="Chunghwa Telecom Co., Ltd.", C=TW
+  Algorithm: RSA; Serial number: 0x15c8bd65475cafb897005ee406d2bc9d
+  Valid from Sun Dec 19 20:31:27 CST 2004 until Tue Dec 19 20:31:27 CST 2034
+
+adding as trusted cert:
+  Subject: CN=AffirmTrust Commercial, O=AffirmTrust, C=US
+  Issuer:  CN=AffirmTrust Commercial, O=AffirmTrust, C=US
+  Algorithm: RSA; Serial number: 0x7777062726a9b17c
+  Valid from Fri Jan 29 08:06:06 CST 2010 until Tue Dec 31 08:06:06 CST 2030
+
+adding as trusted cert:
+  Subject: CN=Certum Trusted Network CA, OU=Certum Certification Authority, O=Unizeto Technologies S.A., C=PL
+  Issuer:  CN=Certum Trusted Network CA, OU=Certum Certification Authority, O=Unizeto Technologies S.A., C=PL
+  Algorithm: RSA; Serial number: 0x444c0
+  Valid from Wed Oct 22 07:07:37 CDT 2008 until Mon Dec 31 06:07:37 CST 2029
+
+adding as trusted cert:
+  Subject: CN=Certum CA, O=Unizeto Sp. z o.o., C=PL
+  Issuer:  CN=Certum CA, O=Unizeto Sp. z o.o., C=PL
+  Algorithm: RSA; Serial number: 0x10020
+  Valid from Tue Jun 11 05:46:39 CDT 2002 until Fri Jun 11 05:46:39 CDT 2027
+
+adding as trusted cert:
+  Subject: CN=XRamp Global Certification Authority, O=XRamp Security Services Inc, OU=www.xrampsecurity.com, C=US
+  Issuer:  CN=XRamp Global Certification Authority, O=XRamp Security Services Inc, OU=www.xrampsecurity.com, C=US
+  Algorithm: RSA; Serial number: 0x50946cec18ead59c4dd597ef758fa0ad
+  Valid from Mon Nov 01 11:14:04 CST 2004 until Sun Dec 31 23:37:19 CST 2034
+
+adding as trusted cert:
+  Subject: CN=AddTrust Qualified CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE
+  Issuer:  CN=AddTrust Qualified CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Tue May 30 05:44:50 CDT 2000 until Sat May 30 05:44:50 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=Buypass Class 2 Root CA, O=Buypass AS-983163327, C=NO
+  Issuer:  CN=Buypass Class 2 Root CA, O=Buypass AS-983163327, C=NO
+  Algorithm: RSA; Serial number: 0x2
+  Valid from Tue Oct 26 03:38:03 CDT 2010 until Fri Oct 26 03:38:03 CDT 2040
+
+adding as trusted cert:
+  Subject: CN=Sonera Class2 CA, O=Sonera, C=FI
+  Issuer:  CN=Sonera Class2 CA, O=Sonera, C=FI
+  Algorithm: RSA; Serial number: 0x1d
+  Valid from Fri Apr 06 02:29:40 CDT 2001 until Tue Apr 06 02:29:40 CDT 2021
+
+adding as trusted cert:
+  Subject: CN=America Online Root Certification Authority 1, O=America Online Inc., C=US
+  Issuer:  CN=America Online Root Certification Authority 1, O=America Online Inc., C=US
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Tue May 28 01:00:00 CDT 2002 until Thu Nov 19 14:43:00 CST 2037
+
+adding as trusted cert:
+  Subject: CN=GeoTrust Primary Certification Authority - G2, OU=(c) 2007 GeoTrust Inc. - For authorized use only, O=GeoT
+rust Inc., C=US
+  Issuer:  CN=GeoTrust Primary Certification Authority - G2, OU=(c) 2007 GeoTrust Inc. - For authorized use only, O=GeoT
+rust Inc., C=US
+  Algorithm: EC; Serial number: 0x3cb2f4480a00e2feeb243b5e603ec36b
+  Valid from Sun Nov 04 18:00:00 CST 2007 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=SwissSign Gold CA - G2, O=SwissSign AG, C=CH
+  Issuer:  CN=SwissSign Gold CA - G2, O=SwissSign AG, C=CH
+  Algorithm: RSA; Serial number: 0xbb401c43f55e4fb0
+  Valid from Wed Oct 25 03:30:35 CDT 2006 until Sat Oct 25 03:30:35 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=USERTrust ECC Certification Authority, O=The USERTRUST Network, L=Jersey City, ST=New Jersey, C=US
+  Issuer:  CN=USERTrust ECC Certification Authority, O=The USERTRUST Network, L=Jersey City, ST=New Jersey, C=US
+  Algorithm: EC; Serial number: 0x5c8b99c55a94c5d27156decd8980cc26
+  Valid from Sun Jan 31 18:00:00 CST 2010 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=UTN - DATACorp SGC, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Issuer:  CN=UTN - DATACorp SGC, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Algorithm: RSA; Serial number: 0x44be0c8b500021b411d32a6806a9ad69
+  Valid from Thu Jun 24 13:57:21 CDT 1999 until Mon Jun 24 14:06:30 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=QuoVadis Root CA 2, O=QuoVadis Limited, C=BM
+  Issuer:  CN=QuoVadis Root CA 2, O=QuoVadis Limited, C=BM
+  Algorithm: RSA; Serial number: 0x509
+  Valid from Fri Nov 24 12:27:00 CST 2006 until Mon Nov 24 12:23:33 CST 2031
+
+adding as trusted cert:
+  Subject: CN=Deutsche Telekom Root CA 2, OU=T-TeleSec Trust Center, O=Deutsche Telekom AG, C=DE
+  Issuer:  CN=Deutsche Telekom Root CA 2, OU=T-TeleSec Trust Center, O=Deutsche Telekom AG, C=DE
+  Algorithm: RSA; Serial number: 0x26
+  Valid from Fri Jul 09 07:11:00 CDT 1999 until Tue Jul 09 18:59:00 CDT 2019
+
+adding as trusted cert:
+  Subject: OU=Equifax Secure Certificate Authority, O=Equifax, C=US
+  Issuer:  OU=Equifax Secure Certificate Authority, O=Equifax, C=US
+  Algorithm: RSA; Serial number: 0x35def4cf
+  Valid from Sat Aug 22 11:41:51 CDT 1998 until Wed Aug 22 11:41:51 CDT 2018
+
+adding as trusted cert:
+  Subject: OU=Class 1 Public Primary Certification Authority, O="VeriSign, Inc.", C=US
+  Issuer:  OU=Class 1 Public Primary Certification Authority, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x3f691e819cf09a4af373ffb948a2e4dd
+  Valid from Sun Jan 28 18:00:00 CST 1996 until Wed Aug 02 18:59:59 CDT 2028
+
+adding as trusted cert:
+  Subject: CN=USERTrust RSA Certification Authority, O=The USERTRUST Network, L=Jersey City, ST=New Jersey, C=US
+  Issuer:  CN=USERTrust RSA Certification Authority, O=The USERTRUST Network, L=Jersey City, ST=New Jersey, C=US
+  Algorithm: RSA; Serial number: 0x1fd6d30fca3ca51a81bbc640e35032d
+  Valid from Sun Jan 31 18:00:00 CST 2010 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=COMODO ECC Certification Authority, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Issuer:  CN=COMODO ECC Certification Authority, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Algorithm: EC; Serial number: 0x1f47afaa62007050544c019e9b63992a
+  Valid from Wed Mar 05 18:00:00 CST 2008 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=DigiCert High Assurance EV Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Issuer:  CN=DigiCert High Assurance EV Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Algorithm: RSA; Serial number: 0x2ac5c266a0b409b8f0b79f2ae462577
+  Valid from Thu Nov 09 18:00:00 CST 2006 until Sun Nov 09 18:00:00 CST 2031
+
+adding as trusted cert:
+  Subject: OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 2 Public Primary
+Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Issuer:  OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 2 Public Primary
+Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0xb92f60cc889fa17a4609b85b706c8aaf
+  Valid from Sun May 17 19:00:00 CDT 1998 until Tue Aug 01 18:59:59 CDT 2028
+
+adding as trusted cert:
+  Subject: CN=VeriSign Class 3 Public Primary Certification Authority - G5, OU="(c) 2006 VeriSign, Inc. - For authorized
+ use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Class 3 Public Primary Certification Authority - G5, OU="(c) 2006 VeriSign, Inc. - For authorized
+ use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x18dad19e267de8bb4a2158cdcc6b3b4a
+  Valid from Tue Nov 07 18:00:00 CST 2006 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=GlobalSign, O=GlobalSign, OU=GlobalSign Root CA - R2
+  Issuer:  CN=GlobalSign, O=GlobalSign, OU=GlobalSign Root CA - R2
+  Algorithm: RSA; Serial number: 0x400000000010f8626e60d
+  Valid from Fri Dec 15 02:00:00 CST 2006 until Wed Dec 15 02:00:00 CST 2021
+
+adding as trusted cert:
+  Subject: CN=QuoVadis Root CA 3, O=QuoVadis Limited, C=BM
+  Issuer:  CN=QuoVadis Root CA 3, O=QuoVadis Limited, C=BM
+  Algorithm: RSA; Serial number: 0x5c6
+  Valid from Fri Nov 24 13:11:23 CST 2006 until Mon Nov 24 13:06:44 CST 2031
+
+adding as trusted cert:
+  Subject: CN=GeoTrust Universal CA, O=GeoTrust Inc., C=US
+  Issuer:  CN=GeoTrust Universal CA, O=GeoTrust Inc., C=US
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Wed Mar 03 23:00:00 CST 2004 until Sat Mar 03 23:00:00 CST 2029
+
+adding as trusted cert:
+  Subject: CN=GlobalSign, O=GlobalSign, OU=GlobalSign Root CA - R3
+  Issuer:  CN=GlobalSign, O=GlobalSign, OU=GlobalSign Root CA - R3
+  Algorithm: RSA; Serial number: 0x4000000000121585308a2
+  Valid from Wed Mar 18 05:00:00 CDT 2009 until Sun Mar 18 05:00:00 CDT 2029
+
+adding as trusted cert:
+  Subject: CN=Starfield Services Root Certificate Authority - G2, O="Starfield Technologies, Inc.", L=Scottsdale, ST=Ari
+zona, C=US
+  Issuer:  CN=Starfield Services Root Certificate Authority - G2, O="Starfield Technologies, Inc.", L=Scottsdale, ST=Ari
+zona, C=US
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Mon Aug 31 19:00:00 CDT 2009 until Thu Dec 31 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
+  Issuer:  CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
+  Algorithm: RSA; Serial number: 0x20000b9
+  Valid from Fri May 12 13:46:00 CDT 2000 until Mon May 12 18:59:00 CDT 2025
+
+adding as trusted cert:
+  Subject: OU=Starfield Class 2 Certification Authority, O="Starfield Technologies, Inc.", C=US
+  Issuer:  OU=Starfield Class 2 Certification Authority, O="Starfield Technologies, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Tue Jun 29 12:39:16 CDT 2004 until Thu Jun 29 12:39:16 CDT 2034
+
+adding as trusted cert:
+  Subject: CN=Thawte Timestamping CA, OU=Thawte Certification, O=Thawte, L=Durbanville, ST=Western Cape, C=ZA
+  Issuer:  CN=Thawte Timestamping CA, OU=Thawte Certification, O=Thawte, L=Durbanville, ST=Western Cape, C=ZA
+  Algorithm: RSA; Serial number: 0x67c8e1e8e3be1cbdfc913b8ea6238749
+  Valid from Tue Dec 31 18:00:00 CST 1996 until Fri Jan 01 17:59:59 CST 2021
+
+adding as trusted cert:
+  Subject: CN=AAA Certificate Services, O=Comodo CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Issuer:  CN=AAA Certificate Services, O=Comodo CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Wed Dec 31 18:00:00 CST 2003 until Sun Dec 31 17:59:59 CST 2028
+
+adding as trusted cert:
+  Subject: CN=UTN-USERFirst-Hardware, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=U
+S
+  Issuer:  CN=UTN-USERFirst-Hardware, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=U
+S
+  Algorithm: RSA; Serial number: 0x44be0c8b500024b411d3362afe650afd
+  Valid from Fri Jul 09 13:10:42 CDT 1999 until Tue Jul 09 13:19:22 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=Chambers of Commerce Root, OU=http://www.chambersign.org, O=AC Camerfirma SA CIF A82743287, C=EU
+  Issuer:  CN=Chambers of Commerce Root, OU=http://www.chambersign.org, O=AC Camerfirma SA CIF A82743287, C=EU
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Tue Sep 30 11:13:43 CDT 2003 until Wed Sep 30 11:13:44 CDT 2037
+
+adding as trusted cert:
+  Subject: CN=Swisscom Root CA 2, OU=Digital Certificate Services, O=Swisscom, C=ch
+  Issuer:  CN=Swisscom Root CA 2, OU=Digital Certificate Services, O=Swisscom, C=ch
+  Algorithm: RSA; Serial number: 0x1e9e28e848f2e5efc37c4a1e5a1867b6
+  Valid from Fri Jun 24 03:38:14 CDT 2011 until Wed Jun 25 02:38:14 CDT 2031
+
+adding as trusted cert:
+  Subject: CN=VeriSign Class 3 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized
+ use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Class 3 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized
+ use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x9b7e0649a33e62b9d5ee90487129ef57
+  Valid from Thu Sep 30 19:00:00 CDT 1999 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=GlobalSign Root CA, OU=Root CA, O=GlobalSign nv-sa, C=BE
+  Issuer:  CN=GlobalSign Root CA, OU=Root CA, O=GlobalSign nv-sa, C=BE
+  Algorithm: RSA; Serial number: 0x40000000001154b5ac394
+  Valid from Tue Sep 01 07:00:00 CDT 1998 until Fri Jan 28 06:00:00 CST 2028
+
+adding as trusted cert:
+  Subject: CN=Actalis Authentication Root CA, O=Actalis S.p.A./03358520967, L=Milan, C=IT
+  Issuer:  CN=Actalis Authentication Root CA, O=Actalis S.p.A./03358520967, L=Milan, C=IT
+  Algorithm: RSA; Serial number: 0x570a119742c4e3cc
+  Valid from Thu Sep 22 06:22:02 CDT 2011 until Sun Sep 22 06:22:02 CDT 2030
+
+adding as trusted cert:
+  Subject: CN=UTN-USERFirst-Object, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Issuer:  CN=UTN-USERFirst-Object, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Algorithm: RSA; Serial number: 0x44be0c8b500024b411d3362de0b35f1b
+  Valid from Fri Jul 09 13:31:20 CDT 1999 until Tue Jul 09 13:40:36 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=AffirmTrust Networking, O=AffirmTrust, C=US
+  Issuer:  CN=AffirmTrust Networking, O=AffirmTrust, C=US
+  Algorithm: RSA; Serial number: 0x7c4f04391cd4992d
+  Valid from Fri Jan 29 08:08:24 CST 2010 until Tue Dec 31 08:08:24 CST 2030
+
+adding as trusted cert:
+  Subject: OU=Class 3 Public Primary Certification Authority, O="VeriSign, Inc.", C=US
+  Issuer:  OU=Class 3 Public Primary Certification Authority, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x3c9131cb1ff6d01b0e9ab8d044bf12be
+  Valid from Sun Jan 28 18:00:00 CST 1996 until Wed Aug 02 18:59:59 CDT 2028
+
+adding as trusted cert:
+  Subject: CN=AffirmTrust Premium, O=AffirmTrust, C=US
+  Issuer:  CN=AffirmTrust Premium, O=AffirmTrust, C=US
+  Algorithm: RSA; Serial number: 0x6d8c1446b1a60aee
+  Valid from Fri Jan 29 08:10:36 CST 2010 until Mon Dec 31 08:10:36 CST 2040
+
+adding as trusted cert:
+  Subject: CN=Baltimore CyberTrust Code Signing Root, OU=CyberTrust, O=Baltimore, C=IE
+  Issuer:  CN=Baltimore CyberTrust Code Signing Root, OU=CyberTrust, O=Baltimore, C=IE
+  Algorithm: RSA; Serial number: 0x20000bf
+  Valid from Wed May 17 09:01:00 CDT 2000 until Sat May 17 18:59:00 CDT 2025
+
+adding as trusted cert:
+  Subject: CN=America Online Root Certification Authority 2, O=America Online Inc., C=US
+  Issuer:  CN=America Online Root Certification Authority 2, O=America Online Inc., C=US
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Tue May 28 01:00:00 CDT 2002 until Tue Sep 29 09:08:00 CDT 2037
+
+adding as trusted cert:
+  Subject: CN=LuxTrust Global Root, O=LuxTrust s.a., C=LU
+  Issuer:  CN=LuxTrust Global Root, O=LuxTrust s.a., C=LU
+  Algorithm: RSA; Serial number: 0xbb8
+  Valid from Thu Mar 17 04:51:37 CDT 2011 until Wed Mar 17 04:51:37 CDT 2021
+
+adding as trusted cert:
+  Subject: CN=QuoVadis Root Certification Authority, OU=Root Certification Authority, O=QuoVadis Limited, C=BM
+  Issuer:  CN=QuoVadis Root Certification Authority, OU=Root Certification Authority, O=QuoVadis Limited, C=BM
+  Algorithm: RSA; Serial number: 0x3ab6508b
+  Valid from Mon Mar 19 12:33:33 CST 2001 until Wed Mar 17 13:33:33 CDT 2021
+
+adding as trusted cert:
+  Subject: CN=Class 3P Primary CA, O=Certplus, C=FR
+  Issuer:  CN=Class 3P Primary CA, O=Certplus, C=FR
+  Algorithm: RSA; Serial number: 0xbf5cdbb6f21c6ec04deb7a023b36e879
+  Valid from Wed Jul 07 12:10:00 CDT 1999 until Sat Jul 06 18:59:59 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US
+  Issuer:  CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US
+  Algorithm: RSA; Serial number: 0x59e3
+  Valid from Sun Jun 20 23:00:00 CDT 1999 until Sun Jun 21 23:00:00 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=Buypass Class 3 Root CA, O=Buypass AS-983163327, C=NO
+  Issuer:  CN=Buypass Class 3 Root CA, O=Buypass AS-983163327, C=NO
+  Algorithm: RSA; Serial number: 0x2
+  Valid from Tue Oct 26 03:28:58 CDT 2010 until Fri Oct 26 03:28:58 CDT 2040
+
+adding as trusted cert:
+  Subject: OU=Security Communication EV RootCA1, O="SECOM Trust Systems CO.,LTD.", C=JP
+  Issuer:  OU=Security Communication EV RootCA1, O="SECOM Trust Systems CO.,LTD.", C=JP
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Tue Jun 05 21:12:32 CDT 2007 until Fri Jun 05 21:12:32 CDT 2037
+
+adding as trusted cert:
+  Subject: CN=GeoTrust Primary Certification Authority - G3, OU=(c) 2008 GeoTrust Inc. - For authorized use only, O=GeoT
+rust Inc., C=US
+  Issuer:  CN=GeoTrust Primary Certification Authority - G3, OU=(c) 2008 GeoTrust Inc. - For authorized use only, O=GeoT
+rust Inc., C=US
+  Algorithm: RSA; Serial number: 0x15ac6e9419b2794b41f627a9c3180f1f
+  Valid from Tue Apr 01 19:00:00 CDT 2008 until Tue Dec 01 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: CN=thawte Primary Root CA - G2, OU="(c) 2007 thawte, Inc. - For authorized use only", O="thawte, Inc.", C=US
+  Issuer:  CN=thawte Primary Root CA - G2, OU="(c) 2007 thawte, Inc. - For authorized use only", O="thawte, Inc.", C=US
+  Algorithm: EC; Serial number: 0x35fc265cd9844fc93d263d579baed756
+  Valid from Sun Nov 04 18:00:00 CST 2007 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=Swisscom Root EV CA 2, OU=Digital Certificate Services, O=Swisscom, C=ch
+  Issuer:  CN=Swisscom Root EV CA 2, OU=Digital Certificate Services, O=Swisscom, C=ch
+  Algorithm: RSA; Serial number: 0xf2fa64e27463d38dfd101d041f76ca58
+  Valid from Fri Jun 24 04:45:08 CDT 2011 until Wed Jun 25 03:45:08 CDT 2031
+
+adding as trusted cert:
+  Subject: CN=VeriSign Universal Root Certification Authority, OU="(c) 2008 VeriSign, Inc. - For authorized use only", O
+U=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Universal Root Certification Authority, OU="(c) 2008 VeriSign, Inc. - For authorized use only", O
+U=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x401ac46421b31321030ebbe4121ac51d
+  Valid from Tue Apr 01 19:00:00 CDT 2008 until Tue Dec 01 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: CN=Chambers of Commerce Root - 2008, O=AC Camerfirma S.A., SERIALNUMBER=A82743287, L=Madrid (see current addr
+ess at www.camerfirma.com/address), C=EU
+  Issuer:  CN=Chambers of Commerce Root - 2008, O=AC Camerfirma S.A., SERIALNUMBER=A82743287, L=Madrid (see current addr
+ess at www.camerfirma.com/address), C=EU
+  Algorithm: RSA; Serial number: 0xa3da427ea4b1aeda
+  Valid from Fri Aug 01 07:29:50 CDT 2008 until Sat Jul 31 07:29:50 CDT 2038
+
+adding as trusted cert:
+  Subject: CN=SwissSign Silver CA - G2, O=SwissSign AG, C=CH
+  Issuer:  CN=SwissSign Silver CA - G2, O=SwissSign AG, C=CH
+  Algorithm: RSA; Serial number: 0x4f1bd42f54bb2f4b
+  Valid from Wed Oct 25 03:32:46 CDT 2006 until Sat Oct 25 03:32:46 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=Entrust Root Certification Authority - G2, OU="(c) 2009 Entrust, Inc. - for authorized use only", OU=See w
+ww.entrust.net/legal-terms, O="Entrust, Inc.", C=US
+  Issuer:  CN=Entrust Root Certification Authority - G2, OU="(c) 2009 Entrust, Inc. - for authorized use only", OU=See w
+ww.entrust.net/legal-terms, O="Entrust, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x4a538c28
+  Valid from Tue Jul 07 12:25:54 CDT 2009 until Sat Dec 07 11:55:54 CST 2030
+
+adding as trusted cert:
+  Subject: CN=AddTrust Class 1 CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE
+  Issuer:  CN=AddTrust Class 1 CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Tue May 30 05:38:31 CDT 2000 until Sat May 30 05:38:31 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Issuer:  CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Algorithm: RSA; Serial number: 0xce7e0e517d846fe8fe560fc1bf03039
+  Valid from Thu Nov 09 18:00:00 CST 2006 until Sun Nov 09 18:00:00 CST 2031
+
+adding as trusted cert:
+  Subject: OU=Go Daddy Class 2 Certification Authority, O="The Go Daddy Group, Inc.", C=US
+  Issuer:  OU=Go Daddy Class 2 Certification Authority, O="The Go Daddy Group, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Tue Jun 29 12:06:20 CDT 2004 until Thu Jun 29 12:06:20 CDT 2034
+
+adding as trusted cert:
+  Subject: CN=GlobalSign, O=GlobalSign, OU=GlobalSign ECC Root CA - R4
+  Issuer:  CN=GlobalSign, O=GlobalSign, OU=GlobalSign ECC Root CA - R4
+  Algorithm: EC; Serial number: 0x2a38a41c960a04de42b228a50be8349802
+  Valid from Mon Nov 12 18:00:00 CST 2012 until Mon Jan 18 21:14:07 CST 2038
+
+adding as trusted cert:
+  Subject: CN=AddTrust External CA Root, OU=AddTrust External TTP Network, O=AddTrust AB, C=SE
+  Issuer:  CN=AddTrust External CA Root, OU=AddTrust External TTP Network, O=AddTrust AB, C=SE
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Tue May 30 05:48:38 CDT 2000 until Sat May 30 05:48:38 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=T-TeleSec GlobalRoot Class 3, OU=T-Systems Trust Center, O=T-Systems Enterprise Services GmbH, C=DE
+  Issuer:  CN=T-TeleSec GlobalRoot Class 3, OU=T-Systems Trust Center, O=T-Systems Enterprise Services GmbH, C=DE
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Wed Oct 01 05:29:56 CDT 2008 until Sat Oct 01 18:59:59 CDT 2033
+
+adding as trusted cert:
+  Subject: CN=Global Chambersign Root - 2008, O=AC Camerfirma S.A., SERIALNUMBER=A82743287, L=Madrid (see current addres
+s at www.camerfirma.com/address), C=EU
+  Issuer:  CN=Global Chambersign Root - 2008, O=AC Camerfirma S.A., SERIALNUMBER=A82743287, L=Madrid (see current addres
+s at www.camerfirma.com/address), C=EU
+  Algorithm: RSA; Serial number: 0xc9cdd3e9d57d23ce
+  Valid from Fri Aug 01 07:31:40 CDT 2008 until Sat Jul 31 07:31:40 CDT 2038
+
+adding as trusted cert:
+  Subject: CN=COMODO RSA Certification Authority, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Issuer:  CN=COMODO RSA Certification Authority, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Algorithm: RSA; Serial number: 0x4caaf9cadb636fe01ff74ed85b03869d
+  Valid from Mon Jan 18 18:00:00 CST 2010 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=thawte Primary Root CA - G3, OU="(c) 2008 thawte, Inc. - For authorized use only", OU=Certification Servic
+es Division, O="thawte, Inc.", C=US
+  Issuer:  CN=thawte Primary Root CA - G3, OU="(c) 2008 thawte, Inc. - For authorized use only", OU=Certification Servic
+es Division, O="thawte, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x600197b746a7eab4b49ad64b2ff790fb
+  Valid from Tue Apr 01 19:00:00 CDT 2008 until Tue Dec 01 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: EMAILADDRESS=premium-server@thawte.com, CN=Thawte Premium Server CA, OU=Certification Services Division, O=Th
+awte Consulting cc, L=Cape Town, ST=Western Cape, C=ZA
+  Issuer:  EMAILADDRESS=premium-server@thawte.com, CN=Thawte Premium Server CA, OU=Certification Services Division, O=Th
+awte Consulting cc, L=Cape Town, ST=Western Cape, C=ZA
+  Algorithm: RSA; Serial number: 0x36122296c5e338a520a1d25f4cd70954
+  Valid from Wed Jul 31 19:00:00 CDT 1996 until Fri Jan 01 17:59:59 CST 2021
+
+adding as trusted cert:
+  Subject: CN=GTE CyberTrust Global Root, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  Issuer:  CN=GTE CyberTrust Global Root, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  Algorithm: RSA; Serial number: 0x1a5
+  Valid from Wed Aug 12 19:29:00 CDT 1998 until Mon Aug 13 18:59:00 CDT 2018
+
+adding as trusted cert:
+  Subject: CN=UTN-USERFirst-Client Authentication and Email, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Sal
+t Lake City, ST=UT, C=US
+  Issuer:  CN=UTN-USERFirst-Client Authentication and Email, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Sal
+t Lake City, ST=UT, C=US
+  Algorithm: RSA; Serial number: 0x44be0c8b500024b411d336252567c989
+  Valid from Fri Jul 09 12:28:50 CDT 1999 until Tue Jul 09 12:36:58 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=Class 2 Primary CA, O=Certplus, C=FR
+  Issuer:  CN=Class 2 Primary CA, O=Certplus, C=FR
+  Algorithm: RSA; Serial number: 0x85bd4bf3d8dae369f694d75fc3a54423
+  Valid from Wed Jul 07 12:05:00 CDT 1999 until Sat Jul 06 18:59:59 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=AffirmTrust Premium ECC, O=AffirmTrust, C=US
+  Issuer:  CN=AffirmTrust Premium ECC, O=AffirmTrust, C=US
+  Algorithm: EC; Serial number: 0x7497258ac73f7a54
+  Valid from Fri Jan 29 08:20:24 CST 2010 until Mon Dec 31 08:20:24 CST 2040
+
+adding as trusted cert:
+  Subject: CN=T-TeleSec GlobalRoot Class 2, OU=T-Systems Trust Center, O=T-Systems Enterprise Services GmbH, C=DE
+  Issuer:  CN=T-TeleSec GlobalRoot Class 2, OU=T-Systems Trust Center, O=T-Systems Enterprise Services GmbH, C=DE
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Wed Oct 01 05:40:14 CDT 2008 until Sat Oct 01 18:59:59 CDT 2033
+
+adding as trusted cert:
+  Subject: CN=GeoTrust Global CA, O=GeoTrust Inc., C=US
+  Issuer:  CN=GeoTrust Global CA, O=GeoTrust Inc., C=US
+  Algorithm: RSA; Serial number: 0x23456
+  Valid from Mon May 20 23:00:00 CDT 2002 until Fri May 20 23:00:00 CDT 2022
+
+adding as trusted cert:
+  Subject: CN=Sonera Class1 CA, O=Sonera, C=FI
+  Issuer:  CN=Sonera Class1 CA, O=Sonera, C=FI
+  Algorithm: RSA; Serial number: 0x24
+  Valid from Fri Apr 06 05:49:13 CDT 2001 until Tue Apr 06 05:49:13 CDT 2021
+
+adding as trusted cert:
+  Subject: CN=SwissSign Platinum CA - G2, O=SwissSign AG, C=CH
+  Issuer:  CN=SwissSign Platinum CA - G2, O=SwissSign AG, C=CH
+  Algorithm: RSA; Serial number: 0x4eb200670c035d4f
+  Valid from Wed Oct 25 03:36:00 CDT 2006 until Sat Oct 25 03:36:00 CDT 2036
+
+adding as trusted cert:
+  Subject: OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 1 Public Primary
+Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Issuer:  OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 1 Public Primary
+Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x4cc7eaaa983e71d39310f83d3a899192
+  Valid from Sun May 17 19:00:00 CDT 1998 until Tue Aug 01 18:59:59 CDT 2028
+
+adding as trusted cert:
+  Subject: CN=KEYNECTIS ROOT CA, OU=ROOT, O=KEYNECTIS, C=FR
+  Issuer:  CN=KEYNECTIS ROOT CA, OU=ROOT, O=KEYNECTIS, C=FR
+  Algorithm: RSA; Serial number: 0x1121bc276c5547af584eefd4ced629b2a285
+  Valid from Mon May 25 19:00:00 CDT 2009 until Mon May 25 19:00:00 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=GlobalSign, O=GlobalSign, OU=GlobalSign ECC Root CA - R5
+  Issuer:  CN=GlobalSign, O=GlobalSign, OU=GlobalSign ECC Root CA - R5
+  Algorithm: EC; Serial number: 0x605949e0262ebb55f90a778a71f94ad86c
+  Valid from Mon Nov 12 18:00:00 CST 2012 until Mon Jan 18 21:14:07 CST 2038
+
+trigger seeding of SecureRandom
+done seeding SecureRandom
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+PS C:\Users\ppadm\Desktop\MIMER Submission> java MyWebServer
+In BC Looper thread, waiting for 2570 connections
+Prashant's Web Server starting up, listening at port 2540
+
+keyStore is : webserver.jks
+keyStore type is : jks
+keyStore provider is :
+init keystore
+init keymanager of type SunX509
+***
+found key for : webserver
+chain [0] = [
+[
+  Version: V3
+  Subject: CN=prashant, OU=security, O=depaul, L=chicago, ST=IL, C=US
+  Signature Algorithm: SHA256withRSA, OID = 1.2.840.113549.1.1.11
+
+  Key:  Sun RSA public key, 2048 bits
+  modulus: 18740543952853481251313050933519978386568959523650854204411919979088018334957592689344967930921221730399602297300906483719416409104313201010881955186712873787064154690384730302447395253082543157632437383751292447366519299351855622451205504652306770598069874829
+2393791841526784862259468110231116170989994453685139975935534477924599188287184447316907615810500106729731934769636769616670529681275193751542318387799219542385378073470510226812345047696992542879580901928592556716862689023937841261493860236000157770092299348381589424173
+44409309390847228546645295939444099916864617274330799744867233128754127263932539989751
+  public exponent: 65537
+  Validity: [From: Wed Oct 21 10:30:04 CDT 2015,
+               To: Tue Jan 19 09:30:04 CST 2016]
+  Issuer: CN=prashant, OU=security, O=depaul, L=chicago, ST=IL, C=US
+  SerialNumber: [    17b1f953]
+
+Certificate Extensions: 1
+[1]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 4A DF 05 42 E2 24 39 4E   3A 8F 31 2D D3 DC 46 E1  J..B.$9N:.1-..F.
+0010: 7A 6B FB FC                                        zk..
+]
+]
+
+]
+  Algorithm: [SHA256withRSA]
+  Signature:
+0000: 22 30 3E A7 43 6A 33 F7   18 C9 CB C6 DF 67 E7 8C  "0>.Cj3......g..
+0010: A8 3A 10 29 D4 0B E9 AA   47 93 77 90 BE F6 0E 65  .:.)....G.w....e
+0020: 40 C7 8B FC 7A D2 B6 FB   11 A6 C1 D4 DF A5 9F AC  @...z...........
+0030: 9E 5E 75 1A C6 DE A9 FF   96 DB 9F B4 6A AA A8 76  .^u.........j..v
+0040: 71 39 6D AD 29 91 80 78   F5 1F 0F F0 38 B5 49 3A  q9m.)..x....8.I:
+0050: 96 B2 9A 13 34 AB BC E3   C9 E9 E7 05 F4 FE 0C FD  ....4...........
+0060: 06 55 16 1C 2A B9 3B C9   A5 43 01 BD 52 80 36 A4  .U..*.;..C..R.6.
+0070: 88 0A 88 98 1B 4B 98 DB   8B C1 E9 4D B6 42 60 EB  .....K.....M.B`.
+0080: 33 61 21 BA 8E AE 64 63   81 E1 27 DD 97 86 24 A2  3a!...dc..'...$.
+0090: 8F 76 2C 4E 26 15 98 21   AC 04 27 0B B0 74 73 49  .v,N&..!..'..tsI
+00A0: 52 8E 0E 84 65 8C 4E 2E   E7 53 A3 22 6E EB C9 E7  R...e.N..S."n...
+00B0: 7B FF 89 C3 96 55 96 93   DF 65 DD A3 9C 5A 27 6C  .....U...e...Z'l
+00C0: 8F 18 B3 A1 E7 EF 23 59   92 6A AF 6F 25 B1 03 EB  ......#Y.j.o%...
+00D0: 8A 98 D7 7A 94 B5 67 B9   00 7C CC F5 F7 8A 08 E0  ...z..g.........
+00E0: B1 2B 27 95 2F 53 E0 AF   5C 3B 56 2D A6 88 8A 08  .+'./S..\;V-....
+00F0: 3D 4B B9 00 21 F3 36 5E   56 AA F3 31 37 A8 81 4F  =K..!.6^V..17..O
+
+]
+***
+trustStore is: C:\Program Files\Java\jdk1.8.0_60\jre\lib\security\cacerts
+trustStore type is : jks
+trustStore provider is :
+init truststore
+adding as trusted cert:
+  Subject: CN=Equifax Secure Global eBusiness CA-1, O=Equifax Secure Inc., C=US
+  Issuer:  CN=Equifax Secure Global eBusiness CA-1, O=Equifax Secure Inc., C=US
+  Algorithm: RSA; Serial number: 0xc3517
+  Valid from Sun Jun 20 23:00:00 CDT 1999 until Sun Jun 21 23:00:00 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=SecureTrust CA, O=SecureTrust Corporation, C=US
+  Issuer:  CN=SecureTrust CA, O=SecureTrust Corporation, C=US
+  Algorithm: RSA; Serial number: 0xcf08e5c0816a5ad427ff0eb271859d0
+  Valid from Tue Nov 07 13:31:18 CST 2006 until Mon Dec 31 13:40:55 CST 2029
+
+adding as trusted cert:
+  Subject: CN=Entrust Root Certification Authority - EC1, OU="(c) 2012 Entrust, Inc. - for authorized use only", OU=See www.entrust.net/legal-terms, O="Entrust, Inc.", C=US
+  Issuer:  CN=Entrust Root Certification Authority - EC1, OU="(c) 2012 Entrust, Inc. - for authorized use only", OU=See www.entrust.net/legal-terms, O="Entrust, Inc.", C=US
+  Algorithm: EC; Serial number: 0xa68b79290000000050d091f9
+  Valid from Tue Dec 18 09:25:36 CST 2012 until Fri Dec 18 09:55:36 CST 2037
+
+adding as trusted cert:
+  Subject: CN=Starfield Root Certificate Authority - G2, O="Starfield Technologies, Inc.", L=Scottsdale, ST=Arizona, C=US
+  Issuer:  CN=Starfield Root Certificate Authority - G2, O="Starfield Technologies, Inc.", L=Scottsdale, ST=Arizona, C=US
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Mon Aug 31 19:00:00 CDT 2009 until Thu Dec 31 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: CN=VeriSign Class 2 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Class 2 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x6170cb498c5f984529e7b0a6d9505b7a
+  Valid from Thu Sep 30 19:00:00 CDT 1999 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: OU=Security Communication RootCA1, O=SECOM Trust.net, C=JP
+  Issuer:  OU=Security Communication RootCA1, O=SECOM Trust.net, C=JP
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Mon Sep 29 23:20:49 CDT 2003 until Fri Sep 29 23:20:49 CDT 2023
+
+adding as trusted cert:
+  Subject: CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Issuer:  CN=DigiCert Global Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Algorithm: RSA; Serial number: 0x83be056904246b1a1756ac95991c74a
+  Valid from Thu Nov 09 18:00:00 CST 2006 until Sun Nov 09 18:00:00 CST 2031
+
+adding as trusted cert:
+  Subject: CN=Entrust.net Certification Authority (2048), OU=(c) 1999 Entrust.net Limited, OU=www.entrust.net/CPS_2048 incorp. by ref. (limits liab.), O=Entrust.net
+  Issuer:  CN=Entrust.net Certification Authority (2048), OU=(c) 1999 Entrust.net Limited, OU=www.entrust.net/CPS_2048 incorp. by ref. (limits liab.), O=Entrust.net
+  Algorithm: RSA; Serial number: 0x3863def8
+  Valid from Fri Dec 24 11:50:51 CST 1999 until Tue Jul 24 09:15:12 CDT 2029
+
+adding as trusted cert:
+  Subject: CN=thawte Primary Root CA, OU="(c) 2006 thawte, Inc. - For authorized use only", OU=Certification Services Division, O="thawte, Inc.", C=US
+  Issuer:  CN=thawte Primary Root CA, OU="(c) 2006 thawte, Inc. - For authorized use only", OU=Certification Services Division, O="thawte, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x344ed55720d5edec49f42fce37db2b6d
+  Valid from Thu Nov 16 18:00:00 CST 2006 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=Go Daddy Root Certificate Authority - G2, O="GoDaddy.com, Inc.", L=Scottsdale, ST=Arizona, C=US
+  Issuer:  CN=Go Daddy Root Certificate Authority - G2, O="GoDaddy.com, Inc.", L=Scottsdale, ST=Arizona, C=US
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Mon Aug 31 19:00:00 CDT 2009 until Thu Dec 31 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: CN=GeoTrust Primary Certification Authority, O=GeoTrust Inc., C=US
+  Issuer:  CN=GeoTrust Primary Certification Authority, O=GeoTrust Inc., C=US
+  Algorithm: RSA; Serial number: 0x18acb56afd69b6153a636cafdafac4a1
+  Valid from Sun Nov 26 18:00:00 CST 2006 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=VeriSign Class 1 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Class 1 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x8b5b75568454850b00cfaf3848ceb1a4
+  Valid from Thu Sep 30 19:00:00 CDT 1999 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=VeriSign Class 3 Public Primary Certification Authority - G4, OU="(c) 2007 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Class 3 Public Primary Certification Authority - G4, OU="(c) 2007 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: EC; Serial number: 0x2f80fe238c0e220f486712289187acb3
+  Valid from Sun Nov 04 18:00:00 CST 2007 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=Entrust Root Certification Authority, OU="(c) 2006 Entrust, Inc.", OU=www.entrust.net/CPS is incorporated by reference, O="Entrust, Inc.", C=US
+  Issuer:  CN=Entrust Root Certification Authority, OU="(c) 2006 Entrust, Inc.", OU=www.entrust.net/CPS is incorporated by reference, O="Entrust, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x456b5054
+  Valid from Mon Nov 27 14:23:42 CST 2006 until Fri Nov 27 14:53:42 CST 2026
+
+adding as trusted cert:
+  Subject: OU=Security Communication RootCA2, O="SECOM Trust Systems CO.,LTD.", C=JP
+  Issuer:  OU=Security Communication RootCA2, O="SECOM Trust Systems CO.,LTD.", C=JP
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Fri May 29 00:00:39 CDT 2009 until Tue May 29 00:00:39 CDT 2029
+
+adding as trusted cert:
+  Subject: OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 3 Public Primary Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Issuer:  OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 3 Public Primary Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x7dd9fe07cfa81eb7107967fba78934c6
+  Valid from Sun May 17 19:00:00 CDT 1998 until Tue Aug 01 18:59:59 CDT 2028
+
+adding as trusted cert:
+  Subject: OU=ePKI Root Certification Authority, O="Chunghwa Telecom Co., Ltd.", C=TW
+  Issuer:  OU=ePKI Root Certification Authority, O="Chunghwa Telecom Co., Ltd.", C=TW
+  Algorithm: RSA; Serial number: 0x15c8bd65475cafb897005ee406d2bc9d
+  Valid from Sun Dec 19 20:31:27 CST 2004 until Tue Dec 19 20:31:27 CST 2034
+
+adding as trusted cert:
+  Subject: CN=AffirmTrust Commercial, O=AffirmTrust, C=US
+  Issuer:  CN=AffirmTrust Commercial, O=AffirmTrust, C=US
+  Algorithm: RSA; Serial number: 0x7777062726a9b17c
+  Valid from Fri Jan 29 08:06:06 CST 2010 until Tue Dec 31 08:06:06 CST 2030
+
+adding as trusted cert:
+  Subject: CN=Certum Trusted Network CA, OU=Certum Certification Authority, O=Unizeto Technologies S.A., C=PL
+  Issuer:  CN=Certum Trusted Network CA, OU=Certum Certification Authority, O=Unizeto Technologies S.A., C=PL
+  Algorithm: RSA; Serial number: 0x444c0
+  Valid from Wed Oct 22 07:07:37 CDT 2008 until Mon Dec 31 06:07:37 CST 2029
+
+adding as trusted cert:
+  Subject: CN=Certum CA, O=Unizeto Sp. z o.o., C=PL
+  Issuer:  CN=Certum CA, O=Unizeto Sp. z o.o., C=PL
+  Algorithm: RSA; Serial number: 0x10020
+  Valid from Tue Jun 11 05:46:39 CDT 2002 until Fri Jun 11 05:46:39 CDT 2027
+
+adding as trusted cert:
+  Subject: CN=XRamp Global Certification Authority, O=XRamp Security Services Inc, OU=www.xrampsecurity.com, C=US
+  Issuer:  CN=XRamp Global Certification Authority, O=XRamp Security Services Inc, OU=www.xrampsecurity.com, C=US
+  Algorithm: RSA; Serial number: 0x50946cec18ead59c4dd597ef758fa0ad
+  Valid from Mon Nov 01 11:14:04 CST 2004 until Sun Dec 31 23:37:19 CST 2034
+
+adding as trusted cert:
+  Subject: CN=AddTrust Qualified CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE
+  Issuer:  CN=AddTrust Qualified CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Tue May 30 05:44:50 CDT 2000 until Sat May 30 05:44:50 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=Buypass Class 2 Root CA, O=Buypass AS-983163327, C=NO
+  Issuer:  CN=Buypass Class 2 Root CA, O=Buypass AS-983163327, C=NO
+  Algorithm: RSA; Serial number: 0x2
+  Valid from Tue Oct 26 03:38:03 CDT 2010 until Fri Oct 26 03:38:03 CDT 2040
+
+adding as trusted cert:
+  Subject: CN=Sonera Class2 CA, O=Sonera, C=FI
+  Issuer:  CN=Sonera Class2 CA, O=Sonera, C=FI
+  Algorithm: RSA; Serial number: 0x1d
+  Valid from Fri Apr 06 02:29:40 CDT 2001 until Tue Apr 06 02:29:40 CDT 2021
+
+adding as trusted cert:
+  Subject: CN=America Online Root Certification Authority 1, O=America Online Inc., C=US
+  Issuer:  CN=America Online Root Certification Authority 1, O=America Online Inc., C=US
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Tue May 28 01:00:00 CDT 2002 until Thu Nov 19 14:43:00 CST 2037
+
+adding as trusted cert:
+  Subject: CN=GeoTrust Primary Certification Authority - G2, OU=(c) 2007 GeoTrust Inc. - For authorized use only, O=GeoTrust Inc., C=US
+  Issuer:  CN=GeoTrust Primary Certification Authority - G2, OU=(c) 2007 GeoTrust Inc. - For authorized use only, O=GeoTrust Inc., C=US
+  Algorithm: EC; Serial number: 0x3cb2f4480a00e2feeb243b5e603ec36b
+  Valid from Sun Nov 04 18:00:00 CST 2007 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=SwissSign Gold CA - G2, O=SwissSign AG, C=CH
+  Issuer:  CN=SwissSign Gold CA - G2, O=SwissSign AG, C=CH
+  Algorithm: RSA; Serial number: 0xbb401c43f55e4fb0
+  Valid from Wed Oct 25 03:30:35 CDT 2006 until Sat Oct 25 03:30:35 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=USERTrust ECC Certification Authority, O=The USERTRUST Network, L=Jersey City, ST=New Jersey, C=US
+  Issuer:  CN=USERTrust ECC Certification Authority, O=The USERTRUST Network, L=Jersey City, ST=New Jersey, C=US
+  Algorithm: EC; Serial number: 0x5c8b99c55a94c5d27156decd8980cc26
+  Valid from Sun Jan 31 18:00:00 CST 2010 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=UTN - DATACorp SGC, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Issuer:  CN=UTN - DATACorp SGC, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Algorithm: RSA; Serial number: 0x44be0c8b500021b411d32a6806a9ad69
+  Valid from Thu Jun 24 13:57:21 CDT 1999 until Mon Jun 24 14:06:30 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=QuoVadis Root CA 2, O=QuoVadis Limited, C=BM
+  Issuer:  CN=QuoVadis Root CA 2, O=QuoVadis Limited, C=BM
+  Algorithm: RSA; Serial number: 0x509
+  Valid from Fri Nov 24 12:27:00 CST 2006 until Mon Nov 24 12:23:33 CST 2031
+
+adding as trusted cert:
+  Subject: CN=Deutsche Telekom Root CA 2, OU=T-TeleSec Trust Center, O=Deutsche Telekom AG, C=DE
+  Issuer:  CN=Deutsche Telekom Root CA 2, OU=T-TeleSec Trust Center, O=Deutsche Telekom AG, C=DE
+  Algorithm: RSA; Serial number: 0x26
+  Valid from Fri Jul 09 07:11:00 CDT 1999 until Tue Jul 09 18:59:00 CDT 2019
+
+adding as trusted cert:
+  Subject: OU=Equifax Secure Certificate Authority, O=Equifax, C=US
+  Issuer:  OU=Equifax Secure Certificate Authority, O=Equifax, C=US
+  Algorithm: RSA; Serial number: 0x35def4cf
+  Valid from Sat Aug 22 11:41:51 CDT 1998 until Wed Aug 22 11:41:51 CDT 2018
+
+adding as trusted cert:
+  Subject: OU=Class 1 Public Primary Certification Authority, O="VeriSign, Inc.", C=US
+  Issuer:  OU=Class 1 Public Primary Certification Authority, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x3f691e819cf09a4af373ffb948a2e4dd
+  Valid from Sun Jan 28 18:00:00 CST 1996 until Wed Aug 02 18:59:59 CDT 2028
+
+adding as trusted cert:
+  Subject: CN=USERTrust RSA Certification Authority, O=The USERTRUST Network, L=Jersey City, ST=New Jersey, C=US
+  Issuer:  CN=USERTrust RSA Certification Authority, O=The USERTRUST Network, L=Jersey City, ST=New Jersey, C=US
+  Algorithm: RSA; Serial number: 0x1fd6d30fca3ca51a81bbc640e35032d
+  Valid from Sun Jan 31 18:00:00 CST 2010 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=COMODO ECC Certification Authority, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Issuer:  CN=COMODO ECC Certification Authority, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Algorithm: EC; Serial number: 0x1f47afaa62007050544c019e9b63992a
+  Valid from Wed Mar 05 18:00:00 CST 2008 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=DigiCert High Assurance EV Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Issuer:  CN=DigiCert High Assurance EV Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Algorithm: RSA; Serial number: 0x2ac5c266a0b409b8f0b79f2ae462577
+  Valid from Thu Nov 09 18:00:00 CST 2006 until Sun Nov 09 18:00:00 CST 2031
+
+adding as trusted cert:
+  Subject: OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 2 Public Primary Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Issuer:  OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 2 Public Primary Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0xb92f60cc889fa17a4609b85b706c8aaf
+  Valid from Sun May 17 19:00:00 CDT 1998 until Tue Aug 01 18:59:59 CDT 2028
+
+adding as trusted cert:
+  Subject: CN=VeriSign Class 3 Public Primary Certification Authority - G5, OU="(c) 2006 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Class 3 Public Primary Certification Authority - G5, OU="(c) 2006 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x18dad19e267de8bb4a2158cdcc6b3b4a
+  Valid from Tue Nov 07 18:00:00 CST 2006 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=GlobalSign, O=GlobalSign, OU=GlobalSign Root CA - R2
+  Issuer:  CN=GlobalSign, O=GlobalSign, OU=GlobalSign Root CA - R2
+  Algorithm: RSA; Serial number: 0x400000000010f8626e60d
+  Valid from Fri Dec 15 02:00:00 CST 2006 until Wed Dec 15 02:00:00 CST 2021
+
+adding as trusted cert:
+  Subject: CN=QuoVadis Root CA 3, O=QuoVadis Limited, C=BM
+  Issuer:  CN=QuoVadis Root CA 3, O=QuoVadis Limited, C=BM
+  Algorithm: RSA; Serial number: 0x5c6
+  Valid from Fri Nov 24 13:11:23 CST 2006 until Mon Nov 24 13:06:44 CST 2031
+
+adding as trusted cert:
+  Subject: CN=GeoTrust Universal CA, O=GeoTrust Inc., C=US
+  Issuer:  CN=GeoTrust Universal CA, O=GeoTrust Inc., C=US
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Wed Mar 03 23:00:00 CST 2004 until Sat Mar 03 23:00:00 CST 2029
+
+adding as trusted cert:
+  Subject: CN=GlobalSign, O=GlobalSign, OU=GlobalSign Root CA - R3
+  Issuer:  CN=GlobalSign, O=GlobalSign, OU=GlobalSign Root CA - R3
+  Algorithm: RSA; Serial number: 0x4000000000121585308a2
+  Valid from Wed Mar 18 05:00:00 CDT 2009 until Sun Mar 18 05:00:00 CDT 2029
+
+adding as trusted cert:
+  Subject: CN=Starfield Services Root Certificate Authority - G2, O="Starfield Technologies, Inc.", L=Scottsdale, ST=Arizona, C=US
+  Issuer:  CN=Starfield Services Root Certificate Authority - G2, O="Starfield Technologies, Inc.", L=Scottsdale, ST=Arizona, C=US
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Mon Aug 31 19:00:00 CDT 2009 until Thu Dec 31 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
+  Issuer:  CN=Baltimore CyberTrust Root, OU=CyberTrust, O=Baltimore, C=IE
+  Algorithm: RSA; Serial number: 0x20000b9
+  Valid from Fri May 12 13:46:00 CDT 2000 until Mon May 12 18:59:00 CDT 2025
+
+adding as trusted cert:
+  Subject: OU=Starfield Class 2 Certification Authority, O="Starfield Technologies, Inc.", C=US
+  Issuer:  OU=Starfield Class 2 Certification Authority, O="Starfield Technologies, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Tue Jun 29 12:39:16 CDT 2004 until Thu Jun 29 12:39:16 CDT 2034
+
+adding as trusted cert:
+  Subject: CN=Thawte Timestamping CA, OU=Thawte Certification, O=Thawte, L=Durbanville, ST=Western Cape, C=ZA
+  Issuer:  CN=Thawte Timestamping CA, OU=Thawte Certification, O=Thawte, L=Durbanville, ST=Western Cape, C=ZA
+  Algorithm: RSA; Serial number: 0x67c8e1e8e3be1cbdfc913b8ea6238749
+  Valid from Tue Dec 31 18:00:00 CST 1996 until Fri Jan 01 17:59:59 CST 2021
+
+adding as trusted cert:
+  Subject: CN=AAA Certificate Services, O=Comodo CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Issuer:  CN=AAA Certificate Services, O=Comodo CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Wed Dec 31 18:00:00 CST 2003 until Sun Dec 31 17:59:59 CST 2028
+
+adding as trusted cert:
+  Subject: CN=UTN-USERFirst-Hardware, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Issuer:  CN=UTN-USERFirst-Hardware, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Algorithm: RSA; Serial number: 0x44be0c8b500024b411d3362afe650afd
+  Valid from Fri Jul 09 13:10:42 CDT 1999 until Tue Jul 09 13:19:22 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=Chambers of Commerce Root, OU=http://www.chambersign.org, O=AC Camerfirma SA CIF A82743287, C=EU
+  Issuer:  CN=Chambers of Commerce Root, OU=http://www.chambersign.org, O=AC Camerfirma SA CIF A82743287, C=EU
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Tue Sep 30 11:13:43 CDT 2003 until Wed Sep 30 11:13:44 CDT 2037
+
+adding as trusted cert:
+  Subject: CN=Swisscom Root CA 2, OU=Digital Certificate Services, O=Swisscom, C=ch
+  Issuer:  CN=Swisscom Root CA 2, OU=Digital Certificate Services, O=Swisscom, C=ch
+  Algorithm: RSA; Serial number: 0x1e9e28e848f2e5efc37c4a1e5a1867b6
+  Valid from Fri Jun 24 03:38:14 CDT 2011 until Wed Jun 25 02:38:14 CDT 2031
+
+adding as trusted cert:
+  Subject: CN=VeriSign Class 3 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Class 3 Public Primary Certification Authority - G3, OU="(c) 1999 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x9b7e0649a33e62b9d5ee90487129ef57
+  Valid from Thu Sep 30 19:00:00 CDT 1999 until Wed Jul 16 18:59:59 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=GlobalSign Root CA, OU=Root CA, O=GlobalSign nv-sa, C=BE
+  Issuer:  CN=GlobalSign Root CA, OU=Root CA, O=GlobalSign nv-sa, C=BE
+  Algorithm: RSA; Serial number: 0x40000000001154b5ac394
+  Valid from Tue Sep 01 07:00:00 CDT 1998 until Fri Jan 28 06:00:00 CST 2028
+
+adding as trusted cert:
+  Subject: CN=Actalis Authentication Root CA, O=Actalis S.p.A./03358520967, L=Milan, C=IT
+  Issuer:  CN=Actalis Authentication Root CA, O=Actalis S.p.A./03358520967, L=Milan, C=IT
+  Algorithm: RSA; Serial number: 0x570a119742c4e3cc
+  Valid from Thu Sep 22 06:22:02 CDT 2011 until Sun Sep 22 06:22:02 CDT 2030
+
+adding as trusted cert:
+  Subject: CN=UTN-USERFirst-Object, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Issuer:  CN=UTN-USERFirst-Object, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Algorithm: RSA; Serial number: 0x44be0c8b500024b411d3362de0b35f1b
+  Valid from Fri Jul 09 13:31:20 CDT 1999 until Tue Jul 09 13:40:36 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=AffirmTrust Networking, O=AffirmTrust, C=US
+  Issuer:  CN=AffirmTrust Networking, O=AffirmTrust, C=US
+  Algorithm: RSA; Serial number: 0x7c4f04391cd4992d
+  Valid from Fri Jan 29 08:08:24 CST 2010 until Tue Dec 31 08:08:24 CST 2030
+
+adding as trusted cert:
+  Subject: OU=Class 3 Public Primary Certification Authority, O="VeriSign, Inc.", C=US
+  Issuer:  OU=Class 3 Public Primary Certification Authority, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x3c9131cb1ff6d01b0e9ab8d044bf12be
+  Valid from Sun Jan 28 18:00:00 CST 1996 until Wed Aug 02 18:59:59 CDT 2028
+
+adding as trusted cert:
+  Subject: CN=AffirmTrust Premium, O=AffirmTrust, C=US
+  Issuer:  CN=AffirmTrust Premium, O=AffirmTrust, C=US
+  Algorithm: RSA; Serial number: 0x6d8c1446b1a60aee
+  Valid from Fri Jan 29 08:10:36 CST 2010 until Mon Dec 31 08:10:36 CST 2040
+
+adding as trusted cert:
+  Subject: CN=Baltimore CyberTrust Code Signing Root, OU=CyberTrust, O=Baltimore, C=IE
+  Issuer:  CN=Baltimore CyberTrust Code Signing Root, OU=CyberTrust, O=Baltimore, C=IE
+  Algorithm: RSA; Serial number: 0x20000bf
+  Valid from Wed May 17 09:01:00 CDT 2000 until Sat May 17 18:59:00 CDT 2025
+
+adding as trusted cert:
+  Subject: CN=America Online Root Certification Authority 2, O=America Online Inc., C=US
+  Issuer:  CN=America Online Root Certification Authority 2, O=America Online Inc., C=US
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Tue May 28 01:00:00 CDT 2002 until Tue Sep 29 09:08:00 CDT 2037
+
+adding as trusted cert:
+  Subject: CN=LuxTrust Global Root, O=LuxTrust s.a., C=LU
+  Issuer:  CN=LuxTrust Global Root, O=LuxTrust s.a., C=LU
+  Algorithm: RSA; Serial number: 0xbb8
+  Valid from Thu Mar 17 04:51:37 CDT 2011 until Wed Mar 17 04:51:37 CDT 2021
+
+adding as trusted cert:
+  Subject: CN=QuoVadis Root Certification Authority, OU=Root Certification Authority, O=QuoVadis Limited, C=BM
+  Issuer:  CN=QuoVadis Root Certification Authority, OU=Root Certification Authority, O=QuoVadis Limited, C=BM
+  Algorithm: RSA; Serial number: 0x3ab6508b
+  Valid from Mon Mar 19 12:33:33 CST 2001 until Wed Mar 17 13:33:33 CDT 2021
+
+adding as trusted cert:
+  Subject: CN=Class 3P Primary CA, O=Certplus, C=FR
+  Issuer:  CN=Class 3P Primary CA, O=Certplus, C=FR
+  Algorithm: RSA; Serial number: 0xbf5cdbb6f21c6ec04deb7a023b36e879
+  Valid from Wed Jul 07 12:10:00 CDT 1999 until Sat Jul 06 18:59:59 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US
+  Issuer:  CN=Equifax Secure eBusiness CA-1, O=Equifax Secure Inc., C=US
+  Algorithm: RSA; Serial number: 0x59e3
+  Valid from Sun Jun 20 23:00:00 CDT 1999 until Sun Jun 21 23:00:00 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=Buypass Class 3 Root CA, O=Buypass AS-983163327, C=NO
+  Issuer:  CN=Buypass Class 3 Root CA, O=Buypass AS-983163327, C=NO
+  Algorithm: RSA; Serial number: 0x2
+  Valid from Tue Oct 26 03:28:58 CDT 2010 until Fri Oct 26 03:28:58 CDT 2040
+
+adding as trusted cert:
+  Subject: OU=Security Communication EV RootCA1, O="SECOM Trust Systems CO.,LTD.", C=JP
+  Issuer:  OU=Security Communication EV RootCA1, O="SECOM Trust Systems CO.,LTD.", C=JP
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Tue Jun 05 21:12:32 CDT 2007 until Fri Jun 05 21:12:32 CDT 2037
+
+adding as trusted cert:
+  Subject: CN=GeoTrust Primary Certification Authority - G3, OU=(c) 2008 GeoTrust Inc. - For authorized use only, O=GeoTrust Inc., C=US
+  Issuer:  CN=GeoTrust Primary Certification Authority - G3, OU=(c) 2008 GeoTrust Inc. - For authorized use only, O=GeoTrust Inc., C=US
+  Algorithm: RSA; Serial number: 0x15ac6e9419b2794b41f627a9c3180f1f
+  Valid from Tue Apr 01 19:00:00 CDT 2008 until Tue Dec 01 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: CN=thawte Primary Root CA - G2, OU="(c) 2007 thawte, Inc. - For authorized use only", O="thawte, Inc.", C=US
+  Issuer:  CN=thawte Primary Root CA - G2, OU="(c) 2007 thawte, Inc. - For authorized use only", O="thawte, Inc.", C=US
+  Algorithm: EC; Serial number: 0x35fc265cd9844fc93d263d579baed756
+  Valid from Sun Nov 04 18:00:00 CST 2007 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=Swisscom Root EV CA 2, OU=Digital Certificate Services, O=Swisscom, C=ch
+  Issuer:  CN=Swisscom Root EV CA 2, OU=Digital Certificate Services, O=Swisscom, C=ch
+  Algorithm: RSA; Serial number: 0xf2fa64e27463d38dfd101d041f76ca58
+  Valid from Fri Jun 24 04:45:08 CDT 2011 until Wed Jun 25 03:45:08 CDT 2031
+
+adding as trusted cert:
+  Subject: CN=VeriSign Universal Root Certification Authority, OU="(c) 2008 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Issuer:  CN=VeriSign Universal Root Certification Authority, OU="(c) 2008 VeriSign, Inc. - For authorized use only", OU=VeriSign Trust Network, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x401ac46421b31321030ebbe4121ac51d
+  Valid from Tue Apr 01 19:00:00 CDT 2008 until Tue Dec 01 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: CN=Chambers of Commerce Root - 2008, O=AC Camerfirma S.A., SERIALNUMBER=A82743287, L=Madrid (see current address at www.camerfirma.com/address), C=EU
+  Issuer:  CN=Chambers of Commerce Root - 2008, O=AC Camerfirma S.A., SERIALNUMBER=A82743287, L=Madrid (see current address at www.camerfirma.com/address), C=EU
+  Algorithm: RSA; Serial number: 0xa3da427ea4b1aeda
+  Valid from Fri Aug 01 07:29:50 CDT 2008 until Sat Jul 31 07:29:50 CDT 2038
+
+adding as trusted cert:
+  Subject: CN=SwissSign Silver CA - G2, O=SwissSign AG, C=CH
+  Issuer:  CN=SwissSign Silver CA - G2, O=SwissSign AG, C=CH
+  Algorithm: RSA; Serial number: 0x4f1bd42f54bb2f4b
+  Valid from Wed Oct 25 03:32:46 CDT 2006 until Sat Oct 25 03:32:46 CDT 2036
+
+adding as trusted cert:
+  Subject: CN=Entrust Root Certification Authority - G2, OU="(c) 2009 Entrust, Inc. - for authorized use only", OU=See www.entrust.net/legal-terms, O="Entrust, Inc.", C=US
+  Issuer:  CN=Entrust Root Certification Authority - G2, OU="(c) 2009 Entrust, Inc. - for authorized use only", OU=See www.entrust.net/legal-terms, O="Entrust, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x4a538c28
+  Valid from Tue Jul 07 12:25:54 CDT 2009 until Sat Dec 07 11:55:54 CST 2030
+
+adding as trusted cert:
+  Subject: CN=AddTrust Class 1 CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE
+  Issuer:  CN=AddTrust Class 1 CA Root, OU=AddTrust TTP Network, O=AddTrust AB, C=SE
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Tue May 30 05:38:31 CDT 2000 until Sat May 30 05:38:31 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Issuer:  CN=DigiCert Assured ID Root CA, OU=www.digicert.com, O=DigiCert Inc, C=US
+  Algorithm: RSA; Serial number: 0xce7e0e517d846fe8fe560fc1bf03039
+  Valid from Thu Nov 09 18:00:00 CST 2006 until Sun Nov 09 18:00:00 CST 2031
+
+adding as trusted cert:
+  Subject: OU=Go Daddy Class 2 Certification Authority, O="The Go Daddy Group, Inc.", C=US
+  Issuer:  OU=Go Daddy Class 2 Certification Authority, O="The Go Daddy Group, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x0
+  Valid from Tue Jun 29 12:06:20 CDT 2004 until Thu Jun 29 12:06:20 CDT 2034
+
+adding as trusted cert:
+  Subject: CN=GlobalSign, O=GlobalSign, OU=GlobalSign ECC Root CA - R4
+  Issuer:  CN=GlobalSign, O=GlobalSign, OU=GlobalSign ECC Root CA - R4
+  Algorithm: EC; Serial number: 0x2a38a41c960a04de42b228a50be8349802
+  Valid from Mon Nov 12 18:00:00 CST 2012 until Mon Jan 18 21:14:07 CST 2038
+
+adding as trusted cert:
+  Subject: CN=AddTrust External CA Root, OU=AddTrust External TTP Network, O=AddTrust AB, C=SE
+  Issuer:  CN=AddTrust External CA Root, OU=AddTrust External TTP Network, O=AddTrust AB, C=SE
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Tue May 30 05:48:38 CDT 2000 until Sat May 30 05:48:38 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=T-TeleSec GlobalRoot Class 3, OU=T-Systems Trust Center, O=T-Systems Enterprise Services GmbH, C=DE
+  Issuer:  CN=T-TeleSec GlobalRoot Class 3, OU=T-Systems Trust Center, O=T-Systems Enterprise Services GmbH, C=DE
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Wed Oct 01 05:29:56 CDT 2008 until Sat Oct 01 18:59:59 CDT 2033
+
+adding as trusted cert:
+  Subject: CN=Global Chambersign Root - 2008, O=AC Camerfirma S.A., SERIALNUMBER=A82743287, L=Madrid (see current address at www.camerfirma.com/address), C=EU
+  Issuer:  CN=Global Chambersign Root - 2008, O=AC Camerfirma S.A., SERIALNUMBER=A82743287, L=Madrid (see current address at www.camerfirma.com/address), C=EU
+  Algorithm: RSA; Serial number: 0xc9cdd3e9d57d23ce
+  Valid from Fri Aug 01 07:31:40 CDT 2008 until Sat Jul 31 07:31:40 CDT 2038
+
+adding as trusted cert:
+  Subject: CN=COMODO RSA Certification Authority, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Issuer:  CN=COMODO RSA Certification Authority, O=COMODO CA Limited, L=Salford, ST=Greater Manchester, C=GB
+  Algorithm: RSA; Serial number: 0x4caaf9cadb636fe01ff74ed85b03869d
+  Valid from Mon Jan 18 18:00:00 CST 2010 until Mon Jan 18 17:59:59 CST 2038
+
+adding as trusted cert:
+  Subject: CN=thawte Primary Root CA - G3, OU="(c) 2008 thawte, Inc. - For authorized use only", OU=Certification Services Division, O="thawte, Inc.", C=US
+  Issuer:  CN=thawte Primary Root CA - G3, OU="(c) 2008 thawte, Inc. - For authorized use only", OU=Certification Services Division, O="thawte, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x600197b746a7eab4b49ad64b2ff790fb
+  Valid from Tue Apr 01 19:00:00 CDT 2008 until Tue Dec 01 17:59:59 CST 2037
+
+adding as trusted cert:
+  Subject: EMAILADDRESS=premium-server@thawte.com, CN=Thawte Premium Server CA, OU=Certification Services Division, O=Thawte Consulting cc, L=Cape Town, ST=Western Cape, C=ZA
+  Issuer:  EMAILADDRESS=premium-server@thawte.com, CN=Thawte Premium Server CA, OU=Certification Services Division, O=Thawte Consulting cc, L=Cape Town, ST=Western Cape, C=ZA
+  Algorithm: RSA; Serial number: 0x36122296c5e338a520a1d25f4cd70954
+  Valid from Wed Jul 31 19:00:00 CDT 1996 until Fri Jan 01 17:59:59 CST 2021
+
+adding as trusted cert:
+  Subject: CN=GTE CyberTrust Global Root, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  Issuer:  CN=GTE CyberTrust Global Root, OU="GTE CyberTrust Solutions, Inc.", O=GTE Corporation, C=US
+  Algorithm: RSA; Serial number: 0x1a5
+  Valid from Wed Aug 12 19:29:00 CDT 1998 until Mon Aug 13 18:59:00 CDT 2018
+
+adding as trusted cert:
+  Subject: CN=UTN-USERFirst-Client Authentication and Email, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Issuer:  CN=UTN-USERFirst-Client Authentication and Email, OU=http://www.usertrust.com, O=The USERTRUST Network, L=Salt Lake City, ST=UT, C=US
+  Algorithm: RSA; Serial number: 0x44be0c8b500024b411d336252567c989
+  Valid from Fri Jul 09 12:28:50 CDT 1999 until Tue Jul 09 12:36:58 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=Class 2 Primary CA, O=Certplus, C=FR
+  Issuer:  CN=Class 2 Primary CA, O=Certplus, C=FR
+  Algorithm: RSA; Serial number: 0x85bd4bf3d8dae369f694d75fc3a54423
+  Valid from Wed Jul 07 12:05:00 CDT 1999 until Sat Jul 06 18:59:59 CDT 2019
+
+adding as trusted cert:
+  Subject: CN=AffirmTrust Premium ECC, O=AffirmTrust, C=US
+  Issuer:  CN=AffirmTrust Premium ECC, O=AffirmTrust, C=US
+  Algorithm: EC; Serial number: 0x7497258ac73f7a54
+  Valid from Fri Jan 29 08:20:24 CST 2010 until Mon Dec 31 08:20:24 CST 2040
+
+adding as trusted cert:
+  Subject: CN=T-TeleSec GlobalRoot Class 2, OU=T-Systems Trust Center, O=T-Systems Enterprise Services GmbH, C=DE
+  Issuer:  CN=T-TeleSec GlobalRoot Class 2, OU=T-Systems Trust Center, O=T-Systems Enterprise Services GmbH, C=DE
+  Algorithm: RSA; Serial number: 0x1
+  Valid from Wed Oct 01 05:40:14 CDT 2008 until Sat Oct 01 18:59:59 CDT 2033
+
+adding as trusted cert:
+  Subject: CN=GeoTrust Global CA, O=GeoTrust Inc., C=US
+  Issuer:  CN=GeoTrust Global CA, O=GeoTrust Inc., C=US
+  Algorithm: RSA; Serial number: 0x23456
+  Valid from Mon May 20 23:00:00 CDT 2002 until Fri May 20 23:00:00 CDT 2022
+
+adding as trusted cert:
+  Subject: CN=Sonera Class1 CA, O=Sonera, C=FI
+  Issuer:  CN=Sonera Class1 CA, O=Sonera, C=FI
+  Algorithm: RSA; Serial number: 0x24
+  Valid from Fri Apr 06 05:49:13 CDT 2001 until Tue Apr 06 05:49:13 CDT 2021
+
+adding as trusted cert:
+  Subject: CN=SwissSign Platinum CA - G2, O=SwissSign AG, C=CH
+  Issuer:  CN=SwissSign Platinum CA - G2, O=SwissSign AG, C=CH
+  Algorithm: RSA; Serial number: 0x4eb200670c035d4f
+  Valid from Wed Oct 25 03:36:00 CDT 2006 until Sat Oct 25 03:36:00 CDT 2036
+
+adding as trusted cert:
+  Subject: OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 1 Public Primary Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Issuer:  OU=VeriSign Trust Network, OU="(c) 1998 VeriSign, Inc. - For authorized use only", OU=Class 1 Public Primary Certification Authority - G2, O="VeriSign, Inc.", C=US
+  Algorithm: RSA; Serial number: 0x4cc7eaaa983e71d39310f83d3a899192
+  Valid from Sun May 17 19:00:00 CDT 1998 until Tue Aug 01 18:59:59 CDT 2028
+
+adding as trusted cert:
+  Subject: CN=KEYNECTIS ROOT CA, OU=ROOT, O=KEYNECTIS, C=FR
+  Issuer:  CN=KEYNECTIS ROOT CA, OU=ROOT, O=KEYNECTIS, C=FR
+  Algorithm: RSA; Serial number: 0x1121bc276c5547af584eefd4ced629b2a285
+  Valid from Mon May 25 19:00:00 CDT 2009 until Mon May 25 19:00:00 CDT 2020
+
+adding as trusted cert:
+  Subject: CN=GlobalSign, O=GlobalSign, OU=GlobalSign ECC Root CA - R5
+  Issuer:  CN=GlobalSign, O=GlobalSign, OU=GlobalSign ECC Root CA - R5
+  Algorithm: EC; Serial number: 0x605949e0262ebb55f90a778a71f94ad86c
+  Valid from Mon Nov 12 18:00:00 CST 2012 until Mon Jan 18 21:14:07 CST 2038
+
+trigger seeding of SecureRandom
+done seeding SecureRandom
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+
+
+Root Directory :C:\Users\ppadm\Desktop\MIMER Submission
+
+
+GET /mimer-data.xyz HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://condor.depaul.edu/elliott/435/hw/programs/mimer/mimer-call.html
+Connection: keep-alive
+
+
+
+
+
+
+
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:application/xyz
+Content-Length: 101100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+
+
+Allow unsafe renegotiation: false
+Allow legacy hello messages: true
+Is initial handshake: true
+Is secure renegotiation: false
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+Called BC worker.
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA
+Ignoring unsupported cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unsupported cipher suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unsupported cipher suite: TLS_RSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA
+Ignoring unsupported cipher suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unsupported cipher suite: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unsupported cipher suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+Ignoring unsupported cipher suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unsupported cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unsupported cipher suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unsupported cipher suite: TLS_RSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unsupported cipher suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unsupported cipher suite: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA
+Ignoring unsupported cipher suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unsupported cipher suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+[Raw read]: length = 5
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+0000: Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+16 Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+03 03 00 C3                                     .....
+[Raw read]: length = 195
+0000: 01 00 00 BF 03 03 56 2C   98 8D F9 01 C5 D1 38 E6  ......V,......8.
+0010: BA 09 50 3C 13 F8 17 52   E5 53 39 05 15 83 FC 6D  ..P<...R.S9....m
+0020: 20 27 AE B7 F3 44 00 00   3A C0 23 C0 27 00 3C C0   '...D..:.#.'.<.
+0030: 25 C0 29 00 67 00 40 C0   09 C0 13 00 2F C0 04 C0  %.).g.@...../...
+0040: 0E 00 33 00 32 C0 2B C0   2F 00 9C C0 2D C0 31 00  ..3.2.+./...-.1.
+0050: 9E 00 A2 C0 08 C0 12 00   0A C0 03 C0 0D 00 16 00  ................
+0060: 13 00 FF 01 00 00 5C 00   0A 00 34 00 32 00 17 00  ......\...4.2...
+0070: 01 00 03 00 13 00 15 00   06 00 07 00 09 00 0A 00  ................
+0080: 18 00 0B 00 0C 00 19 00   0D 00 0E 00 0F 00 10 00  ................
+0090: 11 00 02 00 12 00 04 00   05 00 14 00 08 00 16 00  ................
+00A0: 0B 00 02 01 00 00 0D 00   1A 00 18 06 03 06 01 05  ................
+00B0: 03 05 01 04 03 04 01 03   03 03 01 02 03 02 01 02  ................
+00C0: 02 01 01                                           ...
+Thread-2, READ: TLSv1.2 Handshake, length = 195
+*** ClientHello, TLSv1.2
+RandomCookie:  GMT: 1445697421 bytes = { 249, 1, 197, 209, 56, 230, 186, 9, 80, 60, 19, 248, 23, 82, 229, 83, 57, 5, 21, 131, 252, 109, 32, 39, 174, 183, 243, 68 }
+Session ID:  {}
+Cipher Suites: [TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CB
+C_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_W
+ITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3D
+ES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+Compression Methods:  { 0 }
+Extension elliptic_curves, curve names: {secp256r1, sect163k1, sect163r2, secp192r1, secp224r1, sect233k1, sect233r1, sect283k1, sect283r1, secp384r1, sect409k1, sect409r1, secp521r1, sect571k1, sect571r1, secp160k1, secp160r1, secp160r2, sect163r1, secp192k1, sect193r1,
+ sect193r2, secp224k1, sect239k1, secp256k1}
+Extension ec_point_formats, formats: [uncompressed]
+Extension signature_algorithms, signature_algorithms: SHA512withECDSA, SHA512withRSA, SHA384withECDSA, SHA384withRSA, SHA256withECDSA, SHA256withRSA, SHA224withECDSA, SHA224withRSA, SHA1withECDSA, SHA1withRSA, SHA1withDSA, MD5withRSA
+***
+[read] MD5 and SHA1 hashes:  len = 195
+0000: 01 00 00 BF 03 03 56 2C   98 8D F9 01 C5 D1 38 E6  ......V,......8.
+0010: BA 09 50 3C 13 F8 17 52   E5 53 39 05 15 83 FC 6D  ..P<...R.S9....m
+0020: 20 27 AE B7 F3 44 00 00   3A C0 23 C0 27 00 3C C0   '...D..:.#.'.<.
+0030: 25 C0 29 00 67 00 40 C0   09 C0 13 00 2F C0 04 C0  %.).g.@...../...
+0040: 0E 00 33 00 32 C0 2B C0   2F 00 9C C0 2D C0 31 00  ..3.2.+./...-.1.
+0050: 9E 00 A2 C0 08 C0 12 00   0A C0 03 C0 0D 00 16 00  ................
+0060: 13 00 FF 01 00 00 5C 00   0A 00 34 00 32 00 17 00  ......\...4.2...
+0070: 01 00 03 00 13 00 15 00   06 00 07 00 09 00 0A 00  ................
+0080: 18 00 0B 00 0C 00 19 00   0D 00 0E 00 0F 00 10 00  ................
+0090: 11 00 02 00 12 00 04 00   05 00 14 00 08 00 16 00  ................
+00A0: 0B 00 02 01 00 00 0D 00   1A 00 18 06 03 06 01 05  ................
+00B0: 03 05 01 04 03 04 01 03   03 03 01 02 03 02 01 02  ................
+00C0: 02 01 01                                           ...
+%% Initialized:  [Session-1, SSL_NULL_WITH_NULL_NULL]
+matching alias: webserver
+%% Negotiating:  [Session-1, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256]
+*** ServerHello, TLSv1.2
+RandomCookie:  GMT: 1445697421 bytes = { 106, 146, 187, 118, 252, 97, 194, 46, 68, 233, 161, 154, 25, 254, 190, 61, 125, 27, 70, 33, 37, 229, 240, 105, 177, 71, 213, 107 }
+Session ID:  {86, 44, 152, 141, 36, 180, 205, 96, 33, 55, 98, 217, 232, 224, 76, 57, 20, 31, 155, 227, 113, 180, 209, 144, 232, 100, 218, 159, 237, 83, 62, 252}
+Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+Compression Method: 0
+Extension renegotiation_info, renegotiated_connection: <empty>
+***
+Cipher suite:  TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+*** Certificate chain
+chain [0] = [
+[
+  Version: V3
+  Subject: CN=prashant, OU=security, O=depaul, L=chicago, ST=IL, C=US
+  Signature Algorithm: SHA256withRSA, OID = 1.2.840.113549.1.1.11
+
+  Key:  Sun RSA public key, 2048 bits
+  modulus: 18740543952853481251313050933519978386568959523650854204411919979088018334957592689344967930921221730399602297300906483719416409104313201010881955186712873787064154690384730302447395253082543157632437383751292447366519299351855622451205504652306770598069874829
+2393791841526784862259468110231116170989994453685139975935534477924599188287184447316907615810500106729731934769636769616670529681275193751542318387799219542385378073470510226812345047696992542879580901928592556716862689023937841261493860236000157770092299348381589424173
+44409309390847228546645295939444099916864617274330799744867233128754127263932539989751
+  public exponent: 65537
+  Validity: [From: Wed Oct 21 10:30:04 CDT 2015,
+               To: Tue Jan 19 09:30:04 CST 2016]
+  Issuer: CN=prashant, OU=security, O=depaul, L=chicago, ST=IL, C=US
+  SerialNumber: [    17b1f953]
+
+Certificate Extensions: 1
+[1]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 4A DF 05 42 E2 24 39 4E   3A 8F 31 2D D3 DC 46 E1  J..B.$9N:.1-..F.
+0010: 7A 6B FB FC                                        zk..
+]
+]
+
+]
+  Algorithm: [SHA256withRSA]
+  Signature:
+0000: 22 30 3E A7 43 6A 33 F7   18 C9 CB C6 DF 67 E7 8C  "0>.Cj3......g..
+0010: A8 3A 10 29 D4 0B E9 AA   47 93 77 90 BE F6 0E 65  .:.)....G.w....e
+0020: 40 C7 8B FC 7A D2 B6 FB   11 A6 C1 D4 DF A5 9F AC  @...z...........
+0030: 9E 5E 75 1A C6 DE A9 FF   96 DB 9F B4 6A AA A8 76  .^u.........j..v
+0040: 71 39 6D AD 29 91 80 78   F5 1F 0F F0 38 B5 49 3A  q9m.)..x....8.I:
+0050: 96 B2 9A 13 34 AB BC E3   C9 E9 E7 05 F4 FE 0C FD  ....4...........
+0060: 06 55 16 1C 2A B9 3B C9   A5 43 01 BD 52 80 36 A4  .U..*.;..C..R.6.
+0070: 88 0A 88 98 1B 4B 98 DB   8B C1 E9 4D B6 42 60 EB  .....K.....M.B`.
+0080: 33 61 21 BA 8E AE 64 63   81 E1 27 DD 97 86 24 A2  3a!...dc..'...$.
+0090: 8F 76 2C 4E 26 15 98 21   AC 04 27 0B B0 74 73 49  .v,N&..!..'..tsI
+00A0: 52 8E 0E 84 65 8C 4E 2E   E7 53 A3 22 6E EB C9 E7  R...e.N..S."n...
+00B0: 7B FF 89 C3 96 55 96 93   DF 65 DD A3 9C 5A 27 6C  .....U...e...Z'l
+00C0: 8F 18 B3 A1 E7 EF 23 59   92 6A AF 6F 25 B1 03 EB  ......#Y.j.o%...
+00D0: 8A 98 D7 7A 94 B5 67 B9   00 7C CC F5 F7 8A 08 E0  ...z..g.........
+00E0: B1 2B 27 95 2F 53 E0 AF   5C 3B 56 2D A6 88 8A 08  .+'./S..\;V-....
+00F0: 3D 4B B9 00 21 F3 36 5E   56 AA F3 31 37 A8 81 4F  =K..!.6^V..17..O
+
+]
+***
+*** ECDH ServerKeyExchange
+Signature Algorithm SHA512withRSA
+Server key: Sun EC public key, 256 bits
+  public x coord: 4339395359878764935579705486804201109868342859206058139383646733320402566672
+  public y coord: 33485234745697997547146295854665125595317458016543658522900992901845893694654
+  parameters: secp256r1 [NIST P-256, X9.62 prime256v1] (1.2.840.10045.3.1.7)
+*** ServerHelloDone
+[write] MD5 and SHA1 hashes:  len = 1301
+0000: 02 00 00 4D 03 03 56 2C   98 8D 6A 92 BB 76 FC 61  ...M..V,..j..v.a
+0010: C2 2E 44 E9 A1 9A 19 FE   BE 3D 7D 1B 46 21 25 E5  ..D......=..F!%.
+0020: F0 69 B1 47 D5 6B 20 56   2C 98 8D 24 B4 CD 60 21  .i.G.k V,..$..`!
+0030: 37 62 D9 E8 E0 4C 39 14   1F 9B E3 71 B4 D1 90 E8  7b...L9....q....
+0040: 64 DA 9F ED 53 3E FC C0   27 00 00 05 FF 01 00 01  d...S>..'.......
+0050: 00 0B 00 03 6F 00 03 6C   00 03 69 30 82 03 65 30  ....o..l..i0..e0
+0060: 82 02 4D A0 03 02 01 02   02 04 17 B1 F9 53 30 0D  ..M..........S0.
+0070: 06 09 2A 86 48 86 F7 0D   01 01 0B 05 00 30 63 31  ..*.H........0c1
+0080: 0B 30 09 06 03 55 04 06   13 02 55 53 31 0B 30 09  .0...U....US1.0.
+0090: 06 03 55 04 08 13 02 49   4C 31 10 30 0E 06 03 55  ..U....IL1.0...U
+00A0: 04 07 13 07 63 68 69 63   61 67 6F 31 0F 30 0D 06  ....chicago1.0..
+00B0: 03 55 04 0A 13 06 64 65   70 61 75 6C 31 11 30 0F  .U....depaul1.0.
+00C0: 06 03 55 04 0B 13 08 73   65 63 75 72 69 74 79 31  ..U....security1
+00D0: 11 30 0F 06 03 55 04 03   13 08 70 72 61 73 68 61  .0...U....prasha
+00E0: 6E 74 30 1E 17 0D 31 35   31 30 32 31 31 35 33 30  nt0...1510211530
+00F0: 30 34 5A 17 0D 31 36 30   31 31 39 31 35 33 30 30  04Z..16011915300
+0100: 34 5A 30 63 31 0B 30 09   06 03 55 04 06 13 02 55  4Z0c1.0...U....U
+0110: 53 31 0B 30 09 06 03 55   04 08 13 02 49 4C 31 10  S1.0...U....IL1.
+0120: 30 0E 06 03 55 04 07 13   07 63 68 69 63 61 67 6F  0...U....chicago
+0130: 31 0F 30 0D 06 03 55 04   0A 13 06 64 65 70 61 75  1.0...U....depau
+0140: 6C 31 11 30 0F 06 03 55   04 0B 13 08 73 65 63 75  l1.0...U....secu
+0150: 72 69 74 79 31 11 30 0F   06 03 55 04 03 13 08 70  rity1.0...U....p
+0160: 72 61 73 68 61 6E 74 30   82 01 22 30 0D 06 09 2A  rashant0.."0...*
+0170: 86 48 86 F7 0D 01 01 01   05 00 03 82 01 0F 00 30  .H.............0
+0180: 82 01 0A 02 82 01 01 00   94 74 25 F1 34 95 73 6C  .........t%.4.sl
+0190: 1C 50 06 2A E7 FD 8D 82   DF F1 79 28 A6 CE 72 24  .P.*......y(..r$
+01A0: 99 0B A4 FD 53 B8 E3 50   A8 4C F2 F8 9E 64 CD 61  ....S..P.L...d.a
+01B0: 74 43 37 4A E5 2F 46 1E   3B 35 15 F0 75 D5 8B A2  tC7J./F.;5..u...
+01C0: 88 53 26 16 E3 02 F8 0E   51 CC 0B 0C 11 F8 3B 01  .S&.....Q.....;.
+01D0: 6D A8 13 0B FF 0D F9 2C   FC 42 19 0A 11 97 8C 3C  m......,.B.....<
+01E0: 6F 87 AD 7A 36 AE E8 23   A0 1F 4F 78 58 BB 55 98  o..z6..#..OxX.U.
+01F0: F3 A0 73 4C B2 B9 45 85   EB 02 C0 47 09 76 E4 30  ..sL..E....G.v.0
+0200: D8 91 7B 05 31 B0 61 A2   AD D5 DF 36 3E 8F A1 99  ....1.a....6>...
+0210: 48 5C B9 AB 1B F2 93 2B   27 E0 C9 23 59 C2 C0 BB  H\.....+'..#Y...
+0220: 27 07 AB D9 18 F7 07 BF   97 10 B5 D3 B1 1D 29 6C  '.............)l
+0230: 82 9D 9A DB C9 A1 1C 2F   4D 5B 74 38 BE 5A 09 39  ......./M[t8.Z.9
+0240: 73 65 50 71 34 7D D8 FA   56 DA 7F 36 64 70 D1 AD  sePq4...V..6dp..
+0250: 67 58 B9 77 09 BD 73 B9   4F 5D C2 59 7F B1 33 75  gX.w..s.O].Y..3u
+0260: 87 F0 A3 AA 47 31 9A 7D   7F FA 28 8C 58 5C 06 90  ....G1....(.X\..
+0270: BE 74 66 5E 46 7C E4 E6   15 66 FC 3C BC CA 85 E1  .tf^F....f.<....
+0280: C5 5E AD 1E E9 4B EE F7   02 03 01 00 01 A3 21 30  .^...K........!0
+0290: 1F 30 1D 06 03 55 1D 0E   04 16 04 14 4A DF 05 42  .0...U......J..B
+02A0: E2 24 39 4E 3A 8F 31 2D   D3 DC 46 E1 7A 6B FB FC  .$9N:.1-..F.zk..
+02B0: 30 0D 06 09 2A 86 48 86   F7 0D 01 01 0B 05 00 03  0...*.H.........
+02C0: 82 01 01 00 22 30 3E A7   43 6A 33 F7 18 C9 CB C6  ...."0>.Cj3.....
+02D0: DF 67 E7 8C A8 3A 10 29   D4 0B E9 AA 47 93 77 90  .g...:.)....G.w.
+02E0: BE F6 0E 65 40 C7 8B FC   7A D2 B6 FB 11 A6 C1 D4  ...e@...z.......
+02F0: DF A5 9F AC 9E 5E 75 1A   C6 DE A9 FF 96 DB 9F B4  .....^u.........
+0300: 6A AA A8 76 71 39 6D AD   29 91 80 78 F5 1F 0F F0  j..vq9m.)..x....
+0310: 38 B5 49 3A 96 B2 9A 13   34 AB BC E3 C9 E9 E7 05  8.I:....4.......
+0320: F4 FE 0C FD 06 55 16 1C   2A B9 3B C9 A5 43 01 BD  .....U..*.;..C..
+0330: 52 80 36 A4 88 0A 88 98   1B 4B 98 DB 8B C1 E9 4D  R.6......K.....M
+0340: B6 42 60 EB 33 61 21 BA   8E AE 64 63 81 E1 27 DD  .B`.3a!...dc..'.
+0350: 97 86 24 A2 8F 76 2C 4E   26 15 98 21 AC 04 27 0B  ..$..v,N&..!..'.
+0360: B0 74 73 49 52 8E 0E 84   65 8C 4E 2E E7 53 A3 22  .tsIR...e.N..S."
+0370: 6E EB C9 E7 7B FF 89 C3   96 55 96 93 DF 65 DD A3  n........U...e..
+0380: 9C 5A 27 6C 8F 18 B3 A1   E7 EF 23 59 92 6A AF 6F  .Z'l......#Y.j.o
+0390: 25 B1 03 EB 8A 98 D7 7A   94 B5 67 B9 00 7C CC F5  %......z..g.....
+03A0: F7 8A 08 E0 B1 2B 27 95   2F 53 E0 AF 5C 3B 56 2D  .....+'./S..\;V-
+03B0: A6 88 8A 08 3D 4B B9 00   21 F3 36 5E 56 AA F3 31  ....=K..!.6^V..1
+03C0: 37 A8 81 4F 0C 00 01 49   03 00 17 41 04 09 98 02  7..O...I...A....
+03D0: BF 97 5D 52 23 96 B4 D0   B9 C6 FB 0B 7A 27 E8 27  ..]R#.......z'.'
+03E0: 4E 7D E5 BC 4A 03 65 93   B8 7C 7C FE 10 4A 07 F8  N...J.e......J..
+03F0: A2 C2 71 FA 19 04 5F ED   F7 19 75 F7 56 76 4F 30  ..q..._...u.VvO0
+0400: 40 EF DB CE C7 AE 3C 94   D8 35 22 C4 BE 06 01 01  @.....<..5".....
+0410: 00 66 B3 45 29 38 A9 BE   BD 52 DB 6F EA 6A E8 E6  .f.E)8...R.o.j..
+0420: 06 2D CB 6A 1C C4 FD 47   9F 8B 59 E5 29 F0 0B 71  .-.j...G..Y.)..q
+0430: 8A 6F AB 25 97 78 83 AD   9C EF 31 E6 6A 31 A6 F9  .o.%.x....1.j1..
+0440: 17 49 78 26 0E C8 13 5B   2E 39 95 94 41 F7 02 32  .Ix&...[.9..A..2
+0450: E6 86 C9 90 7B E7 D7 41   78 5D 36 85 1F 85 D9 80  .......Ax]6.....
+0460: 7E 82 13 5A 23 5D EA 2E   9D B8 1A D1 7C 5D 75 35  ...Z#].......]u5
+0470: 7D F2 80 10 3B D3 9A 2A   E2 02 9C 48 67 37 A3 6D  ....;..*...Hg7.m
+0480: CE 0F 22 FC 1A 0F 3D CE   EC B5 C8 8D 2F 84 A6 5B  .."...=...../..[
+0490: B8 BC 05 BC 5D C6 4C 62   74 8A D0 B9 B0 73 CC D1  ....].Lbt....s..
+04A0: 7F 8C B7 7C CD 82 53 B6   46 4F 21 18 5B CF 95 86  ......S.FO!.[...
+04B0: B2 84 FF B5 86 C1 81 3E   4D 91 7D D5 7A EA C4 C9  .......>M...z...
+04C0: DB 9C BC CA 2D 18 40 B1   68 66 BD 8E 59 67 2B 12  ....-.@.hf..Yg+.
+04D0: 69 26 80 FA 15 1E 64 CA   41 54 54 59 8C E7 38 A1  i&....d.ATTY..8.
+04E0: CE E2 C8 66 E4 69 6C 2F   89 2C 04 6F 5B 56 E6 EF  ...f.il/.,.o[V..
+04F0: 21 38 46 0A 22 7E 6C 08   4C B8 50 F0 81 09 2F B7  !8F.".l.L.P.../.
+0500: BD 8F 22 BB 79 47 15 D2   98 B4 94 3B C8 F7 BD 40  ..".yG.....;...@
+0510: A0 0E 00 00 00                                     .....
+Thread-2, WRITE: TLSv1.2 Handshake, length = 1301
+[Raw write]: length = 1306
+0000: 16 03 03 05 15 02 00 00   4D 03 03 56 2C 98 8D 6A  ........M..V,..j
+0010: 92 BB 76 FC 61 C2 2E 44   E9 A1 9A 19 FE BE 3D 7D  ..v.a..D......=.
+0020: 1B 46 21 25 E5 F0 69 B1   47 D5 6B 20 56 2C 98 8D  .F!%..i.G.k V,..
+0030: 24 B4 CD 60 21 37 62 D9   E8 E0 4C 39 14 1F 9B E3  $..`!7b...L9....
+0040: 71 B4 D1 90 E8 64 DA 9F   ED 53 3E FC C0 27 00 00  q....d...S>..'..
+0050: 05 FF 01 00 01 00 0B 00   03 6F 00 03 6C 00 03 69  .........o..l..i
+0060: 30 82 03 65 30 82 02 4D   A0 03 02 01 02 02 04 17  0..e0..M........
+0070: B1 F9 53 30 0D 06 09 2A   86 48 86 F7 0D 01 01 0B  ..S0...*.H......
+0080: 05 00 30 63 31 0B 30 09   06 03 55 04 06 13 02 55  ..0c1.0...U....U
+0090: 53 31 0B 30 09 06 03 55   04 08 13 02 49 4C 31 10  S1.0...U....IL1.
+00A0: 30 0E 06 03 55 04 07 13   07 63 68 69 63 61 67 6F  0...U....chicago
+00B0: 31 0F 30 0D 06 03 55 04   0A 13 06 64 65 70 61 75  1.0...U....depau
+00C0: 6C 31 11 30 0F 06 03 55   04 0B 13 08 73 65 63 75  l1.0...U....secu
+00D0: 72 69 74 79 31 11 30 0F   06 03 55 04 03 13 08 70  rity1.0...U....p
+00E0: 72 61 73 68 61 6E 74 30   1E 17 0D 31 35 31 30 32  rashant0...15102
+00F0: 31 31 35 33 30 30 34 5A   17 0D 31 36 30 31 31 39  1153004Z..160119
+0100: 31 35 33 30 30 34 5A 30   63 31 0B 30 09 06 03 55  153004Z0c1.0...U
+0110: 04 06 13 02 55 53 31 0B   30 09 06 03 55 04 08 13  ....US1.0...U...
+0120: 02 49 4C 31 10 30 0E 06   03 55 04 07 13 07 63 68  .IL1.0...U....ch
+0130: 69 63 61 67 6F 31 0F 30   0D 06 03 55 04 0A 13 06  icago1.0...U....
+0140: 64 65 70 61 75 6C 31 11   30 0F 06 03 55 04 0B 13  depaul1.0...U...
+0150: 08 73 65 63 75 72 69 74   79 31 11 30 0F 06 03 55  .security1.0...U
+0160: 04 03 13 08 70 72 61 73   68 61 6E 74 30 82 01 22  ....prashant0.."
+0170: 30 0D 06 09 2A 86 48 86   F7 0D 01 01 01 05 00 03  0...*.H.........
+0180: 82 01 0F 00 30 82 01 0A   02 82 01 01 00 94 74 25  ....0.........t%
+0190: F1 34 95 73 6C 1C 50 06   2A E7 FD 8D 82 DF F1 79  .4.sl.P.*......y
+01A0: 28 A6 CE 72 24 99 0B A4   FD 53 B8 E3 50 A8 4C F2  (..r$....S..P.L.
+01B0: F8 9E 64 CD 61 74 43 37   4A E5 2F 46 1E 3B 35 15  ..d.atC7J./F.;5.
+01C0: F0 75 D5 8B A2 88 53 26   16 E3 02 F8 0E 51 CC 0B  .u....S&.....Q..
+01D0: 0C 11 F8 3B 01 6D A8 13   0B FF 0D F9 2C FC 42 19  ...;.m......,.B.
+01E0: 0A 11 97 8C 3C 6F 87 AD   7A 36 AE E8 23 A0 1F 4F  ....<o..z6..#..O
+01F0: 78 58 BB 55 98 F3 A0 73   4C B2 B9 45 85 EB 02 C0  xX.U...sL..E....
+0200: 47 09 76 E4 30 D8 91 7B   05 31 B0 61 A2 AD D5 DF  G.v.0....1.a....
+0210: 36 3E 8F A1 99 48 5C B9   AB 1B F2 93 2B 27 E0 C9  6>...H\.....+'..
+0220: 23 59 C2 C0 BB 27 07 AB   D9 18 F7 07 BF 97 10 B5  #Y...'..........
+0230: D3 B1 1D 29 6C 82 9D 9A   DB C9 A1 1C 2F 4D 5B 74  ...)l......./M[t
+0240: 38 BE 5A 09 39 73 65 50   71 34 7D D8 FA 56 DA 7F  8.Z.9sePq4...V..
+0250: 36 64 70 D1 AD 67 58 B9   77 09 BD 73 B9 4F 5D C2  6dp..gX.w..s.O].
+0260: 59 7F B1 33 75 87 F0 A3   AA 47 31 9A 7D 7F FA 28  Y..3u....G1....(
+0270: 8C 58 5C 06 90 BE 74 66   5E 46 7C E4 E6 15 66 FC  .X\...tf^F....f.
+0280: 3C BC CA 85 E1 C5 5E AD   1E E9 4B EE F7 02 03 01  <.....^...K.....
+0290: 00 01 A3 21 30 1F 30 1D   06 03 55 1D 0E 04 16 04  ...!0.0...U.....
+02A0: 14 4A DF 05 42 E2 24 39   4E 3A 8F 31 2D D3 DC 46  .J..B.$9N:.1-..F
+02B0: E1 7A 6B FB FC 30 0D 06   09 2A 86 48 86 F7 0D 01  .zk..0...*.H....
+02C0: 01 0B 05 00 03 82 01 01   00 22 30 3E A7 43 6A 33  ........."0>.Cj3
+02D0: F7 18 C9 CB C6 DF 67 E7   8C A8 3A 10 29 D4 0B E9  ......g...:.)...
+02E0: AA 47 93 77 90 BE F6 0E   65 40 C7 8B FC 7A D2 B6  .G.w....e@...z..
+02F0: FB 11 A6 C1 D4 DF A5 9F   AC 9E 5E 75 1A C6 DE A9  ..........^u....
+0300: FF 96 DB 9F B4 6A AA A8   76 71 39 6D AD 29 91 80  .....j..vq9m.)..
+0310: 78 F5 1F 0F F0 38 B5 49   3A 96 B2 9A 13 34 AB BC  x....8.I:....4..
+0320: E3 C9 E9 E7 05 F4 FE 0C   FD 06 55 16 1C 2A B9 3B  ..........U..*.;
+0330: C9 A5 43 01 BD 52 80 36   A4 88 0A 88 98 1B 4B 98  ..C..R.6......K.
+0340: DB 8B C1 E9 4D B6 42 60   EB 33 61 21 BA 8E AE 64  ....M.B`.3a!...d
+0350: 63 81 E1 27 DD 97 86 24   A2 8F 76 2C 4E 26 15 98  c..'...$..v,N&..
+0360: 21 AC 04 27 0B B0 74 73   49 52 8E 0E 84 65 8C 4E  !..'..tsIR...e.N
+0370: 2E E7 53 A3 22 6E EB C9   E7 7B FF 89 C3 96 55 96  ..S."n........U.
+0380: 93 DF 65 DD A3 9C 5A 27   6C 8F 18 B3 A1 E7 EF 23  ..e...Z'l......#
+0390: 59 92 6A AF 6F 25 B1 03   EB 8A 98 D7 7A 94 B5 67  Y.j.o%......z..g
+03A0: B9 00 7C CC F5 F7 8A 08   E0 B1 2B 27 95 2F 53 E0  ..........+'./S.
+03B0: AF 5C 3B 56 2D A6 88 8A   08 3D 4B B9 00 21 F3 36  .\;V-....=K..!.6
+03C0: 5E 56 AA F3 31 37 A8 81   4F 0C 00 01 49 03 00 17  ^V..17..O...I...
+03D0: 41 04 09 98 02 BF 97 5D   52 23 96 B4 D0 B9 C6 FB  A......]R#......
+03E0: 0B 7A 27 E8 27 4E 7D E5   BC 4A 03 65 93 B8 7C 7C  .z'.'N...J.e....
+03F0: FE 10 4A 07 F8 A2 C2 71   FA 19 04 5F ED F7 19 75  ..J....q..._...u
+0400: F7 56 76 4F 30 40 EF DB   CE C7 AE 3C 94 D8 35 22  .VvO0@.....<..5"
+0410: C4 BE 06 01 01 00 66 B3   45 29 38 A9 BE BD 52 DB  ......f.E)8...R.
+0420: 6F EA 6A E8 E6 06 2D CB   6A 1C C4 FD 47 9F 8B 59  o.j...-.j...G..Y
+0430: E5 29 F0 0B 71 8A 6F AB   25 97 78 83 AD 9C EF 31  .)..q.o.%.x....1
+0440: E6 6A 31 A6 F9 17 49 78   26 0E C8 13 5B 2E 39 95  .j1...Ix&...[.9.
+0450: 94 41 F7 02 32 E6 86 C9   90 7B E7 D7 41 78 5D 36  .A..2.......Ax]6
+0460: 85 1F 85 D9 80 7E 82 13   5A 23 5D EA 2E 9D B8 1A  ........Z#].....
+0470: D1 7C 5D 75 35 7D F2 80   10 3B D3 9A 2A E2 02 9C  ..]u5....;..*...
+0480: 48 67 37 A3 6D CE 0F 22   FC 1A 0F 3D CE EC B5 C8  Hg7.m.."...=....
+0490: 8D 2F 84 A6 5B B8 BC 05   BC 5D C6 4C 62 74 8A D0  ./..[....].Lbt..
+04A0: B9 B0 73 CC D1 7F 8C B7   7C CD 82 53 B6 46 4F 21  ..s........S.FO!
+04B0: 18 5B CF 95 86 B2 84 FF   B5 86 C1 81 3E 4D 91 7D  .[..........>M..
+04C0: D5 7A EA C4 C9 DB 9C BC   CA 2D 18 40 B1 68 66 BD  .z.......-.@.hf.
+04D0: 8E 59 67 2B 12 69 26 80   FA 15 1E 64 CA 41 54 54  .Yg+.i&....d.ATT
+04E0: 59 8C E7 38 A1 CE E2 C8   66 E4 69 6C 2F 89 2C 04  Y..8....f.il/.,.
+04F0: 6F 5B 56 E6 EF 21 38 46   0A 22 7E 6C 08 4C B8 50  o[V..!8F.".l.L.P
+0500: F0 81 09 2F B7 BD 8F 22   BB 79 47 15 D2 98 B4 94  .../...".yG.....
+0510: 3B C8 F7 BD 40 A0 0E 00   00 00                    ;...@.....
+[Raw read]: length = 5
+0000: 16 03 03 00 46                                     ....F
+[Raw read]: length = 70
+0000: 10 00 00 42 41 04 D7 3D   23 FD 78 1E 57 E1 12 45  ...BA..=#.x.W..E
+0010: DA 37 2C 25 11 9D 0B A1   B2 F4 B6 B8 AA AA 1C 5B  .7,%...........[
+0020: A3 94 DD AC 5F 17 E3 01   93 8A 89 F3 47 E2 FF 0C  ...._.......G...
+0030: 64 90 1C 85 25 36 9C AF   4F 40 FA 5C CF B6 B5 C6  d...%6..O@.\....
+0040: 36 83 72 8C C8 0B                                  6.r...
+Thread-2, READ: TLSv1.2 Handshake, length = 70
+*** ECDHClientKeyExchange
+ECDH Public value:  { 4, 215, 61, 35, 253, 120, 30, 87, 225, 18, 69, 218, 55, 44, 37, 17, 157, 11, 161, 178, 244, 182, 184, 170, 170, 28, 91, 163, 148, 221, 172, 95, 23, 227, 1, 147, 138, 137, 243, 71, 226, 255, 12, 100, 144, 28, 133, 37, 54, 156, 175, 79, 64, 250, 92, 2
+07, 182, 181, 198, 54, 131, 114, 140, 200, 11 }
+SESSION KEYGEN:
+PreMaster Secret:
+0000: 2E D7 AC 9D 59 58 E9 1E   00 86 28 CF C5 7F 18 4C  ....YX....(....L
+0010: 38 BF A6 D2 FD D3 5C FD   A9 CF C4 4A E5 7C 98 4C  8.....\....J...L
+CONNECTION KEYGEN:
+Client Nonce:
+0000: 56 2C 98 8D F9 01 C5 D1   38 E6 BA 09 50 3C 13 F8  V,......8...P<..
+0010: 17 52 E5 53 39 05 15 83   FC 6D 20 27 AE B7 F3 44  .R.S9....m '...D
+Server Nonce:
+0000: 56 2C 98 8D 6A 92 BB 76   FC 61 C2 2E 44 E9 A1 9A  V,..j..v.a..D...
+0010: 19 FE BE 3D 7D 1B 46 21   25 E5 F0 69 B1 47 D5 6B  ...=..F!%..i.G.k
+Master Secret:
+0000: C3 08 B1 34 FB F0 33 09   F7 53 BC 41 A2 5F 0B CB  ...4..3..S.A._..
+0010: BF 19 21 E6 D2 FA DD 68   8E C3 3F 41 CF 20 4A BF  ..!....h..?A. J.
+0020: 9D 7C FF 1C 2E 55 BB 9D   77 74 EB E8 C0 13 FB AD  .....U..wt......
+Client MAC write Secret:
+0000: 4A F7 1A AB 89 FF E2 8D   9F 6A 81 93 67 2F 1E 48  J........j..g/.H
+0010: 46 4D 87 D2 46 7E AA BD   9A 56 1E DB 0D BF DD 3D  FM..F....V.....=
+Server MAC write Secret:
+0000: 3C 42 65 58 9D 21 B7 95   93 5D 1D 76 49 CE A3 8D  <BeX.!...].vI...
+0010: 9B C2 37 55 BD 59 11 FF   F7 D3 4B C3 D6 E0 89 C7  ..7U.Y....K.....
+Client write key:
+0000: 9E AE 46 A2 9B DC D0 E0   6F E0 5E 7F 76 85 E9 3B  ..F.....o.^.v..;
+Server write key:
+0000: 2F EC D2 AD AC 90 16 4D   E4 CB 34 5B 12 7B 9F 10  /......M..4[....
+... no IV derived for this protocol
+[read] MD5 and SHA1 hashes:  len = 70
+0000: 10 00 00 42 41 04 D7 3D   23 FD 78 1E 57 E1 12 45  ...BA..=#.x.W..E
+0010: DA 37 2C 25 11 9D 0B A1   B2 F4 B6 B8 AA AA 1C 5B  .7,%...........[
+0020: A3 94 DD AC 5F 17 E3 01   93 8A 89 F3 47 E2 FF 0C  ...._.......G...
+0030: 64 90 1C 85 25 36 9C AF   4F 40 FA 5C CF B6 B5 C6  d...%6..O@.\....
+0040: 36 83 72 8C C8 0B                                  6.r...
+[Raw read]: length = 5
+0000: 14 03 03 00 01                                     .....
+[Raw read]: length = 1
+0000: 01                                                 .
+Thread-2, READ: TLSv1.2 Change Cipher Spec, length = 1
+[Raw read]: length = 5
+0000: 16 03 03 00 50                                     ....P
+[Raw read]: length = 80
+0000: DA EF 2D 94 16 ED 37 7B   37 D1 E7 BB A0 1D 1D BF  ..-...7.7.......
+0010: ED 5C 3F D6 77 90 D8 AD   35 E1 04 BE 46 8D 7D DD  .\?.w...5...F...
+0020: E4 5D 1A A7 57 59 09 47   AB 62 D2 C1 6A E7 99 6A  .]..WY.G.b..j..j
+0030: 21 35 DB D7 C5 E1 EE EA   25 A6 96 8E 34 13 E5 2E  !5......%...4...
+0040: 6B A4 31 07 D9 1D 0D 5F   4C 3F 96 B6 B7 72 90 BC  k.1...._L?...r..
+Thread-2, READ: TLSv1.2 Handshake, length = 80
+Padded plaintext after DECRYPTION:  len = 80
+0000: 33 0E 71 AE EC BE 92 43   B3 6E 8B B9 AF 8C CC 50  3.q....C.n.....P
+0010: 14 00 00 0C 01 F7 61 06   82 BA 60 C1 BA 8B E4 39  ......a...`....9
+0020: F8 33 DA BD 38 78 FC F7   37 53 D6 A4 6C 75 3A 74  .3..8x..7S..lu:t
+0030: 29 DF 57 8C 0A FA 11 CC   61 9B 31 A2 C4 96 F3 53  ).W.....a.1....S
+0040: 0F 0F 0F 0F 0F 0F 0F 0F   0F 0F 0F 0F 0F 0F 0F 0F  ................
+*** Finished
+verify_data:  { 1, 247, 97, 6, 130, 186, 96, 193, 186, 139, 228, 57 }
+***
+[read] MD5 and SHA1 hashes:  len = 16
+0000: 14 00 00 0C 01 F7 61 06   82 BA 60 C1 BA 8B E4 39  ......a...`....9
+Thread-2, WRITE: TLSv1.2 Change Cipher Spec, length = 1
+[Raw write]: length = 6
+0000: 14 03 03 00 01 01                                  ......
+*** Finished
+verify_data:  { 90, 196, 229, 81, 77, 107, 110, 65, 38, 149, 41, 53 }
+***
+[write] MD5 and SHA1 hashes:  len = 16
+0000: 14 00 00 0C 5A C4 E5 51   4D 6B 6E 41 26 95 29 35  ....Z..QMknA&.)5
+Padded plaintext before ENCRYPTION:  len = 80
+0000: A8 BD 7F E2 96 20 81 5D   89 34 87 61 1A 4A A9 45  ..... .].4.a.J.E
+0010: 14 00 00 0C 5A C4 E5 51   4D 6B 6E 41 26 95 29 35  ....Z..QMknA&.)5
+0020: 09 B5 A5 62 7C 81 B7 63   F0 26 B6 AD B0 93 10 B7  ...b...c.&......
+0030: B0 8A 40 79 CF 0C 36 15   30 26 07 16 83 97 28 90  ..@y..6.0&....(.
+0040: 0F 0F 0F 0F 0F 0F 0F 0F   0F 0F 0F 0F 0F 0F 0F 0F  ................
+Thread-2, WRITE: TLSv1.2 Handshake, length = 80
+[Raw write]: length = 85
+0000: 16 03 03 00 50 83 42 40   90 C9 ED CE 10 AF 83 98  ....P.B@........
+0010: ED 7D 09 E4 08 35 F1 86   C6 C1 FF 7D 83 99 F3 F1  .....5..........
+0020: C1 12 A9 F0 2E 31 BD A0   FD 24 C4 69 1F 71 D5 A9  .....1...$.i.q..
+0030: CE 84 9E 1A 89 2A AC 94   E7 D4 7B 36 EE C8 09 8E  .....*.....6....
+0040: A5 15 29 6F B1 25 1D 71   ED 07 95 BF 0C 5E 08 9E  ..)o.%.q.....^..
+0050: D5 21 22 34 69                                     .!"4i
+%% Cached server session: [Session-1, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256]
+[Raw read]: length = 5
+0000: 17 03 03 01 A0                                     .....
+[Raw read]: length = 416
+0000: 26 0B 32 4D FE F8 D9 5D   E7 B9 C3 B1 2E FE 35 6F  &.2M...]......5o
+0010: 22 C2 03 F8 6C D6 5A 5E   62 70 16 42 32 3C 90 03  "...l.Z^bp.B2<..
+0020: DF EA 7F C8 F8 9D 30 13   AC 68 4F 87 43 96 29 3B  ......0..hO.C.);
+0030: EB 77 BC 13 92 87 F1 F6   74 D4 D8 41 B5 08 A2 B9  .w......t..A....
+0040: BD EE 19 0D 2C D5 BB 1A   46 0D 4C 27 9F 94 09 D4  ....,...F.L'....
+0050: 41 15 6B 72 C0 DC D9 DC   7C 4A EF 28 E4 B6 3C BB  A.kr.....J.(..<.
+0060: BD 3C 70 26 5C 55 CB 71   E5 0F 80 87 DF 44 D9 DB  .<p&\U.q.....D..
+0070: 56 7C 6F 94 8C DA EF 9D   10 73 73 76 23 5B 53 67  V.o......ssv#[Sg
+0080: 6B A6 2A 1C 5A E9 BE 80   F4 C6 23 7A 83 FD 74 00  k.*.Z.....#z..t.
+0090: 9D EA C7 5D FA 43 F7 25   3C D1 93 F7 A5 AD 97 DF  ...].C.%<.......
+00A0: F8 7E 44 3C F1 FD C3 33   A8 16 ED F3 EC 24 3F 4C  ..D<...3.....$?L
+00B0: 5F D9 6A AB 26 2A AD F9   13 22 D1 10 BB AA B7 DF  _.j.&*..."......
+00C0: 35 69 42 74 BC C6 FB AF   84 3A F3 E8 42 39 3C 15  5iBt.....:..B9<.
+00D0: 27 9F 1F A3 50 3B C9 DC   35 6E 4C 23 85 DF 7B FA  '...P;..5nL#....
+00E0: 19 1F E0 4D 4F 99 80 1E   DE 0F 7C B1 04 D7 97 69  ...MO..........i
+00F0: F9 E3 FD 30 23 D4 ED D5   60 5F BA 90 AF 6F F5 73  ...0#...`_...o.s
+0100: DF 47 1E B6 85 9C 90 23   D1 F2 6D 9E 02 AC 40 C9  .G.....#..m...@.
+0110: 73 AD 03 D1 0D 18 DF 13   1F 89 7C CE 36 50 6E C4  s...........6Pn.
+0120: 28 CF 75 B8 E0 2B 83 06   CE 26 53 4A E0 8B C7 1D  (.u..+...&SJ....
+0130: D5 2C 09 68 61 6C EC 83   03 F0 9D 1E F0 53 DB 05  .,.hal.......S..
+0140: BD 36 21 D7 96 47 94 0B   C8 AE 15 3A 48 39 29 7C  .6!..G.....:H9).
+0150: 03 39 4E 72 58 21 A2 D3   73 B6 52 CB 83 4D FD CC  .9NrX!..s.R..M..
+0160: 87 49 6F 37 3D 96 30 16   22 9B FC 49 D1 E7 7A 77  .Io7=.0."..I..zw
+0170: 84 84 5E F5 52 08 F6 29   A6 1A D6 8A B4 FF AE 95  ..^.R..)........
+0180: BE 2F 72 6D 9A 6F E1 9B   F0 FB BB 05 20 93 D2 BD  ./rm.o...... ...
+0190: CF A1 05 C5 87 2C 9E C2   36 9B 61 45 DE 3B F8 D9  .....,..6.aE.;..
+Thread-2, READ: TLSv1.2 Application Data, length = 416
+Padded plaintext after DECRYPTION:  len = 416
+0000: 65 76 F4 40 AB 49 13 F1   5B 67 61 A3 08 8E E3 CD  ev.@.I..[ga.....
+0010: 3C 6D 79 44 61 74 61 41   72 72 61 79 3E 0A 20 20  <myDataArray>.
+0020: 3C 6E 75 6D 5F 5F 6C 69   6E 65 73 3E 37 3C 2F 6E  <num__lines>7</n
+0030: 75 6D 5F 5F 6C 69 6E 65   73 3E 0A 20 20 3C 6C 69  um__lines>.  <li
+0040: 6E 65 73 3E 0A 20 20 20   20 3C 73 74 72 69 6E 67  nes>.    <string
+0050: 3E 20 3C 2F 73 74 72 69   6E 67 3E 0A 20 20 20 20  > </string>.
+0060: 3C 73 74 72 69 6E 67 3E   3C 2F 73 74 72 69 6E 67  <string></string
+0070: 3E 0A 20 20 20 20 3C 73   74 72 69 6E 67 3E 4F 6E  >.    <string>On
+0080: 65 20 70 61 72 74 72 69   64 67 65 20 69 6E 20 61  e partridge in a
+0090: 20 70 65 61 72 20 74 72   65 65 3C 2F 73 74 72 69   pear tree</stri
+00A0: 6E 67 3E 0A 20 20 20 20   3C 73 74 72 69 6E 67 3E  ng>.    <string>
+00B0: 54 77 6F 20 74 75 72 74   6C 65 20 64 6F 76 65 73  Two turtle doves
+00C0: 3C 2F 73 74 72 69 6E 67   3E 0A 20 20 20 20 3C 73  </string>.    <s
+00D0: 74 72 69 6E 67 3E 54 68   72 65 65 20 46 72 65 6E  tring>Three Fren
+00E0: 63 68 20 68 65 6E 73 3C   2F 73 74 72 69 6E 67 3E  ch hens</string>
+00F0: 0A 20 20 20 20 3C 73 74   72 69 6E 67 3E 46 6F 75  .    <string>Fou
+0100: 72 20 63 61 6C 6C 69 6E   67 20 62 69 72 64 73 3C  r calling birds<
+0110: 2F 73 74 72 69 6E 67 3E   0A 20 20 20 20 3C 73 74  /string>.    <st
+0120: 72 69 6E 67 3E 46 69 76   65 20 67 6F 6C 64 65 6E  ring>Five golden
+0130: 20 72 69 6E 67 73 3C 2F   73 74 72 69 6E 67 3E 0A   rings</string>.
+0140: 20 20 20 20 3C 6E 75 6C   6C 2F 3E 0A 20 20 20 20      <null/>.
+0150: 3C 6E 75 6C 6C 2F 3E 0A   20 20 20 20 3C 6E 75 6C  <null/>.    <nul
+0160: 6C 2F 3E 0A 20 20 3C 2F   6C 69 6E 65 73 3E 0A 3C  l/>.  </lines>.<
+0170: 2F 6D 79 44 61 74 61 41   72 72 61 79 3E 82 29 38  /myDataArray>.)8
+0180: 7D 2D B2 2C D1 F6 A6 DF   5A 9D D7 E3 64 D5 E9 6F  .-.,....Z...d..o
+0190: E4 F6 BC 48 83 42 0F B9   30 4C 57 44 B3 02 02 02  ...H.B..0LWD....
+[Raw read]: length = 5
+0000: 17 03 03 00 40                                     ....@
+[Raw read]: length = 64
+0000: C6 2C DA 9F 48 73 2E 61   03 20 17 E3 1C C2 74 5F  .,..Hs.a. ....t_
+0010: E2 CE CE CB E0 53 AE B2   9E 94 6B 69 8E 30 6A A8  .....S....ki.0j.
+0020: 70 7A 6E 3E E5 34 EA 1D   F8 2A 09 59 BB DD 54 61  pzn>.4...*.Y..Ta
+0030: 4B 4B 68 F1 51 A3 02 8C   20 3A 61 D6 B2 94 8B 83  KKh.Q... :a.....
+Thread-2, READ: TLSv1.2 Application Data, length = 64
+Padded plaintext after DECRYPTION:  len = 64
+0000: 6B 95 45 68 CC 7D 65 0E   1C A7 99 D5 72 53 9E 3B  k.Eh..e.....rS.;
+0010: 0D 0A 65 6E 64 5F 6F 66   5F 78 6D 6C 8B 92 9B 14  ..end_of_xml....
+0020: 49 92 48 04 6B 4F ED B5   22 4C 0C 4B 67 F0 D2 A2  I.H.kO.."L.Kg...
+0030: 07 53 54 A7 EC 91 76 99   98 E1 09 42 03 03 03 03  .ST...v....B....
+[Raw read]: length = 5
+0000: 17 03 03 00 40                                     ....@
+[Raw read]: length = 64
+0000: 45 9A AC 52 23 6B 2A 9C   A9 1C 88 44 8F EB 1A FD  E..R#k*....D....
+0010: 28 D9 0C FB C2 AA C2 0C   73 91 98 DE 70 9C 40 2A  (.......s...p.@*
+0020: E6 DE 56 B5 D2 0C C3 8C   57 72 97 F0 B2 0F 7C 11  ..V.....Wr......
+0030: 09 D0 4D A2 92 5E E9 11   53 AA 8E E8 DF 3F 73 A4  ..M..^..S....?s.
+Thread-2, READ: TLSv1.2 Application Data, length = 64
+Padded plaintext after DECRYPTION:  len = 64
+0000: 87 0F ED 0A 46 E5 F8 09   FD 81 EF 6B 57 66 FE B3  ....F......kWf..
+0010: 0D 0A 8A FA 7E 3C B8 83   A7 32 D9 43 4B CB 51 97  .....<...2.CK.Q.
+0020: D1 63 73 87 BA 7D A9 68   24 84 73 A8 81 22 FA 77  .cs....h$.s..".w
+0030: CB 7B 0D 0D 0D 0D 0D 0D   0D 0D 0D 0D 0D 0D 0D 0D  ................
+The XML marshaled data:
+<myDataArray>
+  <num__lines>7</num__lines>
+  <lines>
+    <string> </string>
+    <string></string>
+    <string>One partridge in a pear tree</string>
+    <string>Two turtle doves</string>
+    <string>Three French hens</string>
+    <string>Four calling birds</string>
+    <string>Five golden rings</string>
+    <null/>
+    <null/>
+    <null/>
+  </lines>
+</myDataArray>
+
+Padded plaintext before ENCRYPTION:  len = 96
+0000: 5C DF E1 55 91 01 3B 92   6C 8C E1 25 23 A0 A4 E1  \..U..;.l..%#...
+0010: 41 63 6B 6E 6F 77 6C 65   64 67 69 6E 67 20 42 61  Acknowledging Ba
+0020: 63 6B 20 43 68 61 6E 6E   65 6C 20 44 61 74 61 20  ck Channel Data
+0030: 52 65 63 65 69 70 74 BD   33 F4 02 19 7D 3B 25 33  Receipt.3....;%3
+0040: CD 14 EB C1 35 B1 5C 9D   DE 47 77 09 52 22 0F F5  ....5.\..Gw.R"..
+0050: 1A 89 0D B9 A1 D6 F9 08   08 08 08 08 08 08 08 08  ................
+Thread-2, WRITE: TLSv1.2 Application Data, length = 96
+[Raw write]: length = 101
+0000: 17 03 03 00 60 74 9F F6   3B 8D 47 6C 13 39 33 41  ....`t..;.Gl.93A
+0010: AE 5F 79 CC CB ED A1 42   7D 6E BF 9B AB 43 29 2B  ._y....B.n...C)+
+0020: 8C 86 28 BB 7F FB 0A 11   F2 C3 99 B6 D4 B3 5D DC  ..(...........].
+0030: E2 9E 96 20 B6 4B BF A2   F0 10 91 12 2C 94 ED CE  ... .K......,...
+0040: 8E 8F 6C F0 20 A7 DE 4D   BD 6B 0D F5 6A 5C 1D 8A  ..l. ..M.k..j\..
+0050: 86 1A BE 71 C8 09 CF 08   8B A2 EF B6 B8 86 EE 86  ...q............
+0060: 5B C8 1E 78 2E                                     [..x.
+Padded plaintext before ENCRYPTION:  len = 64
+0000: 0E 2A 28 1C 46 D9 6B AE   89 4F 45 6E 90 6C DA 44  .*(.F.k..OEn.l.D
+0010: 0D 0A A8 83 19 4A 74 1F   39 93 E7 C1 A2 C7 C3 E9  .....Jt.9.......
+0020: 6A 44 C4 F1 D9 D3 49 49   C8 55 07 A3 EF E2 8A E8  jD....II.U......
+0030: 4E 61 0D 0D 0D 0D 0D 0D   0D 0D 0D 0D 0D 0D 0D 0D  Na..............
+Thread-2, WRITE: TLSv1.2 Application Data, length = 64
+[Raw write]: length = 69
+0000: 17 03 03 00 40 98 5C 75   F7 9E 6C 5B C1 DA 1C 82  ....@.\u..l[....
+0010: 32 CC E4 B3 3B 95 3D 47   BF 25 95 90 97 14 BB 22  2...;.=G.%....."
+0020: 36 C9 BE 9D D4 C6 FA 26   AF 57 81 0D 08 CC 70 D8  6......&.W....p.
+0030: 01 32 0F 5F 36 03 B0 C6   2B 5A D3 1E 31 D3 76 CC  .2._6...+Z..1.v.
+0040: 8E 9E 87 07 41                                     ....A
+Thread-2, called close()
+Thread-2, called closeInternal(true)
+Thread-2, SEND TLSv1.2 ALERT:  warning, description = close_notify
+Padded plaintext before ENCRYPTION:  len = 64
+0000: 24 82 AF B7 E7 D5 F2 16   66 76 D0 78 28 0A 6C F1  $.......fv.x(.l.
+0010: 01 00 65 38 47 28 2E 54   BE FB CE 38 7C E5 2C 30  ..e8G(.T...8..,0
+0020: 3D 31 A4 02 03 FC F5 B5   A4 2B DD 96 71 0A F6 2A  =1.......+..q..*
+0030: F6 0D 0D 0D 0D 0D 0D 0D   0D 0D 0D 0D 0D 0D 0D 0D  ................
+Thread-2, WRITE: TLSv1.2 Alert, length = 64
+[Raw write]: length = 69
+0000: 15 03 03 00 40 E8 C2 AB   A9 AE 65 90 75 B1 21 BD  ....@.....e.u.!.
+0010: 20 68 86 CD B0 E0 5D C4   20 F8 C4 C1 C1 AA 9F 11   h....]. .......
+0020: 0B 46 47 08 26 1A B8 6E   2F F6 FD DE E2 8C 75 84  .FG.&..n/.....u.
+0030: AA 4B 8F 9C CC E6 43 30   0B 06 F1 D9 E3 14 95 71  .K....C0.......q
+0040: 4D 65 D9 D7 07                                     Me...
+Thread-2, called closeSocket(true)
+Here is the restored data:
+
+
+One partridge in a pear tree
+Two turtle doves
+Three French hens
+Four calling birds
+Five golden rings
+
+
+Root Directory :C:\Users\ppadm\Desktop\MIMER Submission
+
+
+GET / HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+
+
+File name in httpResponseFile :/
+
+
+
+
+Current file :/
+
+
+Current working directory :C:\Users\ppadm\Desktop\MIMER Submission/
+
+
+<h3>Directory Tree of Prashant's WebServer Files C:\Users\ppadm\Desktop\MIMER Submission</h3>
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:text/html
+Content-Length: 1878
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'
+
+<h3>Directory Tree of Prashant's WebServer Files C:\Users\ppadm\Desktop\MIMER Submission</h3>
+<a href=" bchandler.cert" > bchandler.cert </a> <--File--> <br>
+<a href=" BCHandler.class" > BCHandler.class </a> <--File--> <br>
+<a href=" BCHandler.java" > BCHandler.java </a> <--File--> <br>
+<a href=" bchandler.jks" > bchandler.jks </a> <--File--> <br>
+<a href=" BCLooper.class" > BCLooper.class </a> <--File--> <br>
+<a href=" BCWorker.class" > BCWorker.class </a> <--File--> <br>
+<a href=" jcx.bat" > jcx.bat </a> <--File--> <br>
+<a href=" Mimer Checklist.html" > Mimer Checklist.html </a> <--File--> <br>
+<a href=" mimer-data.xyz" > mimer-data.xyz </a> <--File--> <br>
+<a href=" mimer-discussion.html .htm" > mimer-discussion.html .htm </a> <--File--> <br>
+<a href=" mimer.output" > mimer.output </a> <--File--> <br>
+<a href=" mimer_call.html" > mimer_call.html </a> <--File--> <br>
+<a href=" myDataArray.class" > myDataArray.class </a> <--File--> <br>
+<a href=" MyWebServer.class" > MyWebServer.class </a> <--File--> <br>
+<a href=" MyWebServer.java" > MyWebServer.java </a> <--File--> <br>
+<a href=" MyWebServer.zip" > MyWebServer.zip </a> <--File--> <br>
+<a href=" New folder/">\ New folder</a> <--Directory--> <br>
+<a href=" rx.bat" > rx.bat </a> <--File--> <br>
+<a href=" shim.bat" > shim.bat </a> <--File--> <br>
+<a href=" SSLsocket configuration cheatsheet.txt" > SSLsocket configuration cheatsheet.txt </a> <--File--> <br>
+<a href=" webserver.cert" > webserver.cert </a> <--File--> <br>
+<a href=" webserver.jks" > webserver.jks </a> <--File--> <br>
+<a href=" WebServerWorker.class" > WebServerWorker.class </a> <--File--> <br>
+<a href=" Worker.class" > Worker.class </a> <--File--> <br>
+<a href=" xpp3_min-1.1.3.4.O.jar" > xpp3_min-1.1.3.4.O.jar </a> <--File--> <br>
+<a href=" xstream-1.2.1.jar" > xstream-1.2.1.jar </a> <--File--> <br>
+<a href=/><b>Go To Home</b></a><br>
+
+
+
+Root Directory :C:\Users\ppadm\Desktop\MIMER Submission
+
+
+GET /favicon.ico HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+
+
+
+
+Root Directory :C:\Users\ppadm\Desktop\MIMER Submission
+
+
+GET /mimer-data.xyz HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+
+
+
+
+
+
+
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:application/xyz
+Content-Length: 101100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+
+
+Allow unsafe renegotiation: false
+Allow legacy hello messages: true
+Is initial handshake: true
+Is secure renegotiation: false
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_GCM_SHA384
+Called BC worker.
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA
+Ignoring unsupported cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unsupported cipher suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unsupported cipher suite: TLS_RSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA
+Ignoring unsupported cipher suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unsupported cipher suite: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unsupported cipher suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA
+Ignoring unsupported cipher suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA256 for TLSv1
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384
+Ignoring unsupported cipher suite: TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unsupported cipher suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unsupported cipher suite: TLS_RSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unsupported cipher suite: TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384
+Ignoring unsupported cipher suite: TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_CBC_SHA
+Ignoring unsupported cipher suite: TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384
+Ignoring unsupported cipher suite: TLS_DHE_DSS_WITH_AES_128_CBC_SHA256 for TLSv1.1
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384
+Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA256
+Ignoring unavailable cipher suite: TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA
+[Raw read]: length = 5
+Ignoring unavailable cipher suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+0000: 16Ignoring unavailable cipher suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+ 03Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA
+ 03Ignoring unavailable cipher suite: TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+ 00 C3                                     .....
+[Raw read]: length = 195
+0000: 01 00 00 BF 03 03 56 2C   98 AA 0A BA 01 6C 31 0C  ......V,.....l1.
+0010: C2 11 76 E7 55 05 20 00   CA E4 31 D3 65 FB D8 1E  ..v.U. ...1.e...
+0020: 1E 77 C4 8F 38 E8 00 00   3A C0 23 C0 27 00 3C C0  .w..8...:.#.'.<.
+0030: 25 C0 29 00 67 00 40 C0   09 C0 13 00 2F C0 04 C0  %.).g.@...../...
+0040: 0E 00 33 00 32 C0 2B C0   2F 00 9C C0 2D C0 31 00  ..3.2.+./...-.1.
+0050: 9E 00 A2 C0 08 C0 12 00   0A C0 03 C0 0D 00 16 00  ................
+0060: 13 00 FF 01 00 00 5C 00   0A 00 34 00 32 00 17 00  ......\...4.2...
+0070: 01 00 03 00 13 00 15 00   06 00 07 00 09 00 0A 00  ................
+0080: 18 00 0B 00 0C 00 19 00   0D 00 0E 00 0F 00 10 00  ................
+0090: 11 00 02 00 12 00 04 00   05 00 14 00 08 00 16 00  ................
+00A0: 0B 00 02 01 00 00 0D 00   1A 00 18 06 03 06 01 05  ................
+00B0: 03 05 01 04 03 04 01 03   03 03 01 02 03 02 01 02  ................
+00C0: 02 01 01                                           ...
+Thread-6, READ: TLSv1.2 Handshake, length = 195
+*** ClientHello, TLSv1.2
+RandomCookie:  GMT: 1445697450 bytes = { 10, 186, 1, 108, 49, 12, 194, 17, 118, 231, 85, 5, 32, 0, 202, 228, 49, 211, 101, 251, 216, 30, 30, 119, 196, 143, 56, 232 }
+Session ID:  {}
+Cipher Suites: [TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CB
+C_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_W
+ITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_3D
+ES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_ECDSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDH_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_RSA_WITH_3DES_EDE_CBC_SHA, SSL_DHE_DSS_WITH_3DES_EDE_CBC_SHA, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+Compression Methods:  { 0 }
+Extension elliptic_curves, curve names: {secp256r1, sect163k1, sect163r2, secp192r1, secp224r1, sect233k1, sect233r1, sect283k1, sect283r1, secp384r1, sect409k1, sect409r1, secp521r1, sect571k1, sect571r1, secp160k1, secp160r1, secp160r2, sect163r1, secp192k1, sect193r1,
+ sect193r2, secp224k1, sect239k1, secp256k1}
+Extension ec_point_formats, formats: [uncompressed]
+Extension signature_algorithms, signature_algorithms: SHA512withECDSA, SHA512withRSA, SHA384withECDSA, SHA384withRSA, SHA256withECDSA, SHA256withRSA, SHA224withECDSA, SHA224withRSA, SHA1withECDSA, SHA1withRSA, SHA1withDSA, MD5withRSA
+***
+[read] MD5 and SHA1 hashes:  len = 195
+0000: 01 00 00 BF 03 03 56 2C   98 AA 0A BA 01 6C 31 0C  ......V,.....l1.
+0010: C2 11 76 E7 55 05 20 00   CA E4 31 D3 65 FB D8 1E  ..v.U. ...1.e...
+0020: 1E 77 C4 8F 38 E8 00 00   3A C0 23 C0 27 00 3C C0  .w..8...:.#.'.<.
+0030: 25 C0 29 00 67 00 40 C0   09 C0 13 00 2F C0 04 C0  %.).g.@...../...
+0040: 0E 00 33 00 32 C0 2B C0   2F 00 9C C0 2D C0 31 00  ..3.2.+./...-.1.
+0050: 9E 00 A2 C0 08 C0 12 00   0A C0 03 C0 0D 00 16 00  ................
+0060: 13 00 FF 01 00 00 5C 00   0A 00 34 00 32 00 17 00  ......\...4.2...
+0070: 01 00 03 00 13 00 15 00   06 00 07 00 09 00 0A 00  ................
+0080: 18 00 0B 00 0C 00 19 00   0D 00 0E 00 0F 00 10 00  ................
+0090: 11 00 02 00 12 00 04 00   05 00 14 00 08 00 16 00  ................
+00A0: 0B 00 02 01 00 00 0D 00   1A 00 18 06 03 06 01 05  ................
+00B0: 03 05 01 04 03 04 01 03   03 03 01 02 03 02 01 02  ................
+00C0: 02 01 01                                           ...
+%% Initialized:  [Session-2, SSL_NULL_WITH_NULL_NULL]
+%% Negotiating:  [Session-2, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256]
+*** ServerHello, TLSv1.2
+RandomCookie:  GMT: 1445697450 bytes = { 207, 189, 79, 8, 229, 147, 245, 159, 108, 247, 94, 17, 147, 44, 201, 65, 57, 207, 245, 116, 198, 80, 83, 39, 115, 152, 55, 2 }
+Session ID:  {86, 44, 152, 170, 113, 15, 14, 139, 113, 75, 232, 116, 46, 122, 59, 195, 237, 71, 159, 94, 152, 207, 64, 156, 99, 146, 172, 130, 40, 140, 122, 69}
+Cipher Suite: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+Compression Method: 0
+Extension renegotiation_info, renegotiated_connection: <empty>
+***
+Cipher suite:  TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+*** Certificate chain
+chain [0] = [
+[
+  Version: V3
+  Subject: CN=prashant, OU=security, O=depaul, L=chicago, ST=IL, C=US
+  Signature Algorithm: SHA256withRSA, OID = 1.2.840.113549.1.1.11
+
+  Key:  Sun RSA public key, 2048 bits
+  modulus: 18740543952853481251313050933519978386568959523650854204411919979088018334957592689344967930921221730399602297300906483719416409104313201010881955186712873787064154690384730302447395253082543157632437383751292447366519299351855622451205504652306770598069874829
+2393791841526784862259468110231116170989994453685139975935534477924599188287184447316907615810500106729731934769636769616670529681275193751542318387799219542385378073470510226812345047696992542879580901928592556716862689023937841261493860236000157770092299348381589424173
+44409309390847228546645295939444099916864617274330799744867233128754127263932539989751
+  public exponent: 65537
+  Validity: [From: Wed Oct 21 10:30:04 CDT 2015,
+               To: Tue Jan 19 09:30:04 CST 2016]
+  Issuer: CN=prashant, OU=security, O=depaul, L=chicago, ST=IL, C=US
+  SerialNumber: [    17b1f953]
+
+Certificate Extensions: 1
+[1]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 4A DF 05 42 E2 24 39 4E   3A 8F 31 2D D3 DC 46 E1  J..B.$9N:.1-..F.
+0010: 7A 6B FB FC                                        zk..
+]
+]
+
+]
+  Algorithm: [SHA256withRSA]
+  Signature:
+0000: 22 30 3E A7 43 6A 33 F7   18 C9 CB C6 DF 67 E7 8C  "0>.Cj3......g..
+0010: A8 3A 10 29 D4 0B E9 AA   47 93 77 90 BE F6 0E 65  .:.)....G.w....e
+0020: 40 C7 8B FC 7A D2 B6 FB   11 A6 C1 D4 DF A5 9F AC  @...z...........
+0030: 9E 5E 75 1A C6 DE A9 FF   96 DB 9F B4 6A AA A8 76  .^u.........j..v
+0040: 71 39 6D AD 29 91 80 78   F5 1F 0F F0 38 B5 49 3A  q9m.)..x....8.I:
+0050: 96 B2 9A 13 34 AB BC E3   C9 E9 E7 05 F4 FE 0C FD  ....4...........
+0060: 06 55 16 1C 2A B9 3B C9   A5 43 01 BD 52 80 36 A4  .U..*.;..C..R.6.
+0070: 88 0A 88 98 1B 4B 98 DB   8B C1 E9 4D B6 42 60 EB  .....K.....M.B`.
+0080: 33 61 21 BA 8E AE 64 63   81 E1 27 DD 97 86 24 A2  3a!...dc..'...$.
+0090: 8F 76 2C 4E 26 15 98 21   AC 04 27 0B B0 74 73 49  .v,N&..!..'..tsI
+00A0: 52 8E 0E 84 65 8C 4E 2E   E7 53 A3 22 6E EB C9 E7  R...e.N..S."n...
+00B0: 7B FF 89 C3 96 55 96 93   DF 65 DD A3 9C 5A 27 6C  .....U...e...Z'l
+00C0: 8F 18 B3 A1 E7 EF 23 59   92 6A AF 6F 25 B1 03 EB  ......#Y.j.o%...
+00D0: 8A 98 D7 7A 94 B5 67 B9   00 7C CC F5 F7 8A 08 E0  ...z..g.........
+00E0: B1 2B 27 95 2F 53 E0 AF   5C 3B 56 2D A6 88 8A 08  .+'./S..\;V-....
+00F0: 3D 4B B9 00 21 F3 36 5E   56 AA F3 31 37 A8 81 4F  =K..!.6^V..17..O
+
+]
+***
+*** ECDH ServerKeyExchange
+Signature Algorithm SHA512withRSA
+Server key: Sun EC public key, 256 bits
+  public x coord: 40278042961447939676781484348253737344480077111352239506630082197184234301058
+  public y coord: 44326527732449666022636176790165634888073670862556075888633444435512042186720
+  parameters: secp256r1 [NIST P-256, X9.62 prime256v1] (1.2.840.10045.3.1.7)
+*** ServerHelloDone
+[write] MD5 and SHA1 hashes:  len = 1301
+0000: 02 00 00 4D 03 03 56 2C   98 AA CF BD 4F 08 E5 93  ...M..V,....O...
+0010: F5 9F 6C F7 5E 11 93 2C   C9 41 39 CF F5 74 C6 50  ..l.^..,.A9..t.P
+0020: 53 27 73 98 37 02 20 56   2C 98 AA 71 0F 0E 8B 71  S's.7. V,..q...q
+0030: 4B E8 74 2E 7A 3B C3 ED   47 9F 5E 98 CF 40 9C 63  K.t.z;..G.^..@.c
+0040: 92 AC 82 28 8C 7A 45 C0   27 00 00 05 FF 01 00 01  ...(.zE.'.......
+0050: 00 0B 00 03 6F 00 03 6C   00 03 69 30 82 03 65 30  ....o..l..i0..e0
+0060: 82 02 4D A0 03 02 01 02   02 04 17 B1 F9 53 30 0D  ..M..........S0.
+0070: 06 09 2A 86 48 86 F7 0D   01 01 0B 05 00 30 63 31  ..*.H........0c1
+0080: 0B 30 09 06 03 55 04 06   13 02 55 53 31 0B 30 09  .0...U....US1.0.
+0090: 06 03 55 04 08 13 02 49   4C 31 10 30 0E 06 03 55  ..U....IL1.0...U
+00A0: 04 07 13 07 63 68 69 63   61 67 6F 31 0F 30 0D 06  ....chicago1.0..
+00B0: 03 55 04 0A 13 06 64 65   70 61 75 6C 31 11 30 0F  .U....depaul1.0.
+00C0: 06 03 55 04 0B 13 08 73   65 63 75 72 69 74 79 31  ..U....security1
+00D0: 11 30 0F 06 03 55 04 03   13 08 70 72 61 73 68 61  .0...U....prasha
+00E0: 6E 74 30 1E 17 0D 31 35   31 30 32 31 31 35 33 30  nt0...1510211530
+00F0: 30 34 5A 17 0D 31 36 30   31 31 39 31 35 33 30 30  04Z..16011915300
+0100: 34 5A 30 63 31 0B 30 09   06 03 55 04 06 13 02 55  4Z0c1.0...U....U
+0110: 53 31 0B 30 09 06 03 55   04 08 13 02 49 4C 31 10  S1.0...U....IL1.
+0120: 30 0E 06 03 55 04 07 13   07 63 68 69 63 61 67 6F  0...U....chicago
+0130: 31 0F 30 0D 06 03 55 04   0A 13 06 64 65 70 61 75  1.0...U....depau
+0140: 6C 31 11 30 0F 06 03 55   04 0B 13 08 73 65 63 75  l1.0...U....secu
+0150: 72 69 74 79 31 11 30 0F   06 03 55 04 03 13 08 70  rity1.0...U....p
+0160: 72 61 73 68 61 6E 74 30   82 01 22 30 0D 06 09 2A  rashant0.."0...*
+0170: 86 48 86 F7 0D 01 01 01   05 00 03 82 01 0F 00 30  .H.............0
+0180: 82 01 0A 02 82 01 01 00   94 74 25 F1 34 95 73 6C  .........t%.4.sl
+0190: 1C 50 06 2A E7 FD 8D 82   DF F1 79 28 A6 CE 72 24  .P.*......y(..r$
+01A0: 99 0B A4 FD 53 B8 E3 50   A8 4C F2 F8 9E 64 CD 61  ....S..P.L...d.a
+01B0: 74 43 37 4A E5 2F 46 1E   3B 35 15 F0 75 D5 8B A2  tC7J./F.;5..u...
+01C0: 88 53 26 16 E3 02 F8 0E   51 CC 0B 0C 11 F8 3B 01  .S&.....Q.....;.
+01D0: 6D A8 13 0B FF 0D F9 2C   FC 42 19 0A 11 97 8C 3C  m......,.B.....<
+01E0: 6F 87 AD 7A 36 AE E8 23   A0 1F 4F 78 58 BB 55 98  o..z6..#..OxX.U.
+01F0: F3 A0 73 4C B2 B9 45 85   EB 02 C0 47 09 76 E4 30  ..sL..E....G.v.0
+0200: D8 91 7B 05 31 B0 61 A2   AD D5 DF 36 3E 8F A1 99  ....1.a....6>...
+0210: 48 5C B9 AB 1B F2 93 2B   27 E0 C9 23 59 C2 C0 BB  H\.....+'..#Y...
+0220: 27 07 AB D9 18 F7 07 BF   97 10 B5 D3 B1 1D 29 6C  '.............)l
+0230: 82 9D 9A DB C9 A1 1C 2F   4D 5B 74 38 BE 5A 09 39  ......./M[t8.Z.9
+0240: 73 65 50 71 34 7D D8 FA   56 DA 7F 36 64 70 D1 AD  sePq4...V..6dp..
+0250: 67 58 B9 77 09 BD 73 B9   4F 5D C2 59 7F B1 33 75  gX.w..s.O].Y..3u
+0260: 87 F0 A3 AA 47 31 9A 7D   7F FA 28 8C 58 5C 06 90  ....G1....(.X\..
+0270: BE 74 66 5E 46 7C E4 E6   15 66 FC 3C BC CA 85 E1  .tf^F....f.<....
+0280: C5 5E AD 1E E9 4B EE F7   02 03 01 00 01 A3 21 30  .^...K........!0
+0290: 1F 30 1D 06 03 55 1D 0E   04 16 04 14 4A DF 05 42  .0...U......J..B
+02A0: E2 24 39 4E 3A 8F 31 2D   D3 DC 46 E1 7A 6B FB FC  .$9N:.1-..F.zk..
+02B0: 30 0D 06 09 2A 86 48 86   F7 0D 01 01 0B 05 00 03  0...*.H.........
+02C0: 82 01 01 00 22 30 3E A7   43 6A 33 F7 18 C9 CB C6  ...."0>.Cj3.....
+02D0: DF 67 E7 8C A8 3A 10 29   D4 0B E9 AA 47 93 77 90  .g...:.)....G.w.
+02E0: BE F6 0E 65 40 C7 8B FC   7A D2 B6 FB 11 A6 C1 D4  ...e@...z.......
+02F0: DF A5 9F AC 9E 5E 75 1A   C6 DE A9 FF 96 DB 9F B4  .....^u.........
+0300: 6A AA A8 76 71 39 6D AD   29 91 80 78 F5 1F 0F F0  j..vq9m.)..x....
+0310: 38 B5 49 3A 96 B2 9A 13   34 AB BC E3 C9 E9 E7 05  8.I:....4.......
+0320: F4 FE 0C FD 06 55 16 1C   2A B9 3B C9 A5 43 01 BD  .....U..*.;..C..
+0330: 52 80 36 A4 88 0A 88 98   1B 4B 98 DB 8B C1 E9 4D  R.6......K.....M
+0340: B6 42 60 EB 33 61 21 BA   8E AE 64 63 81 E1 27 DD  .B`.3a!...dc..'.
+0350: 97 86 24 A2 8F 76 2C 4E   26 15 98 21 AC 04 27 0B  ..$..v,N&..!..'.
+0360: B0 74 73 49 52 8E 0E 84   65 8C 4E 2E E7 53 A3 22  .tsIR...e.N..S."
+0370: 6E EB C9 E7 7B FF 89 C3   96 55 96 93 DF 65 DD A3  n........U...e..
+0380: 9C 5A 27 6C 8F 18 B3 A1   E7 EF 23 59 92 6A AF 6F  .Z'l......#Y.j.o
+0390: 25 B1 03 EB 8A 98 D7 7A   94 B5 67 B9 00 7C CC F5  %......z..g.....
+03A0: F7 8A 08 E0 B1 2B 27 95   2F 53 E0 AF 5C 3B 56 2D  .....+'./S..\;V-
+03B0: A6 88 8A 08 3D 4B B9 00   21 F3 36 5E 56 AA F3 31  ....=K..!.6^V..1
+03C0: 37 A8 81 4F 0C 00 01 49   03 00 17 41 04 59 0C 90  7..O...I...A.Y..
+03D0: 7E E7 0D 73 55 1E E8 B9   80 BC 91 D1 2C E1 3E 56  ...sU.......,.>V
+03E0: E9 16 7E 58 7A 0E 18 4B   4B 57 2A A6 82 61 FF EC  ...Xz..KKW*..a..
+03F0: F5 09 C6 BA 34 A0 41 98   39 60 6D D3 B2 C7 40 60  ....4.A.9`m...@`
+0400: 82 AF 85 F7 F5 84 AD 98   B9 01 1B E7 E0 06 01 01  ................
+0410: 00 2F C8 15 B4 A5 26 12   BD 8A 70 07 82 D9 BE 69  ./....&...p....i
+0420: B4 BA EF 58 4C 0F 30 45   88 E0 04 B5 B2 CC CA EA  ...XL.0E........
+0430: 4C F1 C9 F0 96 2C 19 28   1C 0C C8 06 53 2E 59 AD  L....,.(....S.Y.
+0440: 8A 66 A4 E1 9B 3F FC E0   22 25 FD EA 35 94 43 6A  .f...?.."%..5.Cj
+0450: DC 1A 59 80 B9 07 AE 9C   0F 0F B0 F4 9B 9B 8B 69  ..Y............i
+0460: 07 C2 A1 9D 6E 36 09 6C   8E B6 49 BB 5D 6A F9 57  ....n6.l..I.]j.W
+0470: 58 88 FB 88 17 EF A7 19   4B BE 26 CF 8D 76 A0 A3  X.......K.&..v..
+0480: 55 C9 61 7C AB 36 38 E9   BD 7C F4 70 60 32 30 73  U.a..68....p`20s
+0490: F6 F8 2B CD 90 95 21 50   FD 50 A4 09 E7 9F D3 4C  ..+...!P.P.....L
+04A0: 20 8B B7 A5 7B CA F6 65   2E FF 08 A0 CF 20 53 E2   ......e..... S.
+04B0: 4B 7B EF 2F F7 08 B2 1A   F2 1D 9E 81 E3 8E 29 3C  K../..........)<
+04C0: 23 D8 A8 CA 9F BF 12 0B   EC FD 35 87 73 DE AF CC  #.........5.s...
+04D0: 5A 5A F8 A3 F3 11 CE 93   AF 23 D3 88 32 71 9E 1C  ZZ.......#..2q..
+04E0: 4C DC 25 DC D4 BC 5C 1F   AF 16 8D B1 D5 C0 75 87  L.%...\.......u.
+04F0: 6C D5 0D CD DE CA 61 4E   A4 20 D7 08 B5 2A BE 59  l.....aN. ...*.Y
+0500: 08 E9 5C 73 A1 75 68 57   05 3F 24 EA 1A AC 68 5A  ..\s.uhW.?$...hZ
+0510: 18 0E 00 00 00                                     .....
+Thread-6, WRITE: TLSv1.2 Handshake, length = 1301
+[Raw write]: length = 1306
+0000: 16 03 03 05 15 02 00 00   4D 03 03 56 2C 98 AA CF  ........M..V,...
+0010: BD 4F 08 E5 93 F5 9F 6C   F7 5E 11 93 2C C9 41 39  .O.....l.^..,.A9
+0020: CF F5 74 C6 50 53 27 73   98 37 02 20 56 2C 98 AA  ..t.PS's.7. V,..
+0030: 71 0F 0E 8B 71 4B E8 74   2E 7A 3B C3 ED 47 9F 5E  q...qK.t.z;..G.^
+0040: 98 CF 40 9C 63 92 AC 82   28 8C 7A 45 C0 27 00 00  ..@.c...(.zE.'..
+0050: 05 FF 01 00 01 00 0B 00   03 6F 00 03 6C 00 03 69  .........o..l..i
+0060: 30 82 03 65 30 82 02 4D   A0 03 02 01 02 02 04 17  0..e0..M........
+0070: B1 F9 53 30 0D 06 09 2A   86 48 86 F7 0D 01 01 0B  ..S0...*.H......
+0080: 05 00 30 63 31 0B 30 09   06 03 55 04 06 13 02 55  ..0c1.0...U....U
+0090: 53 31 0B 30 09 06 03 55   04 08 13 02 49 4C 31 10  S1.0...U....IL1.
+00A0: 30 0E 06 03 55 04 07 13   07 63 68 69 63 61 67 6F  0...U....chicago
+00B0: 31 0F 30 0D 06 03 55 04   0A 13 06 64 65 70 61 75  1.0...U....depau
+00C0: 6C 31 11 30 0F 06 03 55   04 0B 13 08 73 65 63 75  l1.0...U....secu
+00D0: 72 69 74 79 31 11 30 0F   06 03 55 04 03 13 08 70  rity1.0...U....p
+00E0: 72 61 73 68 61 6E 74 30   1E 17 0D 31 35 31 30 32  rashant0...15102
+00F0: 31 31 35 33 30 30 34 5A   17 0D 31 36 30 31 31 39  1153004Z..160119
+0100: 31 35 33 30 30 34 5A 30   63 31 0B 30 09 06 03 55  153004Z0c1.0...U
+0110: 04 06 13 02 55 53 31 0B   30 09 06 03 55 04 08 13  ....US1.0...U...
+0120: 02 49 4C 31 10 30 0E 06   03 55 04 07 13 07 63 68  .IL1.0...U....ch
+0130: 69 63 61 67 6F 31 0F 30   0D 06 03 55 04 0A 13 06  icago1.0...U....
+0140: 64 65 70 61 75 6C 31 11   30 0F 06 03 55 04 0B 13  depaul1.0...U...
+0150: 08 73 65 63 75 72 69 74   79 31 11 30 0F 06 03 55  .security1.0...U
+0160: 04 03 13 08 70 72 61 73   68 61 6E 74 30 82 01 22  ....prashant0.."
+0170: 30 0D 06 09 2A 86 48 86   F7 0D 01 01 01 05 00 03  0...*.H.........
+0180: 82 01 0F 00 30 82 01 0A   02 82 01 01 00 94 74 25  ....0.........t%
+0190: F1 34 95 73 6C 1C 50 06   2A E7 FD 8D 82 DF F1 79  .4.sl.P.*......y
+01A0: 28 A6 CE 72 24 99 0B A4   FD 53 B8 E3 50 A8 4C F2  (..r$....S..P.L.
+01B0: F8 9E 64 CD 61 74 43 37   4A E5 2F 46 1E 3B 35 15  ..d.atC7J./F.;5.
+01C0: F0 75 D5 8B A2 88 53 26   16 E3 02 F8 0E 51 CC 0B  .u....S&.....Q..
+01D0: 0C 11 F8 3B 01 6D A8 13   0B FF 0D F9 2C FC 42 19  ...;.m......,.B.
+01E0: 0A 11 97 8C 3C 6F 87 AD   7A 36 AE E8 23 A0 1F 4F  ....<o..z6..#..O
+01F0: 78 58 BB 55 98 F3 A0 73   4C B2 B9 45 85 EB 02 C0  xX.U...sL..E....
+0200: 47 09 76 E4 30 D8 91 7B   05 31 B0 61 A2 AD D5 DF  G.v.0....1.a....
+0210: 36 3E 8F A1 99 48 5C B9   AB 1B F2 93 2B 27 E0 C9  6>...H\.....+'..
+0220: 23 59 C2 C0 BB 27 07 AB   D9 18 F7 07 BF 97 10 B5  #Y...'..........
+0230: D3 B1 1D 29 6C 82 9D 9A   DB C9 A1 1C 2F 4D 5B 74  ...)l......./M[t
+0240: 38 BE 5A 09 39 73 65 50   71 34 7D D8 FA 56 DA 7F  8.Z.9sePq4...V..
+0250: 36 64 70 D1 AD 67 58 B9   77 09 BD 73 B9 4F 5D C2  6dp..gX.w..s.O].
+0260: 59 7F B1 33 75 87 F0 A3   AA 47 31 9A 7D 7F FA 28  Y..3u....G1....(
+0270: 8C 58 5C 06 90 BE 74 66   5E 46 7C E4 E6 15 66 FC  .X\...tf^F....f.
+0280: 3C BC CA 85 E1 C5 5E AD   1E E9 4B EE F7 02 03 01  <.....^...K.....
+0290: 00 01 A3 21 30 1F 30 1D   06 03 55 1D 0E 04 16 04  ...!0.0...U.....
+02A0: 14 4A DF 05 42 E2 24 39   4E 3A 8F 31 2D D3 DC 46  .J..B.$9N:.1-..F
+02B0: E1 7A 6B FB FC 30 0D 06   09 2A 86 48 86 F7 0D 01  .zk..0...*.H....
+02C0: 01 0B 05 00 03 82 01 01   00 22 30 3E A7 43 6A 33  ........."0>.Cj3
+02D0: F7 18 C9 CB C6 DF 67 E7   8C A8 3A 10 29 D4 0B E9  ......g...:.)...
+02E0: AA 47 93 77 90 BE F6 0E   65 40 C7 8B FC 7A D2 B6  .G.w....e@...z..
+02F0: FB 11 A6 C1 D4 DF A5 9F   AC 9E 5E 75 1A C6 DE A9  ..........^u....
+0300: FF 96 DB 9F B4 6A AA A8   76 71 39 6D AD 29 91 80  .....j..vq9m.)..
+0310: 78 F5 1F 0F F0 38 B5 49   3A 96 B2 9A 13 34 AB BC  x....8.I:....4..
+0320: E3 C9 E9 E7 05 F4 FE 0C   FD 06 55 16 1C 2A B9 3B  ..........U..*.;
+0330: C9 A5 43 01 BD 52 80 36   A4 88 0A 88 98 1B 4B 98  ..C..R.6......K.
+0340: DB 8B C1 E9 4D B6 42 60   EB 33 61 21 BA 8E AE 64  ....M.B`.3a!...d
+0350: 63 81 E1 27 DD 97 86 24   A2 8F 76 2C 4E 26 15 98  c..'...$..v,N&..
+0360: 21 AC 04 27 0B B0 74 73   49 52 8E 0E 84 65 8C 4E  !..'..tsIR...e.N
+0370: 2E E7 53 A3 22 6E EB C9   E7 7B FF 89 C3 96 55 96  ..S."n........U.
+0380: 93 DF 65 DD A3 9C 5A 27   6C 8F 18 B3 A1 E7 EF 23  ..e...Z'l......#
+0390: 59 92 6A AF 6F 25 B1 03   EB 8A 98 D7 7A 94 B5 67  Y.j.o%......z..g
+03A0: B9 00 7C CC F5 F7 8A 08   E0 B1 2B 27 95 2F 53 E0  ..........+'./S.
+03B0: AF 5C 3B 56 2D A6 88 8A   08 3D 4B B9 00 21 F3 36  .\;V-....=K..!.6
+03C0: 5E 56 AA F3 31 37 A8 81   4F 0C 00 01 49 03 00 17  ^V..17..O...I...
+03D0: 41 04 59 0C 90 7E E7 0D   73 55 1E E8 B9 80 BC 91  A.Y.....sU......
+03E0: D1 2C E1 3E 56 E9 16 7E   58 7A 0E 18 4B 4B 57 2A  .,.>V...Xz..KKW*
+03F0: A6 82 61 FF EC F5 09 C6   BA 34 A0 41 98 39 60 6D  ..a......4.A.9`m
+0400: D3 B2 C7 40 60 82 AF 85   F7 F5 84 AD 98 B9 01 1B  ...@`...........
+0410: E7 E0 06 01 01 00 2F C8   15 B4 A5 26 12 BD 8A 70  ....../....&...p
+0420: 07 82 D9 BE 69 B4 BA EF   58 4C 0F 30 45 88 E0 04  ....i...XL.0E...
+0430: B5 B2 CC CA EA 4C F1 C9   F0 96 2C 19 28 1C 0C C8  .....L....,.(...
+0440: 06 53 2E 59 AD 8A 66 A4   E1 9B 3F FC E0 22 25 FD  .S.Y..f...?.."%.
+0450: EA 35 94 43 6A DC 1A 59   80 B9 07 AE 9C 0F 0F B0  .5.Cj..Y........
+0460: F4 9B 9B 8B 69 07 C2 A1   9D 6E 36 09 6C 8E B6 49  ....i....n6.l..I
+0470: BB 5D 6A F9 57 58 88 FB   88 17 EF A7 19 4B BE 26  .]j.WX.......K.&
+0480: CF 8D 76 A0 A3 55 C9 61   7C AB 36 38 E9 BD 7C F4  ..v..U.a..68....
+0490: 70 60 32 30 73 F6 F8 2B   CD 90 95 21 50 FD 50 A4  p`20s..+...!P.P.
+04A0: 09 E7 9F D3 4C 20 8B B7   A5 7B CA F6 65 2E FF 08  ....L ......e...
+04B0: A0 CF 20 53 E2 4B 7B EF   2F F7 08 B2 1A F2 1D 9E  .. S.K../.......
+04C0: 81 E3 8E 29 3C 23 D8 A8   CA 9F BF 12 0B EC FD 35  ...)<#.........5
+04D0: 87 73 DE AF CC 5A 5A F8   A3 F3 11 CE 93 AF 23 D3  .s...ZZ.......#.
+04E0: 88 32 71 9E 1C 4C DC 25   DC D4 BC 5C 1F AF 16 8D  .2q..L.%...\....
+04F0: B1 D5 C0 75 87 6C D5 0D   CD DE CA 61 4E A4 20 D7  ...u.l.....aN. .
+0500: 08 B5 2A BE 59 08 E9 5C   73 A1 75 68 57 05 3F 24  ..*.Y..\s.uhW.?$
+0510: EA 1A AC 68 5A 18 0E 00   00 00                    ...hZ.....
+[Raw read]: length = 5
+0000: 16 03 03 00 46                                     ....F
+[Raw read]: length = 70
+0000: 10 00 00 42 41 04 6D 36   59 08 8D AF 54 DA B2 51  ...BA.m6Y...T..Q
+0010: 39 1D 70 A2 19 65 C6 9F   C1 4A AE 18 4A DA 6B 1B  9.p..e...J..J.k.
+0020: 7D DB 48 F6 27 DD 10 E2   D5 A8 A1 F4 D7 73 7C 2E  ..H.'........s..
+0030: 52 18 F6 79 47 05 98 8D   AC 3A 28 6E 9A A2 90 96  R..yG....:(n....
+0040: 6B 18 70 C0 C3 A8                                  k.p...
+Thread-6, READ: TLSv1.2 Handshake, length = 70
+*** ECDHClientKeyExchange
+ECDH Public value:  { 4, 109, 54, 89, 8, 141, 175, 84, 218, 178, 81, 57, 29, 112, 162, 25, 101, 198, 159, 193, 74, 174, 24, 74, 218, 107, 27, 125, 219, 72, 246, 39, 221, 16, 226, 213, 168, 161, 244, 215, 115, 124, 46, 82, 24, 246, 121, 71, 5, 152, 141, 172, 58, 40, 110,
+154, 162, 144, 150, 107, 24, 112, 192, 195, 168 }
+SESSION KEYGEN:
+PreMaster Secret:
+0000: 47 25 55 79 3B AB DC 4A   62 30 4F A3 FB B7 D6 41  G%Uy;..Jb0O....A
+0010: F4 51 4C 4D FE 63 99 24   98 51 3F 5A 03 DA 0B F7  .QLM.c.$.Q?Z....
+CONNECTION KEYGEN:
+Client Nonce:
+0000: 56 2C 98 AA 0A BA 01 6C   31 0C C2 11 76 E7 55 05  V,.....l1...v.U.
+0010: 20 00 CA E4 31 D3 65 FB   D8 1E 1E 77 C4 8F 38 E8   ...1.e....w..8.
+Server Nonce:
+0000: 56 2C 98 AA CF BD 4F 08   E5 93 F5 9F 6C F7 5E 11  V,....O.....l.^.
+0010: 93 2C C9 41 39 CF F5 74   C6 50 53 27 73 98 37 02  .,.A9..t.PS's.7.
+Master Secret:
+0000: 9B 62 DA 87 04 9A 12 24   17 24 55 EC 43 20 FF 19  .b.....$.$U.C ..
+0010: 67 E5 F6 20 F5 3C 99 ED   B4 D2 06 16 EB D4 AF 7D  g.. .<..........
+0020: 73 C3 A5 86 06 82 06 74   9C 04 15 9B 08 61 0B 10  s......t.....a..
+Client MAC write Secret:
+0000: B2 5E A4 3B DD 57 21 DE   A1 B7 E7 97 2C FF 44 89  .^.;.W!.....,.D.
+0010: 30 EE BF C3 28 6E F1 02   5F 2A 15 FB 77 2A E0 2A  0...(n.._*..w*.*
+Server MAC write Secret:
+0000: 6C 7E 9C AE E7 8D 2F 56   BF 42 A2 16 06 B8 98 AF  l...../V.B......
+0010: C4 ED 49 EB F7 CF A6 2E   C1 22 96 43 7F FA BD 72  ..I......".C...r
+Client write key:
+0000: 50 DD F5 F2 C1 EF 0E DC   A2 C0 B6 AE 97 2D 96 ED  P............-..
+Server write key:
+0000: 4A 35 3B C3 F5 61 3C 7F   18 32 12 C3 B8 85 F6 CC  J5;..a<..2......
+... no IV derived for this protocol
+[read] MD5 and SHA1 hashes:  len = 70
+0000: 10 00 00 42 41 04 6D 36   59 08 8D AF 54 DA B2 51  ...BA.m6Y...T..Q
+0010: 39 1D 70 A2 19 65 C6 9F   C1 4A AE 18 4A DA 6B 1B  9.p..e...J..J.k.
+0020: 7D DB 48 F6 27 DD 10 E2   D5 A8 A1 F4 D7 73 7C 2E  ..H.'........s..
+0030: 52 18 F6 79 47 05 98 8D   AC 3A 28 6E 9A A2 90 96  R..yG....:(n....
+0040: 6B 18 70 C0 C3 A8                                  k.p...
+[Raw read]: length = 5
+0000: 14 03 03 00 01                                     .....
+[Raw read]: length = 1
+0000: 01                                                 .
+Thread-6, READ: TLSv1.2 Change Cipher Spec, length = 1
+[Raw read]: length = 5
+0000: 16 03 03 00 50                                     ....P
+[Raw read]: length = 80
+0000: A4 62 9A 55 F0 80 56 6B   D6 81 C4 A8 B9 6F 4E 07  .b.U..Vk.....oN.
+0010: 31 16 30 7F 67 4A 9D 39   A5 B6 52 5F A4 EB B7 14  1.0.gJ.9..R_....
+0020: F8 64 FA E0 8A C5 CB 09   35 78 D2 2B 7E 7B E4 DB  .d......5x.+....
+0030: CE B6 0D 6E F4 0F 09 D6   E9 90 6C 51 C4 48 0A EB  ...n......lQ.H..
+0040: CA CE D6 A6 DF A4 5B 27   18 3C 08 4C 51 CC F0 9C  ......['.<.LQ...
+Thread-6, READ: TLSv1.2 Handshake, length = 80
+Padded plaintext after DECRYPTION:  len = 80
+0000: 41 BB 0E 11 56 7F 28 DC   80 A7 5D 1E B8 CE 5A 5A  A...V.(...]...ZZ
+0010: 14 00 00 0C 8B 93 26 50   AE A3 DB AF 7F 88 58 23  ......&P......X#
+0020: 1E CD 64 0A F3 E0 0A 52   C0 93 79 A4 9C 41 10 11  ..d....R..y..A..
+0030: 91 C7 0E 12 30 38 45 1C   1B 55 CE 83 3F F3 28 F0  ....08E..U..?.(.
+0040: 0F 0F 0F 0F 0F 0F 0F 0F   0F 0F 0F 0F 0F 0F 0F 0F  ................
+*** Finished
+verify_data:  { 139, 147, 38, 80, 174, 163, 219, 175, 127, 136, 88, 35 }
+***
+[read] MD5 and SHA1 hashes:  len = 16
+0000: 14 00 00 0C 8B 93 26 50   AE A3 DB AF 7F 88 58 23  ......&P......X#
+Thread-6, WRITE: TLSv1.2 Change Cipher Spec, length = 1
+[Raw write]: length = 6
+0000: 14 03 03 00 01 01                                  ......
+*** Finished
+verify_data:  { 232, 181, 98, 180, 211, 168, 99, 27, 66, 25, 8, 198 }
+***
+[write] MD5 and SHA1 hashes:  len = 16
+0000: 14 00 00 0C E8 B5 62 B4   D3 A8 63 1B 42 19 08 C6  ......b...c.B...
+Padded plaintext before ENCRYPTION:  len = 80
+0000: 7C C2 80 DA 0D C7 BB 28   13 C4 B0 56 C5 99 E0 49  .......(...V...I
+0010: 14 00 00 0C E8 B5 62 B4   D3 A8 63 1B 42 19 08 C6  ......b...c.B...
+0020: 44 E6 FC 75 A0 C2 DB C0   EE 91 BA 4A CA 34 1F BB  D..u.......J.4..
+0030: 19 1D 11 81 9D B2 F6 B4   F6 0D A0 FC D3 F8 1A D8  ................
+0040: 0F 0F 0F 0F 0F 0F 0F 0F   0F 0F 0F 0F 0F 0F 0F 0F  ................
+Thread-6, WRITE: TLSv1.2 Handshake, length = 80
+[Raw write]: length = 85
+0000: 16 03 03 00 50 FC 5B 87   AB C1 63 24 D0 D0 B8 7C  ....P.[...c$....
+0010: B9 64 83 EB C7 07 5C 06   2D 66 22 75 59 68 94 64  .d....\.-f"uYh.d
+0020: 51 3C AF 72 3F 8B FA 06   45 97 9C 01 25 9F 32 59  Q<.r?...E...%.2Y
+0030: 52 9F C3 21 CC 36 63 80   96 06 2E 35 5C 21 57 16  R..!.6c....5\!W.
+0040: 4F 67 67 D1 1A 85 EF 54   1E BD 74 E4 3F E6 97 AF  Ogg....T..t.?...
+0050: 00 2D 30 49 C6                                     .-0I.
+%% Cached server session: [Session-2, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256]
+[Raw read]: length = 5
+0000: 17 03 03 01 A0                                     .....
+[Raw read]: length = 416
+0000: BF 35 30 AE EA BB A4 5D   C2 A0 9C F2 BB 6D 30 E7  .50....].....m0.
+0010: 17 02 77 E7 9E EA 7B B7   D3 B7 4F 36 71 6D AC 06  ..w.......O6qm..
+0020: 7C 7F B0 D2 7B EC 6B 23   E0 E6 83 27 46 28 44 60  ......k#...'F(D`
+0030: 70 F4 34 6F E0 E8 BF FC   CC C8 EB 52 3C 14 C3 25  p.4o.......R<..%
+0040: AE AC E9 FF FF 41 E7 DF   59 A4 8A 4A 93 B6 B0 26  .....A..Y..J...&
+0050: AD 30 8A 7D 8C A0 AE 92   1A A0 37 F2 C6 88 DF 4F  .0........7....O
+0060: 6F C4 49 3E A0 47 DC 4B   91 44 D9 39 41 F7 71 7E  o.I>.G.K.D.9A.q.
+0070: 56 F1 6B 06 3E 27 43 AE   19 30 6D 6E 8E AF 70 C1  V.k.>'C..0mn..p.
+0080: 4C 1D 1D C2 B4 53 84 9A   13 A2 AC 3E 53 AB 2B 25  L....S.....>S.+%
+0090: 54 22 77 87 57 FA 5A F7   A2 FC A6 9B 9D CD CE DB  T"w.W.Z.........
+00A0: FE 50 1F CE 2B 2B 6B 72   B6 F7 F5 53 74 61 D6 BF  .P..++kr...Sta..
+00B0: 14 5F 73 08 91 37 B5 66   10 4F 84 36 63 62 82 EA  ._s..7.f.O.6cb..
+00C0: A1 62 48 76 1F 92 AD 91   6B 79 62 CB C9 89 C4 1E  .bHv....kyb.....
+00D0: 56 02 FB F9 C4 79 7B 4D   42 8F 33 7D D4 B4 64 43  V....y.MB.3...dC
+00E0: 39 51 76 55 32 1F 15 7B   C4 17 7C C7 E5 89 60 B5  9QvU2.........`.
+00F0: 66 7E 6C 51 AF 65 DE 2B   02 A6 9A 36 B0 E8 0A 67  f.lQ.e.+...6...g
+0100: B0 AC E9 D1 8D 0A 65 11   16 A5 F9 68 E7 14 D0 D3  ......e....h....
+0110: 82 39 20 FA 91 D8 23 4D   C1 4A F0 78 4F D0 28 7B  .9 ...#M.J.xO.(.
+0120: A3 AF 59 24 C2 5E 5C E6   7A 97 4B D5 C9 BC B4 CB  ..Y$.^\.z.K.....
+0130: 89 16 F6 40 22 D8 63 EA   32 9F 45 65 01 41 CA 63  ...@".c.2.Ee.A.c
+0140: CF 99 97 0C 05 CE 84 34   07 B2 5D D4 76 93 67 5B  .......4..].v.g[
+0150: 3B 26 49 0C 12 DC 46 F2   3B 3F 06 85 74 33 73 68  ;&I...F.;?..t3sh
+0160: 48 CB 91 62 4E 8E E2 50   EF B5 83 88 AD 31 3F 00  H..bN..P.....1?.
+0170: F0 40 CA 2E C2 C8 4D C1   6A 63 08 B9 8D AD D8 B1  .@....M.jc......
+0180: 15 24 C3 51 5C 53 BB 1A   81 17 D5 78 8B 9B 96 51  .$.Q\S.....x...Q
+0190: 69 B6 14 5E FB 50 E5 5E   C7 02 7E 5D 2C 4D 03 B9  i..^.P.^...],M..
+Thread-6, READ: TLSv1.2 Application Data, length = 416
+Padded plaintext after DECRYPTION:  len = 416
+0000: 84 AA 3B B6 9F 05 93 E1   FA 38 5C F3 47 DB 19 33  ..;......8\.G..3
+0010: 3C 6D 79 44 61 74 61 41   72 72 61 79 3E 0A 20 20  <myDataArray>.
+0020: 3C 6E 75 6D 5F 5F 6C 69   6E 65 73 3E 37 3C 2F 6E  <num__lines>7</n
+0030: 75 6D 5F 5F 6C 69 6E 65   73 3E 0A 20 20 3C 6C 69  um__lines>.  <li
+0040: 6E 65 73 3E 0A 20 20 20   20 3C 73 74 72 69 6E 67  nes>.    <string
+0050: 3E 20 3C 2F 73 74 72 69   6E 67 3E 0A 20 20 20 20  > </string>.
+0060: 3C 73 74 72 69 6E 67 3E   3C 2F 73 74 72 69 6E 67  <string></string
+0070: 3E 0A 20 20 20 20 3C 73   74 72 69 6E 67 3E 4F 6E  >.    <string>On
+0080: 65 20 70 61 72 74 72 69   64 67 65 20 69 6E 20 61  e partridge in a
+0090: 20 70 65 61 72 20 74 72   65 65 3C 2F 73 74 72 69   pear tree</stri
+00A0: 6E 67 3E 0A 20 20 20 20   3C 73 74 72 69 6E 67 3E  ng>.    <string>
+00B0: 54 77 6F 20 74 75 72 74   6C 65 20 64 6F 76 65 73  Two turtle doves
+00C0: 3C 2F 73 74 72 69 6E 67   3E 0A 20 20 20 20 3C 73  </string>.    <s
+00D0: 74 72 69 6E 67 3E 54 68   72 65 65 20 46 72 65 6E  tring>Three Fren
+00E0: 63 68 20 68 65 6E 73 3C   2F 73 74 72 69 6E 67 3E  ch hens</string>
+00F0: 0A 20 20 20 20 3C 73 74   72 69 6E 67 3E 46 6F 75  .    <string>Fou
+0100: 72 20 63 61 6C 6C 69 6E   67 20 62 69 72 64 73 3C  r calling birds<
+0110: 2F 73 74 72 69 6E 67 3E   0A 20 20 20 20 3C 73 74  /string>.    <st
+0120: 72 69 6E 67 3E 46 69 76   65 20 67 6F 6C 64 65 6E  ring>Five golden
+0130: 20 72 69 6E 67 73 3C 2F   73 74 72 69 6E 67 3E 0A   rings</string>.
+0140: 20 20 20 20 3C 6E 75 6C   6C 2F 3E 0A 20 20 20 20      <null/>.
+0150: 3C 6E 75 6C 6C 2F 3E 0A   20 20 20 20 3C 6E 75 6C  <null/>.    <nul
+0160: 6C 2F 3E 0A 20 20 3C 2F   6C 69 6E 65 73 3E 0A 3C  l/>.  </lines>.<
+0170: 2F 6D 79 44 61 74 61 41   72 72 61 79 3E 28 47 46  /myDataArray>(GF
+0180: B0 13 A9 2B AA D5 B8 E9   FD 52 87 61 8C 5C A5 80  ...+.....R.a.\..
+0190: 87 5A 96 66 59 8C 4E 6F   67 CD 8C 91 D2 02 02 02  .Z.fY.Nog.......
+[Raw read]: length = 5
+0000: 17 03 03 00 40                                     ....@
+[Raw read]: length = 64
+0000: 49 C9 42 4E A5 65 41 48   DB D8 A0 8A B1 E5 9D 3A  I.BN.eAH.......:
+0010: DA 24 18 1C 36 2C F8 B1   64 A1 DC C7 A9 42 7E 25  .$..6,..d....B.%
+0020: FC FA AF B0 1E 52 FB 47   7F AA 34 13 F0 E0 4D F2  .....R.G..4...M.
+0030: 89 BA 97 1E 7A 95 FC 24   23 BA 5E 0F AA 5B AF 25  ....z..$#.^..[.%
+Thread-6, READ: TLSv1.2 Application Data, length = 64
+Padded plaintext after DECRYPTION:  len = 64
+0000: 1E 89 A4 D1 4F B3 D4 91   49 E5 98 6E BF B3 2B 35  ....O...I..n..+5
+0010: 0D 0A 65 6E 64 5F 6F 66   5F 78 6D 6C 79 CB E0 AD  ..end_of_xmly...
+0020: 07 41 44 F6 88 5A 97 D1   16 2E 7D AA 4B 4B BC D0  .AD..Z......KK..
+0030: 83 DC A8 0E F6 33 11 D9   D5 A7 54 45 03 03 03 03  .....3....TE....
+[Raw read]: length = 5
+0000: 17 03 03 00 40                                     ....@
+[Raw read]: length = 64
+0000: A2 A4 47 DD 3F D7 6C 9A   87 E6 F2 15 98 7C 31 08  ..G.?.l.......1.
+0010: C2 06 8A 5C 7D C3 9A CA   67 5D 09 E0 AE 4D 02 B8  ...\....g]...M..
+0020: 0B AB 13 8A 95 16 35 19   79 E0 BB 7B C0 8D 42 F1  ......5.y.....B.
+0030: 21 A9 44 EC 94 7E 91 C2   54 BD B8 45 42 0F 69 95  !.D.....T..EB.i.
+Thread-6, READ: TLSv1.2 Application Data, length = 64
+Padded plaintext after DECRYPTION:  len = 64
+0000: 67 B9 3C AE 95 8E B0 48   7D 53 67 93 0A 95 42 29  g.<....H.Sg...B)
+0010: 0D 0A D9 0B 7C 76 29 E4   B2 60 78 3F C2 DE C0 CF  .....v)..`x?....
+0020: F1 06 AE 53 D8 53 06 90   F3 DA 7C 87 DA BE AE D7  ...S.S..........
+0030: 91 4B 0D 0D 0D 0D 0D 0D   0D 0D 0D 0D 0D 0D 0D 0D  .K..............
+The XML marshaled data:
+<myDataArray>
+  <num__lines>7</num__lines>
+  <lines>
+    <string> </string>
+    <string></string>
+    <string>One partridge in a pear tree</string>
+    <string>Two turtle doves</string>
+    <string>Three French hens</string>
+    <string>Four calling birds</string>
+    <string>Five golden rings</string>
+    <null/>
+    <null/>
+    <null/>
+  </lines>
+</myDataArray>
+
+Padded plaintext before ENCRYPTION:  len = 96
+0000: 94 AA 32 69 73 82 C7 2D   95 D0 6B 69 DC 38 6F 0E  ..2is..-..ki.8o.
+0010: 41 63 6B 6E 6F 77 6C 65   64 67 69 6E 67 20 42 61  Acknowledging Ba
+0020: 63 6B 20 43 68 61 6E 6E   65 6C 20 44 61 74 61 20  ck Channel Data
+0030: 52 65 63 65 69 70 74 E1   F1 1C 17 1A C9 AE 8C E7  Receipt.........
+0040: 6B 39 F9 2F 0B 68 96 E4   4F FE 47 82 2E 5D 50 DC  k9./.h..O.G..]P.
+0050: A9 45 EC 43 48 5C 4F 08   08 08 08 08 08 08 08 08  .E.CH\O.........
+Thread-6, WRITE: TLSv1.2 Application Data, length = 96
+[Raw write]: length = 101
+0000: 17 03 03 00 60 52 C7 8D   04 D9 81 B4 85 AE 91 8F  ....`R..........
+0010: A9 83 FD 1C 48 0A 9A D2   4F 1C 80 CF 1A 83 20 C8  ....H...O..... .
+0020: A7 E7 AB DB 03 97 D1 93   E7 7C C6 27 A8 7C E8 44  ...........'...D
+0030: C4 45 94 C4 9C 15 67 5F   2F 86 E0 76 75 78 66 4D  .E....g_/..vuxfM
+0040: 12 35 25 C9 4D 64 4D 1B   3D 27 AB F2 B0 79 99 F0  .5%.MdM.='...y..
+0050: 39 A1 EF 80 C8 3B C8 4C   DE A8 EB 70 04 2E E2 AE  9....;.L...p....
+0060: 3E 6C 1A 93 E0                                     >l...
+Padded plaintext before ENCRYPTION:  len = 64
+0000: 9E 89 81 34 16 2D AB 78   57 82 8A A9 45 06 A1 4F  ...4.-.xW...E..O
+0010: 0D 0A 21 3D 54 98 69 FA   B5 71 E7 B2 D2 A0 BC 51  ..!=T.i..q.....Q
+0020: 03 F7 10 F5 67 3C F5 5F   10 44 42 45 5C B5 AE F5  ....g<._.DBE\...
+0030: 01 86 0D 0D 0D 0D 0D 0D   0D 0D 0D 0D 0D 0D 0D 0D  ................
+Thread-6, WRITE: TLSv1.2 Application Data, length = 64
+[Raw write]: length = 69
+0000: 17 03 03 00 40 01 FD 8A   DE 50 47 52 7C D9 7D B7  ....@....PGR....
+0010: 01 D0 6A 27 29 67 D4 B5   A3 EF 2B 45 EA 27 2B 0C  ..j')g....+E.'+.
+0020: 2B 1E 26 D0 1A DD 55 D7   5D 0A FC 32 14 1E ED B3  +.&...U.]..2....
+0030: A3 87 99 F1 C6 E3 CC 2E   68 32 B3 71 CD 8B 16 E5  ........h2.q....
+0040: BC 28 0D E0 D8                                     .(...
+Thread-6, called close()
+Thread-6, called closeInternal(true)
+Thread-6, SEND TLSv1.2 ALERT:  warning, description = close_notify
+Padded plaintext before ENCRYPTION:  len = 64
+0000: A5 6F 2E 6C 12 3C 01 CD   A5 BD 10 A4 5D 2E 05 99  .o.l.<......]...
+0010: 01 00 9F F3 C6 DD E1 D4   F3 57 7A 53 23 35 A8 C3  .........WzS#5..
+0020: 95 EC 55 A9 7A 40 59 0E   39 FD 56 FB EE 6D 17 EB  ..U.z@Y.9.V..m..
+0030: 5E 26 0D 0D 0D 0D 0D 0D   0D 0D 0D 0D 0D 0D 0D 0D  ^&..............
+Thread-6, WRITE: TLSv1.2 Alert, length = 64
+Thread-6, Exception sending alert: java.net.SocketException: Connection reset by peer: socket write error
+Thread-6, called closeSocket(true)
+Here is the restored data:
+
+
+One partridge in a pear tree
+Two turtle doves
+Three French hens
+Four calling birds
+Five golden rings
+
+
+Root Directory :C:\Users\ppadm\Desktop\MIMER Submission
+
+
+GET /favicon.ico HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+
+
+
+
+Root Directory :C:\Users\ppadm\Desktop\MIMER Submission
+
+
+GET /favicon.ico HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+
+
+
+
+Root Directory :C:\Users\ppadm\Desktop\MIMER Submission
+
+
+GET /favicon.ico HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: image/png,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+

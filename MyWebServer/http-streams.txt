@@ -1,0 +1,39 @@
+						********************************\MyTelnet/********************************
+\workspace\MyTelnet\src>java MyTelnet 10.0.10.6 2540
+Prashant's Telnet client
+
+Using Server 10.0.10.6, 2540
+Enter the request
+GET /sub-a/sub-b/lion.html HTTP/1.1
+Host: 10.0.10.6:2540
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:text/html
+Content-Length: 47100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+
+
+<html>
+<body>
+<h1>LION</h1>
+<p>This is the lion file inside sub-a/sub-b</p>
+</body>
+</html>
+
+C:\Users\ppadm\workspace\MyTelnet\src>
+
+						********************************\MyListener/********************************
+
+\workspace\MyListener\src>java MyListener 10.0.10.6 2540
+Prashant's listener server starting up, listening at port 2540
+
+GET /sub-a/sub-b/lion.html HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive

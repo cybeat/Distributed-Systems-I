@@ -1,0 +1,370 @@
+					********************************\ServerLog/********************************
+C:\Users\ppadm\Desktop\WebServer Submission>javac  MyWebServer.java
+
+C:\Users\ppadm\Desktop\WebServer Submission>java MyWebServer
+Prashant's Web Server starting up, listening at port 2540
+
+					********************************\root directory/********************************
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+GET / HTTP/1.1
+Host: localhost:2540
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.
+2454.101 Safari/537.36
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6
+
+File name in httpResponseFile :/
+
+Current file :/
+
+Current working directory :C:\Users\ppadm\Desktop\WebServer Submission/
+
+<h3>Directory Tree of Prashant's WebServer Files C:\Users\ppadm\Desktop\WebServer Submission</h3>
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:text/html
+Content-Length: 947
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+
+<h3>Directory Tree of Prashant's WebServer Files C:\Users\ppadm\Desktop\WebServer Submission</h3>
+<a href=" apple.jpg" > apple.jpg </a> <--File--> <br>
+<a href=" cgi/">\ cgi</a> <--Directory--> <br>
+<a href=" checklist-mywebserver.html" > checklist-mywebserver.html </a> <--File--> <br>
+<a href=" favicon.ico" > favicon.ico </a> <--File--> <br>
+<a href=" http-streams.txt.txt" > http-streams.txt.txt </a> <--File--> <br>
+<a href=" lion.html" > lion.html </a> <--File--> <br>
+<a href=" MyWebServer.class" > MyWebServer.class </a> <--File--> <br>
+<a href=" MyWebServer.java" > MyWebServer.java </a> <--File--> <br>
+<a href=" serverlog.txt.txt" > serverlog.txt.txt </a> <--File--> <br>
+<a href=" sub-a/">\ sub-a</a> <--Directory--> <br>
+<a href=" texttest.txt" > texttest.txt </a> <--File--> <br>
+<a href=" wmltest.wml" > wmltest.wml </a> <--File--> <br>
+<a href=" Worker.class" > Worker.class </a> <--File--> <br>
+<a href=/><b>Go To Home</b></a><br>
+
+
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+GET /favicon.ico HTTP/1.1
+Host: localhost:2540
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.
+2454.101 Safari/537.36
+Accept: */*
+Referer: http://localhost:2540/
+Accept-Encoding: gzip, deflate, sdch
+Accept-Language: en-GB,en-US;q=0.8,en;q=0.6
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:image/x-icon
+Content-Length: 318100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+
+					********************************\ServerLog CGI addition of numbers /********************************
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+
+GET /cgi/addnums.html HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:text/html
+Content-Length: 460100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+GET /favicon.ico HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:image/x-icon
+Content-Length: 318100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+
+?
+
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+
+GET /cgi/addnums.fake-cgi?person=YourName&num1=4&num2=5 HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/cgi/addnums.html
+Connection: keep-alive
+
+
+/ /addnums.fake- ?person=YourName&num1=4&num2=5
+name =YourName add 4 and 5 = 9
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+Server: Prashant's Server/1.0
+Content-Length: 464
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+
+<TITLE> CSC435 Prashant for Adding Nummber</TITLE><BODY><H1> Addition of Two Numbers </H1> <FORM met
+hod='GET' action='/cgi/addnums-fake.cgi'>Enter your name and two numbers:<INPUT TYPE='text' NAME='pe
+rson' size=20 value='YourName'><P><INPUT TYPE='text' NAME='num1' size=5 value='4'> <br><INPUT TYPE='
+text' NAME='num2' size=5 value='5'> <br><INPUT TYPE='submit' VALUE='Submit Numbers'></FORM><br>Hello
+ YourName, the addition result of requested number 4 and 5 is 9
+
+
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+GET /favicon.ico HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:image/x-icon
+Content-Length: 318100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+?
+
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+?
+
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+
+GET /favicon.ico HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:image/x-icon
+Content-Length: 318100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+GET /cgi/addnums-fake.cgi?person=prashant&num1=4&num2=100 HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/cgi/addnums.fake-cgi?person=YourName&num1=4&num2=5
+Connection: keep-alive
+
+/ /addnums-fake. ?person=prashant&num1=4&num2=100
+name =prashant add 4 and 100 = 104
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+Server: Prashant's Server/1.0
+Content-Length: 470
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+
+<TITLE> CSC435 Prashant for Adding Nummber</TITLE><BODY><H1> Addition of Two Numbers </H1> <FORM met
+hod='GET' action='/cgi/addnums-fake.cgi'>Enter your name and two numbers:<INPUT TYPE='text' NAME='pe
+rson' size=20 value='prashant'><P><INPUT TYPE='text' NAME='num1' size=5 value='4'> <br><INPUT TYPE='
+text' NAME='num2' size=5 value='100'> <br><INPUT TYPE='submit' VALUE='Submit Numbers'></FORM><br>Hel
+lo prashant, the addition result of requested number 4 and 100 is 104
+
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+GET /favicon.ico HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:image/x-icon
+Content-Length: 318100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+GET / HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+
+
+File name in httpResponseFile :/
+
+
+Current file :/
+
+
+Current working directory :C:\Users\ppadm\Desktop\WebServer Submission/
+
+<h3>Directory Tree of Prashant's WebServer Files C:\Users\ppadm\Desktop\WebServer Submission</h3>
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:text/html
+Content-Length: 947
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+
+<h3>Directory Tree of Prashant's WebServer Files C:\Users\ppadm\Desktop\WebServer Submission</h3>
+<a href=" apple.jpg" > apple.jpg </a> <--File--> <br>
+<a href=" cgi/">\ cgi</a> <--Directory--> <br>
+<a href=" checklist-mywebserver.html" > checklist-mywebserver.html </a> <--File--> <br>
+<a href=" favicon.ico" > favicon.ico </a> <--File--> <br>
+<a href=" http-streams.txt.txt" > http-streams.txt.txt </a> <--File--> <br>
+<a href=" lion.html" > lion.html </a> <--File--> <br>
+<a href=" MyWebServer.class" > MyWebServer.class </a> <--File--> <br>
+<a href=" MyWebServer.java" > MyWebServer.java </a> <--File--> <br>
+<a href=" serverlog.txt.txt" > serverlog.txt.txt </a> <--File--> <br>
+<a href=" sub-a/">\ sub-a</a> <--Directory--> <br>
+<a href=" texttest.txt" > texttest.txt </a> <--File--> <br>
+<a href=" wmltest.wml" > wmltest.wml </a> <--File--> <br>
+<a href=" Worker.class" > Worker.class </a> <--File--> <br>
+<a href=/><b>Go To Home</b></a><br>
+
+					********************************\ServerLog wml mime type/********************************
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+
+GET /wmltest.wml HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:text/vnd.wap.wml
+Content-Length: 345100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+					********************************\ServerLog .html file type/********************************
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+
+GET /lion.html HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:text/html
+Content-Length: 113100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+					********************************\ServerLog .txt file type/********************************
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+GET /texttest.txt HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+
+
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:text/plain
+Content-Length: 44100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
+
+					********************************\ServerLog .jpg file type/********************************
+Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+
+GET /apple.jpg HTTP/1.1
+Host: localhost:2540
+User-Agent: Mozilla/5.0 (Windows NT 6.2; WOW64; rv:18.0) Gecko/20100101 Firefox/18.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8,text/vnd.wap.wml;q=0.6
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Referer: http://localhost:2540/
+Connection: keep-alive
+
+
+HTTP/1.1 200 OK
+Server: Prashant's Server/1.0
+Content-Type:image/jpeg
+Content-Length: 46677100
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Connection: close
+
