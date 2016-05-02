@@ -1,11 +1,11 @@
 					********************************\ServerLog/********************************
-C:\Users\ppadm\Desktop\WebServer Submission>javac  MyWebServer.java
+dir:\..\..\\WebServer Submission>javac  MyWebServer.java
 
-C:\Users\ppadm\Desktop\WebServer Submission>java MyWebServer
+dir:\..\..\\WebServer Submission>java MyWebServer
 Prashant's Web Server starting up, listening at port 2540
 
 					********************************\root directory/********************************
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 GET / HTTP/1.1
 Host: localhost:2540
@@ -21,9 +21,9 @@ File name in httpResponseFile :/
 
 Current file :/
 
-Current working directory :C:\Users\ppadm\Desktop\WebServer Submission/
+Current working directory :dir:\..\..\\WebServer Submission/
 
-<h3>Directory Tree of Prashant's WebServer Files C:\Users\ppadm\Desktop\WebServer Submission</h3>
+<h3>Directory Tree of Prashant's WebServer Files dir:\..\..\\WebServer Submission</h3>
 
 HTTP/1.1 200 OK
 Server: Prashant's Server/1.0
@@ -32,7 +32,7 @@ Content-Length: 947
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 
-<h3>Directory Tree of Prashant's WebServer Files C:\Users\ppadm\Desktop\WebServer Submission</h3>
+<h3>Directory Tree of Prashant's WebServer Files dir:\..\..\\WebServer Submission</h3>
 <a href=" apple.jpg" > apple.jpg </a> <--File--> <br>
 <a href=" cgi/">\ cgi</a> <--Directory--> <br>
 <a href=" checklist-mywebserver.html" > checklist-mywebserver.html </a> <--File--> <br>
@@ -49,7 +49,7 @@ X-Content-Type-Options: nosniff
 <a href=/><b>Go To Home</b></a><br>
 
 
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 GET /favicon.ico HTTP/1.1
 Host: localhost:2540
@@ -71,7 +71,7 @@ Connection: close
 
 
 					********************************\ServerLog CGI addition of numbers /********************************
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 
 GET /cgi/addnums.html HTTP/1.1
@@ -91,7 +91,7 @@ X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 Connection: close
 
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 GET /favicon.ico HTTP/1.1
 Host: localhost:2540
@@ -109,12 +109,12 @@ X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 Connection: close
 
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 
 ?
 
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 
 GET /cgi/addnums.fake-cgi?person=YourName&num1=4&num2=5 HTTP/1.1
@@ -144,7 +144,7 @@ text' NAME='num2' size=5 value='5'> <br><INPUT TYPE='submit' VALUE='Submit Numbe
  YourName, the addition result of requested number 4 and 5 is 9
 
 
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 GET /favicon.ico HTTP/1.1
 Host: localhost:2540
@@ -163,15 +163,15 @@ X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 Connection: close
 
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 ?
 
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 ?
 
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 
 GET /favicon.ico HTTP/1.1
@@ -191,7 +191,7 @@ X-Content-Type-Options: nosniff
 Connection: close
 
 
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 GET /cgi/addnums-fake.cgi?person=prashant&num1=4&num2=100 HTTP/1.1
 Host: localhost:2540
@@ -218,7 +218,7 @@ rson' size=20 value='prashant'><P><INPUT TYPE='text' NAME='num1' size=5 value='4
 text' NAME='num2' size=5 value='100'> <br><INPUT TYPE='submit' VALUE='Submit Numbers'></FORM><br>Hel
 lo prashant, the addition result of requested number 4 and 100 is 104
 
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 GET /favicon.ico HTTP/1.1
 Host: localhost:2540
@@ -237,7 +237,7 @@ X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 Connection: close
 
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 GET / HTTP/1.1
 Host: localhost:2540
@@ -254,9 +254,9 @@ File name in httpResponseFile :/
 Current file :/
 
 
-Current working directory :C:\Users\ppadm\Desktop\WebServer Submission/
+Current working directory :dir:\..\..\\WebServer Submission/
 
-<h3>Directory Tree of Prashant's WebServer Files C:\Users\ppadm\Desktop\WebServer Submission</h3>
+<h3>Directory Tree of Prashant's WebServer Files dir:\..\..\\WebServer Submission</h3>
 
 HTTP/1.1 200 OK
 Server: Prashant's Server/1.0
@@ -265,7 +265,7 @@ Content-Length: 947
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
 
-<h3>Directory Tree of Prashant's WebServer Files C:\Users\ppadm\Desktop\WebServer Submission</h3>
+<h3>Directory Tree of Prashant's WebServer Files dir:\..\..\\WebServer Submission</h3>
 <a href=" apple.jpg" > apple.jpg </a> <--File--> <br>
 <a href=" cgi/">\ cgi</a> <--Directory--> <br>
 <a href=" checklist-mywebserver.html" > checklist-mywebserver.html </a> <--File--> <br>
@@ -282,7 +282,7 @@ X-Content-Type-Options: nosniff
 <a href=/><b>Go To Home</b></a><br>
 
 					********************************\ServerLog wml mime type/********************************
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 
 GET /wmltest.wml HTTP/1.1
@@ -304,7 +304,7 @@ X-Content-Type-Options: nosniff
 Connection: close
 
 					********************************\ServerLog .html file type/********************************
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 
 GET /lion.html HTTP/1.1
@@ -325,7 +325,7 @@ X-Content-Type-Options: nosniff
 Connection: close
 
 					********************************\ServerLog .txt file type/********************************
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 GET /texttest.txt HTTP/1.1
 Host: localhost:2540
@@ -348,7 +348,7 @@ Connection: close
 
 
 					********************************\ServerLog .jpg file type/********************************
-Root Directory :C:\Users\ppadm\Desktop\WebServer Submission
+Root Directory :dir:\..\..\\WebServer Submission
 
 GET /apple.jpg HTTP/1.1
 Host: localhost:2540
